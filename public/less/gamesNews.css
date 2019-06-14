@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background: #f6f6f6;
+}
+#box {
+  height: 100%;
+  position: relative;
+}
+#mainBox {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  margin-left: -600px;
+  width: 1200px;
+}
+#leftBox {
+  height: 100%;
+  width: 844px;
+  float: left;
+}
+#leftBox #imgBox {
+  position: relative;
+}
+#leftBox #imgBox ul {
+  overflow: hidden;
+}
+#leftBox #imgBox li div {
+  width: 844px;
+  height: 360px;
+  background: rgba(0, 0, 0, 0) url("https://static.yay.com.cn/banner/5be4ed3d4e457.jpg") no-repeat scroll center center / cover;
+}
+#rightBox {
+  height: 100%;
+  width: 332px;
+  background: white;
+  float: left;
+  margin-left: 24px;
+}
+#rightBox #playerBox h2 {
+  line-height: 24px;
+}
+#rightBox #playerBox div {
+  position: relative;
+  display: flex;
+  padding: 12px 0;
+  border-top: #f6f6f6 2px solid;
+}
+#rightBox #playerBox div a {
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+}
+#rightBox #playerBox div a img {
+  position: absolute;
+  margin: auto;
+  transition: all 0.2s ease-in;
+}
+#rightBox #playerBox div a img:hover {
+  transform: scale(1.2);
+}
+#rightBox #playerBox div p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-indent: 8px;
+  line-height: 30px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+#newsBox {
+  margin-top: 24px;
+  background: white;
+  width: 844px;
+  height: 100%;
+}
+#newsBox #bannerBox #banner {
+  padding-left: 20px;
+}
+#newsBox #bannerBox #banner div {
+  display: inline-block;
+  padding: 20px 0;
+  font-size: 22px;
+  margin-right: 70px;
+}
+#newsBox #bannerBox #banner div a:hover {
+  color: #ffbf29;
+}
+a {
+  color: #595959;
+}
+.active {
+  color: #ffa800;
+}
+.active1 {
+  border-bottom: 2px #ffa800 solid;
+}
+.title {
+  font-style: normal;
+  color: black;
+  margin: 20px 0 20px 15px;
+  padding-left: 10px;
+  border-left: 3px #ffa800 solid;
+}
+/*# sourceMappingURL=gamesNews.css.map */
