@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: '微软雅黑';
+}
+body {
+  background: #f6f6f6;
+}
+#box {
+  height: 100%;
+  position: relative;
+}
+#mainBox {
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  margin-left: -600px;
+  width: 1200px;
+}
+#leftBox {
+  height: 100%;
+  width: 844px;
+  float: left;
+  background: white;
+}
+#leftBox .newsMain {
+  font-size: 22px;
+  color: #323232;
+  border-bottom: #f6f6f6 2px solid;
+  padding-left: 30px;
+}
+#leftBox .newsMain a {
+  color: #323232;
+  line-height: 80px;
+}
+#leftBox .newsMain em {
+  margin: 0 10px;
+  font-style: normal;
+  font-family: monospace;
+  letter-spacing: -6px;
+}
+#leftBox .newsCon {
+  position: relative;
+  padding: 30px;
+}
+#leftBox .newsCon .newsInfo {
+  padding: 10px;
+}
+#leftBox .newsCon .newsInfo .firInfo {
+  font-size: 12px;
+}
+#leftBox .newsCon .newsInfo .secInfo {
+  margin-left: 20px;
+  font-size: 12px;
+  color: #ababab;
+}
+#leftBox .newsCon .newsText p {
+  padding: 0 10px 0 10px;
+}
+#leftBox .newsCon .newsText p span {
+  line-height: 24px;
+}
+#rightBox {
+  height: 100%;
+  width: 332px;
+  background: white;
+  float: left;
+  margin-left: 24px;
+}
+#rightBox #playerBox h2 {
+  line-height: 24px;
+}
+#rightBox #playerBox div {
+  position: relative;
+  display: flex;
+  padding: 12px 0;
+  border-top: #f6f6f6 2px solid;
+}
+#rightBox #playerBox div a {
+  margin: 0 auto;
+  position: relative;
+  border-radius: 10px;
+  width: 300px;
+  height: 220px;
+  overflow: hidden;
+}
+#rightBox #playerBox div a img {
+  position: absolute;
+  margin: auto;
+  transition: all 0.2s ease-in;
+}
+#rightBox #playerBox div a img:hover {
+  transform: scale(1.2);
+}
+#rightBox #playerBox div p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-indent: 8px;
+  line-height: 30px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+#newsBox {
+  margin-top: 24px;
+  background: white;
+  width: 844px;
+  height: 100%;
+}
+#newsBox #bannerBox #banner {
+  border-bottom: #f6f6f6 2px solid;
+  padding-left: 30px;
+}
+#newsBox #bannerBox #banner div {
+  display: inline-block;
+  padding: 20px 0;
+  font-size: 22px;
+  margin-right: 70px;
+}
+#newsBox #bannerBox #banner div a:hover {
+  color: #ffbf29;
+}
+.title {
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  color: black;
+  margin: 20px 0 20px 15px;
+  padding-left: 10px;
+  border-left: 3px #ffa800 solid;
+}
+.hotNews {
+  border-top: 20px #f6f6f6 solid;
+  margin-top: 20px;
+}
+.newsList {
+  padding: 10px 0;
+  border-top: #f6f6f6 2px solid;
+}
+.newsList a {
+  display: flex;
+  flex-direction: row;
+}
+.newsList a .hotNewsImg {
+  overflow: hidden;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-left: 15px;
+  margin-right: 20px;
+}
+.newsList a .hotNewsImg div {
+  width: 70px;
+  height: 70px;
+  position: relative;
+}
+.newsList a .hotNewsImg div img {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+.newsList a .hotNewsCon h4 {
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 180px;
+  color: #333333;
+}
+.newsList a .hotNewsCon div p {
+  max-height: 48px;
+  width: 220px;
+  font-size: 12px;
+  color: #9a9a9a;
+  text-overflow: ellipsis;
+}
+/*# sourceMappingURL=news.css.map */
