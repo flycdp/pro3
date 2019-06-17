@@ -23,17 +23,44 @@ body {
   height: 100%;
   width: 844px;
   float: left;
+  background: white;
 }
-#leftBox #imgBox {
+#leftBox .newsMain {
+  font-size: 22px;
+  color: #323232;
+  border-bottom: #f6f6f6 2px solid;
+  padding-left: 30px;
+}
+#leftBox .newsMain a {
+  color: #323232;
+  line-height: 80px;
+}
+#leftBox .newsMain em {
+  margin: 0 10px;
+  font-style: normal;
+  font-family: monospace;
+  letter-spacing: -6px;
+}
+#leftBox .newsCon {
   position: relative;
+  padding: 30px;
 }
-#leftBox #imgBox ul {
-  overflow: hidden;
+#leftBox .newsCon .newsInfo {
+  padding: 10px;
 }
-#leftBox #imgBox li div {
-  width: 844px;
-  height: 360px;
-  background: rgba(0, 0, 0, 0) url("https://static.yay.com.cn/banner/5be4ed3d4e457.jpg") no-repeat scroll center center / cover;
+#leftBox .newsCon .newsInfo .firInfo {
+  font-size: 12px;
+}
+#leftBox .newsCon .newsInfo .secInfo {
+  margin-left: 20px;
+  font-size: 12px;
+  color: #ababab;
+}
+#leftBox .newsCon .newsText p {
+  padding: 0 10px 0 10px;
+}
+#leftBox .newsCon .newsText p span {
+  line-height: 24px;
 }
 #rightBox {
   height: 100%;
@@ -95,15 +122,6 @@ body {
 #newsBox #bannerBox #banner div a:hover {
   color: #ffbf29;
 }
-a {
-  color: #595959;
-}
-.active {
-  color: #ffa800;
-}
-.active1 {
-  border-bottom: 2px #ffa800 solid;
-}
 .title {
   font-size: 22px;
   font-weight: normal;
@@ -112,72 +130,6 @@ a {
   margin: 20px 0 20px 15px;
   padding-left: 10px;
   border-left: 3px #ffa800 solid;
-}
-.content {
-  position: relative;
-  width: 844px;
-}
-.content .news {
-  padding: 20px 0;
-  width: 784px;
-  margin: 0 auto;
-  border-bottom: #f6f6f6 2px solid;
-  display: flex;
-}
-.content .news a {
-  display: flex;
-  flex-direction: row;
-  cursor: pointer;
-}
-.content .news a .newsImg {
-  border-radius: 8px;
-  position: relative;
-  width: 190px;
-  height: 140px;
-  overflow: hidden;
-  margin-right: 20px;
-}
-.content .news a .newsImg img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-}
-.newsCon .tag {
-  display: flex;
-  flex-direction: row;
-}
-.newsCon .tag li {
-  border-radius: 8px;
-  padding: 2px 10px;
-  font-size: 12px;
-  color: white;
-  background: #ff8b3e;
-  margin-right: 10px;
-}
-.newsCon .newsTitle {
-  line-height: 24px;
-  margin-top: 10px;
-  font-size: 16px;
-}
-.newsCon .newsInfo {
-  margin-top: 7px;
-  font-size: 12px;
-}
-.newsCon .newsInfo .firInfo {
-  margin-right: 20px;
-}
-.newsCon .newsInfo .secInfo {
-  color: #b2b2b2;
-}
-.newsCon .newsPre {
-  margin-top: 15px;
-  max-height: 42px;
-  overflow: hidden;
-  font-size: 14px;
-  line-height: 21px;
-  color: #9a9a9a;
 }
 .hotNews {
   border-top: 20px #f6f6f6 solid;
@@ -225,34 +177,4 @@ a {
   color: #9a9a9a;
   text-overflow: ellipsis;
 }
-.pageBox ul {
-  padding: 15px 0 15px 300px;
-}
-.pageBox ul li a {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  color: #0f0f0f;
-  font-size: 14px;
-  border: 1px #0f0f0f solid;
-  line-height: 32px;
-  margin-right: 10px;
-}
-.pageBox ul li a:hover {
-  color: #ffa800;
-  border: 1px #ffa800 solid;
-}
-.pageBox ul li .page {
-  width: 50px;
-  height: 32px;
-}
-.pageBox ul li .noPage {
-  color: #ababab;
-  border: 1px #ababab solid;
-}
-.pageBox ul li .pageActive {
-  color: #ffa800;
-  border: 1px #ffa800 solid;
-}
-/*# sourceMappingURL=gamesNews.css.map */
+/*# sourceMappingURL=news.css.map */
