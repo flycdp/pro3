@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+li {
+    list-style: none;
+}
+i{
+    font-style: normal;
+}
+/* 优惠券 */
+.goodJoin{
+    .joinBox{
+        position: absolute;
+        box-sizing: border-box;
+        padding:10px 0;                             
+        >div{
+            float: left;
+            height: 50px;
+            >b{
+                font-size:12px;
+            }
+            >span{
+                font-size:12px;
+            }
+        }
+
+        .ls{    
+            width: 75px;
+            line-height: 20px;
+            text-align: center;
+            span b{
+                font-size:22px; 
+            }
+        }
+        .rs{
+            width: 200px;
+            b{
+                font-size:14px; 
+                line-height: 1.9;
+            }
+            span{
+                display: block;
+                text-indent: 2rem;
+            }
+            span:nth-last-child{
+                color:#8f8f8f;
+            }
+        }
+    }
+}
+header {
+    height: 60px;
+    background: pink;
+}
+.bg {
+    background: url('../images/cdpBg.jpg');
+    position: absolute;
+    width: 100%;
+    height: 1050px;
+    z-index: -1;
+}
+section {
+    height: 970px;
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    background: white;
+    top:40px;
+    left: 0; 
+    .box{
+        background-image: url('../images/cdpHx.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 40px 30px 20px;
+        .box_hd{
+            text-align: center;
+            overflow: hidden;
+            .list{
+                span{
+                    margin: 10px 15px 20px;
+                    padding: 5px 12px;
+                    border-radius: 30px;
+                    font-size:18px;
+                    line-height: 27px;
+                     
+                }
+                
+                .cur{
+                    color: white;
+                    background: rgb(255,87,96);
+                    
+                }
+                span:hover{
+                    .cur();
+                    cursor: pointer;
+                }
+               
+            }
+            p{
+                text-align: left;
+                margin: 20px 0; 
+                line-height: 2.4rem;
+                margin-top:24px; 
+                color: #8f8f8f;
+            }
+        }
+        .box_bd{
+            .choose{
+                >li{
+                    /* overflow: hidden; */
+                    display: table;
+                    padding:20px 0 ;
+                    border-bottom: 1px solid rgba(248,248,248);
+                    h4{
+                        width: 120px;
+                        height: 40px;
+                        margin-right:20px; 
+                        text-align: center;
+                        line-height: 40px;
+                        
+                    }
+                    input{
+                        outline: none;
+                        box-sizing: border-box;
+                        margin: 0;
+                        height: 32px;
+                        width: 200px;
+                        border: 1px solid #d9d9d9;
+                        padding: 4px 11px;
+                        line-height: 1.5;
+                    }
+                    input::placeholder{
+                        color: #ccc;
+                    }
+                    >div {
+                        display: inline-block;
+                        padding: 15px;
+                        input{
+                            padding: 4px 11px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+                li:nth-child(2){
+                    .wui-content.ng-scope{
+                        display:inline-block;
+                        width: 350px;
+                        height: 32px;
+                    }
+                }
+                li:nth-child(3){
+                    >div{
+                        input{
+                            width: 88px;
+                        }
+                    }
+                }
+                li:nth-child(4){
+                    span{
+                        display:inline-block;
+                        margin-right: 20px;  
+                        cursor: pointer;
+                        width: 60px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                    }
+                    .on{
+                        background: #000;
+                        color: #FFBA06;
+                        border-radius:30px;
+                    }
+                    span:hover{
+                        .on();
+                    }
+                }
+                li:nth-child(5){
+                    h4{
+                        height: 70px;
+                        line-height: 70px !important;
+                    }
+                    img{
+                        width: 276px;
+                        height: 70px;
+                    }
+                }
+                .gameList{
+                    padding-left:16px; 
+                    li{
+                        cursor: pointer;
+                        width: 90px;
+                        height: 110px;
+                        box-sizing: border-box;
+                        float:left;
+                        margin: 0 25px 5px 0;
+                        padding: 10px;
+                        text-align: center;
+                        position: relative;
+                        overflow: hidden;
+                        border-radius:5px; 
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            margin: 0 auto;
+                        }
+                        span{
+                            position: absolute;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            bottom: 10px;
+                            color: #8f8f8f;
+                        }
+                        
+                    }
+                    .on{
+                        border:1px solid #ffa800;
+                        background: #f8f8f8;
+                    }
+                    .on::before{
+                        content: "√";
+                        position: absolute;
+                        right: 3px;
+                        top:3px;
+                        color: white;
+                        z-index: 99;
+                        font-size:12px; 
+                    }
+                    .on::after{
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top:0;
+                        width: 46px;
+                        height: 32px;
+                        background: #ffa800;
+                        transform: translate(18px,-12px) rotate(45deg);
+                    }
+                }
+
+            }
+        }
+
+    }
+}
+

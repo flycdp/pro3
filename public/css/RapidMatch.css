@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+li {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+/* 优惠券 */
+.goodJoin .joinBox {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.goodJoin .joinBox > div {
+  float: left;
+  height: 50px;
+}
+.goodJoin .joinBox > div > b {
+  font-size: 12px;
+}
+.goodJoin .joinBox > div > span {
+  font-size: 12px;
+}
+.goodJoin .joinBox .ls {
+  width: 75px;
+  line-height: 20px;
+  text-align: center;
+}
+.goodJoin .joinBox .ls span b {
+  font-size: 22px;
+}
+.goodJoin .joinBox .rs {
+  width: 200px;
+}
+.goodJoin .joinBox .rs b {
+  font-size: 14px;
+  line-height: 1.9;
+}
+.goodJoin .joinBox .rs span {
+  display: block;
+  text-indent: 2rem;
+}
+.goodJoin .joinBox .rs span:nth-last-child {
+  color: #8f8f8f;
+}
+header {
+  height: 60px;
+  background: pink;
+}
+.bg {
+  background: url('../images/cdpBg.jpg');
+  position: absolute;
+  width: 100%;
+  height: 1050px;
+  z-index: -1;
+}
+section {
+  height: 970px;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  background: white;
+  top: 40px;
+  left: 0;
+}
+section .box {
+  background-image: url('../images/cdpHx.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 40px 30px 20px;
+}
+section .box .box_hd {
+  text-align: center;
+  overflow: hidden;
+}
+section .box .box_hd .list span {
+  margin: 10px 15px 20px;
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: 18px;
+  line-height: 27px;
+}
+section .box .box_hd .list .cur {
+  color: white;
+  background: #ff5760;
+}
+section .box .box_hd .list span:hover {
+  color: white;
+  background: #ff5760;
+  cursor: pointer;
+}
+section .box .box_hd p {
+  text-align: left;
+  margin: 20px 0;
+  line-height: 2.4rem;
+  margin-top: 24px;
+  color: #8f8f8f;
+}
+section .box .box_bd .choose > li {
+  /* overflow: hidden; */
+  display: table;
+  padding: 20px 0 ;
+  border-bottom: 1px solid rgba(248, 248, 248);
+}
+section .box .box_bd .choose > li h4 {
+  width: 120px;
+  height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+section .box .box_bd .choose > li input {
+  outline: none;
+  box-sizing: border-box;
+  margin: 0;
+  height: 32px;
+  width: 200px;
+  border: 1px solid #d9d9d9;
+  padding: 4px 11px;
+  line-height: 1.5;
+}
+section .box .box_bd .choose > li input::placeholder {
+  color: #ccc;
+}
+section .box .box_bd .choose > li > div {
+  display: inline-block;
+  padding: 15px;
+}
+section .box .box_bd .choose > li > div input {
+  padding: 4px 11px;
+  line-height: 1.5;
+}
+section .box .box_bd .choose li:nth-child(2) .wui-content.ng-scope {
+  display: inline-block;
+  width: 350px;
+  height: 32px;
+}
+section .box .box_bd .choose li:nth-child(3) > div input {
+  width: 88px;
+}
+section .box .box_bd .choose li:nth-child(4) span {
+  display: inline-block;
+  margin-right: 20px;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+section .box .box_bd .choose li:nth-child(4) .on {
+  background: #000;
+  color: #FFBA06;
+  border-radius: 30px;
+}
+section .box .box_bd .choose li:nth-child(4) span:hover {
+  background: #000;
+  color: #FFBA06;
+  border-radius: 30px;
+}
+section .box .box_bd .choose li:nth-child(5) h4 {
+  height: 70px;
+  line-height: 70px !important;
+}
+section .box .box_bd .choose li:nth-child(5) img {
+  width: 276px;
+  height: 70px;
+}
+section .box .box_bd .choose .gameList {
+  padding-left: 16px;
+}
+section .box .box_bd .choose .gameList li {
+  cursor: pointer;
+  width: 90px;
+  height: 110px;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 25px 5px 0;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+section .box .box_bd .choose .gameList li img {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+}
+section .box .box_bd .choose .gameList li span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
+  color: #8f8f8f;
+}
+section .box .box_bd .choose .gameList .on {
+  border: 1px solid #ffa800;
+  background: #f8f8f8;
+}
+section .box .box_bd .choose .gameList .on::before {
+  content: "√";
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  color: white;
+  z-index: 99;
+  font-size: 12px;
+}
+section .box .box_bd .choose .gameList .on::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 46px;
+  height: 32px;
+  background: #ffa800;
+  transform: translate(18px, -12px) rotate(45deg);
+}

@@ -1,19 +1,148 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=10.0, minimum-scale=0.25">
-<!--宽度等于设备宽度，比例为屏幕的比例，禁止用户缩放,用户缩放的比例最小为0.25，最大为10>-->
-<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-<!--ie以最新的版本渲染，激活Chrome Frame.网页优先采用谷歌渲染,前提必须安装了Chrome Frame-->
-<title>小杨</title>
-<link rel="stylesheet" href="../pulg/bootstrap/css/bootstrap.css"/>
-<script src="../js/jQuery.js"></script>
-<script src="../pulg/bootstrap/js/bootstrap.js"></script>
-</head>
-<body>
-<script>
 
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,user-scalable=no,maximum-scale=10,minimum-scale=0.25">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>小杨</title>
+    <link rel="stylesheet" href="../pulg/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/RapidMatch.css">
+    <script src="../js/jQuery.js"></script>
+    <script src="../pulg/bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/wui.min.css">
+    <script src="../js/jQuery.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/wui-date.js" charset="utf-8">
+    </script>
+</head>
+
+<body>
+    <header></header>
+    <div class="bg">
+
+    </div>
+    <section>
+        <div class="box">
+            <div class="box_hd">
+                <div class="list">
+                    <span class="game cur">游戏陪玩</span>
+                    <span class="recreation">娱乐陪玩</span>
+                </div>
+                <p>用户可根据服务需求付款下单，平台将订单需求全网推送至符合要求的大神，大神自行抢单，抢单成功后订单生效，订单超时将自动取消；<br />
+                    大神抢单前用户可取消订单，大神抢单成功后取消订单则需大神同意。
+                </p>
+            </div>
+            <div class="box_bd">
+                <ul class="choose">
+                    <li>
+                        <ul class="gameList">
+                            <li class="on">
+                                <img src="../images/cdplol.png">
+                                <span>LOL</span>
+                            </li>
+                            <li>
+                                <img src="../images/cdplol.png">
+                                <span>LOL</span>
+                            </li>
+                            <li>
+                                <img src="../images/cdplol.png">
+                                <span>LOL</span>
+                            </li>
+                            <li>
+                                <img src="../images/cdplol.png">
+                                <span>LOL</span>
+                            </li>
+                            <li>
+                                <img src="../images/cdplol.png">
+                                <span>LOL</span>
+                            </li>
+                            <li>
+                                <img src="../images/cdplol.png">
+                                <span>LOL</span>
+                            </li>
+                            <li>
+                                <img src="../images/cdplol.png">
+                                <span>LOL</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="choseDate">
+                            <h4>选择时间</h4>
+                        </label>
+                        <!-- <div><input type="text" placeholder="现在"></div> -->
+                        <div class="wui-content" ng-app="app">
+                            <div class="wui-area">
+                                <wui-date format="yyyy-mm-dd hh:mm" placeholder="现在" id="date3"
+                                    btns="{'ok':'确定','now':'此刻'}" ng-model="date3">
+                                </wui-date>
+                            </div>
+                            <script type="text/javascript">
+                                var app = angular.module('app', ["wui.date"]);
+                            </script>
+                        </div>
+
+                    </li>
+                    <li>
+                        <label for="choseCount">
+                            <h4>选择数量</h4>
+                        </label>
+                        <div>
+                            <input type="number" id="choseCount" value="1" min="1" max="99"> 小时
+                        </div>
+                        <span>
+                            单价：32Y币/小时
+                        </span>
+                    </li>
+                    <li>
+                        <label>
+                            <h4>选择数量</h4>
+                        </label>
+                        <div id="chooseSex">
+                            <span class="on">不限</span>
+                            <span>女神</span>
+                            <span>男神</span>
+                        </div>
+                    </li>
+                    <!-- 数据库里面调出优惠券信息 -->
+                    <li>
+                        <label>
+                            <h4>优惠券</h4>
+                        </label>
+                        <div class="goodJoin">
+                            <div class="joinBox">
+                                <div class="ls">
+                                    <span><b>9</b>折</span> <br />
+                                    <b>最高减10</b>
+                                </div>
+                                <div class="rs">
+                                    <span><b>新用户全品9折优惠</b></span>
+                                    <span>到期时间：2019-06-19 15:57:26</span>
+                                </div>
+                            </div>
+                            <img src="../images/yhq.png" alt="">
+                            <!-- 是否过期 -->
+                            <div class="">
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+
+                    </li>
+                    <li></li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        $(function () {
+
+        })
+    </script>
 </body>
+
 </html>
