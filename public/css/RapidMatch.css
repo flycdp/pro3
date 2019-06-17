@@ -13,11 +13,12 @@ i {
 .goodJoin .joinBox {
   position: absolute;
   box-sizing: border-box;
-  padding: 10px 0;
+  padding-top: 14px;
 }
 .goodJoin .joinBox > div {
   float: left;
   height: 50px;
+  cursor: pointer;
 }
 .goodJoin .joinBox > div > b {
   font-size: 12px;
@@ -55,18 +56,14 @@ header {
   background: url('../images/cdpBg.jpg');
   position: absolute;
   width: 100%;
-  height: 1050px;
   z-index: -1;
+  background-size: auto;
 }
 section {
-  height: 970px;
   width: 1200px;
-  margin: 0 auto;
-  position: relative;
+  margin: 40px auto 40px;
   z-index: 2;
   background: white;
-  top: 40px;
-  left: 0;
 }
 section .box {
   background-image: url('../images/cdpHx.png');
@@ -104,8 +101,10 @@ section .box .box_hd p {
 section .box .box_bd .choose > li {
   /* overflow: hidden; */
   display: table;
-  padding: 20px 0 ;
+  padding: 20px 0;
   border-bottom: 1px solid rgba(248, 248, 248);
+  width: 100%;
+  box-sizing: border-box;
 }
 section .box .box_bd .choose > li h4 {
   width: 120px;
@@ -135,15 +134,15 @@ section .box .box_bd .choose > li > div input {
   padding: 4px 11px;
   line-height: 1.5;
 }
-section .box .box_bd .choose li:nth-child(2) .wui-content.ng-scope {
+section .box .box_bd .choose > li:nth-child(2) .wui-content.ng-scope {
   display: inline-block;
   width: 350px;
   height: 32px;
 }
-section .box .box_bd .choose li:nth-child(3) > div input {
+section .box .box_bd .choose > li:nth-child(3) > div input {
   width: 88px;
 }
-section .box .box_bd .choose li:nth-child(4) span {
+section .box .box_bd .choose > li:nth-child(4) span {
   display: inline-block;
   margin-right: 20px;
   cursor: pointer;
@@ -152,28 +151,102 @@ section .box .box_bd .choose li:nth-child(4) span {
   line-height: 30px;
   text-align: center;
 }
-section .box .box_bd .choose li:nth-child(4) .on {
+section .box .box_bd .choose > li:nth-child(4) .on {
   background: #000;
   color: #FFBA06;
   border-radius: 30px;
 }
-section .box .box_bd .choose li:nth-child(4) span:hover {
+section .box .box_bd .choose > li:nth-child(4) span:hover {
   background: #000;
   color: #FFBA06;
   border-radius: 30px;
 }
-section .box .box_bd .choose li:nth-child(5) h4 {
+section .box .box_bd .choose > li:nth-child(5) h4 {
   height: 70px;
   line-height: 70px !important;
 }
-section .box .box_bd .choose li:nth-child(5) img {
+section .box .box_bd .choose > li:nth-child(5) img {
   width: 276px;
   height: 70px;
 }
-section .box .box_bd .choose .gameList {
+section .box .box_bd .choose > li:nth-child(5) .lookAllTicket {
+  float: right;
+  cursor: pointer;
+  line-height: 86px;
+  color: #ffa800;
+}
+section .box .box_bd .choose > li:nth-child(6).on {
+  height: 460px;
+}
+section .box .box_bd .choose > li:nth-child(6) {
+  position: relative;
+  /* 测试 */
+  overflow: hidden;
+}
+section .box .box_bd .choose > li:nth-child(6) > div:nth-child(2) {
+  position: relative;
+  top: -7px;
+  width: 80%;
+}
+section .box .box_bd .choose > li:nth-child(6) textarea::placeholder {
+  color: #ccc;
+  text-indent: 1rem;
+}
+section .box .box_bd .choose > li:nth-child(6) .spread {
+  position: absolute;
+  right: 0;
+  bottom: 32px;
+}
+section .box .box_bd .choose > li:nth-child(6) .spread span {
+  color: #8f8f8f;
+  cursor: pointer;
+}
+section .box .box_bd .choose > li:nth-child(6) .spread span i:before {
+  font-size: 12px;
+  font-weight: 200;
+}
+section .box .box_bd .choose > li:nth-child(6) .spread span:hover {
+  color: #ffa800;
+}
+section .box .box_bd .choose > li:nth-child(6) .spread span.on {
+  color: #ffa800;
+}
+section .box .box_bd .choose > li:nth-child(6) .spread span.on i {
+  transform: rotate(-90deg);
+}
+section .box .box_bd .choose > li:nth-child(7) {
+  border: none;
+  color: #FF5760;
+}
+section .box .box_bd .choose > li:nth-child(7) > div {
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+section .box .box_bd .choose > li:nth-child(7) > div div {
+  text-align: center;
+}
+section .box .box_bd .choose > li:nth-child(7) > div span {
+  text-align: center;
+  color: #8f8f8f;
+}
+section .box .box_bd .choose > li:nth-child(7) > div i {
+  display: block;
+  border-radius: 45px;
+  line-height: 45px;
+  height: 45px;
+  background-color: #f22833;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 20px;
+}
+section .box .box_bd .choose > li:nth-child(7) > div b {
+  font-size: 24px;
+}
+section .box .box_bd .gameList {
   padding-left: 16px;
 }
-section .box .box_bd .choose .gameList li {
+section .box .box_bd .gameList li {
   cursor: pointer;
   width: 90px;
   height: 110px;
@@ -186,38 +259,147 @@ section .box .box_bd .choose .gameList li {
   overflow: hidden;
   border-radius: 5px;
 }
-section .box .box_bd .choose .gameList li img {
+section .box .box_bd .gameList li img {
   width: 40px;
   height: 40px;
   margin: 0 auto;
 }
-section .box .box_bd .choose .gameList li span {
+section .box .box_bd .gameList li span {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   bottom: 10px;
   color: #8f8f8f;
 }
-section .box .box_bd .choose .gameList .on {
+section .box .box_bd .gameList .on {
   border: 1px solid #ffa800;
   background: #f8f8f8;
 }
-section .box .box_bd .choose .gameList .on::before {
+section .box .box_bd .gameList .on::before {
   content: "√";
   position: absolute;
-  right: 3px;
-  top: 3px;
+  right: 2px;
+  top: 0px;
   color: white;
   z-index: 99;
   font-size: 12px;
+  transform: scale(0.8);
 }
-section .box .box_bd .choose .gameList .on::after {
+section .box .box_bd .gameList .on::after {
   content: "";
   position: absolute;
   right: 0;
   top: 0;
-  width: 46px;
+  width: 35px;
   height: 32px;
   background: #ffa800;
-  transform: translate(18px, -12px) rotate(45deg);
+  transform: translate(18px, -16px) rotate(45deg);
+}
+.modal-body ul {
+  overflow: hidden;
+}
+.modal-body ul li {
+  float: left;
+  margin-left: 10px;
+  margin-top: 40px;
+}
+[id^=dropdownMenu] {
+  width: 200px;
+  height: 32px;
+  cursor: pointer;
+  border: 1px solid #d9d9dd;
+  border-radius: 5px;
+  float: left;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.65);
+  text-indent: 1rem;
+}
+[id^=dropdownMenu] > span {
+  float: right;
+  line-height: 32px;
+  position: relative;
+  top: 14px;
+  right: 5px;
+}
+.dropdown-menu > li {
+  position: relative;
+  line-height: 26px;
+}
+.dropdown-menu > li > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #feff01;
+  transform: translateX(-20px);
+  display: none;
+  opacity: 0.1;
+}
+.dropdown-menu > li > a.on::before {
+  display: block;
+}
+.dropdown-menu > li > a:hover::before {
+  display: block;
+}
+.dropdown:nth-child(2) {
+  top: 88px;
+}
+.dropdown:nth-child(3) {
+  top: 160px;
+}
+.dropdown:nth-child(4) {
+  top: 224px;
+}
+.dropdown:nth-child(4) h5 {
+  float: left;
+  margin-right: 20px;
+}
+.dropdown:nth-child(4) [id^=dropdownMenu] {
+  width: 260px;
+}
+.dropdown:nth-child(4) .dropdown-menu {
+  left: 48px;
+  top: 92%;
+}
+.dropdown:nth-child(5) {
+  top: 300px;
+}
+.dropdown:nth-child(5) h5 {
+  float: left;
+  margin-right: 20px;
+}
+.dropdown:nth-child(5) [id^=dropdownMenu] {
+  width: 300px;
+  height: 400px;
+}
+.dropdown:nth-child(5) .dropdown-menu {
+  left: 48px;
+  top: 92%;
+}
+.dropdown-menu {
+  top: 100%;
+  max-height: 150px;
+  overflow: auto;
+}
+.dropdown:hover [id^=dropdownMenu] {
+  border: 1px solid #FFBA06;
+}
+.dropdown-menu a.on {
+  font-weight: 600;
+}
+@media screen and (max-width: 991px) and (min-width: 631px) {
+  .modal-body ul li {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .modal-body ul li {
+    margin-left: 4px;
+  }
+}
+.today {
+  color: #FFBA06 !important;
+}
+.today.on {
+  color: whitesmoke !important;
 }
