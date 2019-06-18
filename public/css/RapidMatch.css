@@ -179,9 +179,16 @@ section .box .box_bd .choose > li:nth-child(6).on {
   height: 460px;
 }
 section .box .box_bd .choose > li:nth-child(6) {
+  transition: all 0.3s;
   position: relative;
   /* 测试 */
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+section .box .box_bd .choose > li:nth-child(6) .dropdown {
+  display: none;
+}
+section .box .box_bd .choose > li:nth-child(6) .dropdown:nth-child(1) {
+  display: block;
 }
 section .box .box_bd .choose > li:nth-child(6) > div:nth-child(2) {
   position: relative;
@@ -402,4 +409,31 @@ section .box .box_bd .gameList .on::after {
 }
 .today.on {
   color: whitesmoke !important;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/yhb/iconfont/iconfont.eot');
+  src: url('../font/yhb/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/yhb/iconfont/iconfont.woff2') format('woff2'),
+      url('../font/yhb/iconfont/iconfont.woff') format('woff'),
+      url('../font/yhb/iconfont/iconfont.ttf') format('truetype'),
+      url('../font/yhb/iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wui-date-editor i.icon1{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  transform: translate(170px,-4px);
+}
+.time-icon{
+  transform: translateY(-2px);
 }
