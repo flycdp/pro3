@@ -124,7 +124,7 @@ a {
   width: 1200px;
   background: #ffffff;
   margin: 0 auto;
-  height: 700px;
+  height: 1000px;
 }
 .div8 {
   float: left;
@@ -145,6 +145,9 @@ a {
   line-height: 52px;
   position: relative;
   z-index: 99;
+}
+.div7 li a span {
+  color: black;
 }
 .div7 p {
   width: 190px;

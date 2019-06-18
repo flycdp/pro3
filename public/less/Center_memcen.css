@@ -124,7 +124,7 @@ a {
   width: 1200px;
   background: #ffffff;
   margin: 0 auto;
-  height: 700px;
+  height: 1400px;
 }
 .div8 {
   float: left;
@@ -145,6 +145,9 @@ a {
   line-height: 52px;
   position: relative;
   z-index: 99;
+}
+.div7 li a span {
+  color: black;
 }
 .div7 p {
   width: 190px;
@@ -330,7 +333,15 @@ a {
 .div11 .mem_body ul li div {
   float: left;
 }
-.div11 .mem_body ul li .mem_vip {
+.div11 .mem_body ul li .vipleve {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+}
+.div11 .mem_body ul li .mem_vip1 {
   width: 70px;
   height: 25px;
   margin-top: 25px;
@@ -338,6 +349,87 @@ a {
   float: left;
   background-image: url("../images/vip_sript..png");
   background-position: -70px 0px;
+}
+.div11 .mem_body ul li .mem_vip2 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -140px 0px;
+}
+.div11 .mem_body ul li .mem_vip3 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -210px 0px;
+}
+.div11 .mem_body ul li .mem_vip4 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -280px 0px;
+}
+.div11 .mem_body ul li .mem_vip5 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -350px 0px;
+}
+.div11 .mem_body ul li .mem_vip6 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -420px 0px;
+}
+.div11 .mem_body ul li .mem_vip7 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -490px 0px;
+}
+.div11 .mem_body ul li .mem_vip8 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -560px 0px;
+}
+.div11 .mem_body ul li .mem_vip9 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -630px 0px;
+}
+.div11 .mem_body ul li .mem_vip10 {
+  width: 70px;
+  height: 25px;
+  margin-top: 25px;
+  margin-right: 25px;
+  float: left;
+  background-image: url("../images/vip_sript..png");
+  background-position: -700px 0px;
 }
 .div11 .mem_body ul li .mem_fee {
   width: 560px;

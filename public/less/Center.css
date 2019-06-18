@@ -124,7 +124,7 @@ a {
   width: 1200px;
   background: #ffffff;
   margin: 0 auto;
-  height: 700px;
+  height: 800px;
 }
 .div8 {
   float: left;
@@ -188,10 +188,7 @@ a {
   width: 950px;
   padding: 20px 30px;
 }
-.div9 .div10 li a.active1 {
-  color: #ffa800;
-}
-.div10 li {
+.div9 li {
   width: 72px;
   height: 40px;
   padding: 6px 10px;
@@ -200,13 +197,13 @@ a {
   line-height: 40px;
   float: left;
 }
-.div10 li a:link {
+.div9 li a:link {
   color: black;
 }
-.div10 li a.active1 {
+.div9 li a.active1 {
   color: #ffa800;
 }
-.div10 li a.active1 a:link {
+.div9 li a.active1 a:link {
   color: #ffa800;
 }
 .div10 li.active1 {
@@ -219,60 +216,38 @@ a {
   border-bottom: 1px solid #e0e0e0;
   height: 52px;
 }
-.div11 {
-  width: 950px;
-  padding: 30px 0 0 0 ;
-  float: left;
-}
-.div11 .goodJoin {
-  float: left;
-  width: 280px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-.div11 .goodJoin .joinBox {
-  position: absolute;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-.div11 .goodJoin .joinBox > div {
-  float: left;
-  height: 50px;
-}
-.div11 .goodJoin .joinBox > div .p2 {
-  width: 65px;
-  height: 20px;
-  font-size: 12px;
-  padding: 10px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.div11 .goodJoin .joinBox .ls {
-  width: 70px;
-  line-height: 20px;
-  text-align: center;
-}
-.div11 .goodJoin .joinBox .rs {
-  width: 200px;
-  margin-left: 20px;
-}
-.div11 .goodJoin .joinBox .rs .p3 {
-  width: 180px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #bfbfbf;
-}
 .div11 > div {
   display: none;
 }
 .div11 > div.active {
   display: block;
 }
-.div15 {
+.div11 {
   width: 950px;
-  overflow: hidden;
+  padding: 30px 0 0 0 ;
+  float: left;
+}
+.div11 li {
+  width: 950px;
+  border: 1px solid #ffa800;
+  padding: 0;
+  margin-bottom: 42px;
+  margin-right: 0px;
+  height: 192px;
+}
+.div12 {
+  padding: 0 30px;
+  width: 888px;
+  background: #fffaef;
+  height: 42px;
+  color: #999999;
+  margin-left: 1px;
+}
+.s6 {
+  float: left;
+}
+.s7 {
+  float: right;
 }
 .div13 {
   width: 888px;
@@ -290,6 +265,52 @@ a {
   height: 80px;
   border-radius: 50px;
   vertical-align: top;
+}
+.p3 {
+  text-align: center;
+  line-height: 20px;
+  background: red;
+  color: white;
+}
+.div-left dl {
+  padding: 0 0 0 18px;
+  width: 280px;
+  height: 90px;
+  float: left;
+  text-align: left;
+}
+.div-left dt {
+  height: 28px;
+}
+.div-left dd {
+  height: 28px;
+}
+.s8 {
+  color: #999999;
+}
+.div-left {
+  float: left;
+}
+.div-right {
+  float: right;
+  padding-right: 98px;
+  width: 300px;
+}
+.div-right dl {
+  width: 300px;
+  text-align: right;
+}
+.div-right dt {
+  height: 28px;
+}
+.div-right dd {
+  height: 28px;
+}
+.s9 {
+  color: red;
+}
+.div11 li:hover {
+  box-shadow: 2px 2px 5px #888888;
 }
 .div9-foot {
   width: 950px;
@@ -319,4 +340,11 @@ a {
 .div9-foot li:hover {
   border: 1px solid #FFA800;
 }
-/*# sourceMappingURL=Center_gj.css.map */
+.div10 ul {
+  border-bottom: 1px solid #cccccc;
+}
+.div10 {
+  border-bottom: 1px solid #e0e0e0;
+  height: 52px;
+}
+/*# sourceMappingURL=Center.css.map */
