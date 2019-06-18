@@ -112,23 +112,23 @@ a {
   padding-left: 10px;
   border-left: 3px #ffa800 solid;
 }
-.content {
+.allContent {
   position: relative;
   width: 844px;
 }
-.content .news {
+.allContent .news {
   padding: 20px 0;
   width: 784px;
   margin: 0 auto;
   border-bottom: #f6f6f6 2px solid;
   display: flex;
 }
-.content .news a {
+.allContent .news a {
   display: flex;
   flex-direction: row;
   cursor: pointer;
 }
-.content .news a .newsImg {
+.allContent .news a .newsImg {
   border-radius: 8px;
   position: relative;
   width: 190px;
@@ -136,7 +136,7 @@ a {
   overflow: hidden;
   margin-right: 20px;
 }
-.content .news a .newsImg img {
+.allContent .news a .newsImg img {
   position: absolute;
   left: 50%;
   top: 50%;
