@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=10.0, minimum-scale=0.25">
+    <!--宽度等于设备宽度，比例为屏幕的比例，禁止用户缩放,用户缩放的比例最小为0.25，最大为10>-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <!--ie以最新的版本渲染，激活Chrome Frame.网页优先采用谷歌渲染,前提必须安装了Chrome Frame-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="../pulg/bootstrap/css/bootstrap.css" />
+    <script src="../js/jQuery.js"></script>
+    <script src="../pulg/bootstrap/js/bootstrap.js"></script>
+    <script src="../js/messge.js"></script>
+    <link rel="stylesheet" href="../css/messge.css">
+    <title>小杨</title>
+</head>
+
+<body>
+    <header style="height: 60px;margin-bottom: 40px;background: pink"></header>
+    <div id="root">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="tabMsg">
+                    <ul>
+                        <li class="on">消息中心</li>
+                        <li>我的关注</li>
+                        <li>我的粉丝</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <div class="ls">
+                        <ul>
+                            <li class="on">
+                                <!-- 存放图片 -->
+                                <div class="otherImg">
+                                    <img src="http://photocdn.sohu.com/20120216/Img334903378.jpg" class="img-circle">
+
+                                </div>
+                                <div class="msg">
+                                    <div class="sf">
+                                        <span class="name">你是晨的皮皮虾子</span>
+                                        <time>昨天12:02</time>
+                                    </div>
+                                    <div class="text">
+                                        萨瓦迪卡，欢迎大家，欢迎大家来到美丽的泰国
+                                    </div>
+                                </div>
+                                <!-- 最近消息显示 -->
+                                <div class="mesCount">1</div>
+                            </li>
+                            <li>
+                                <div class="otherImg">
+                                    <img src="http://photocdn.sohu.com/20120216/Img334903378.jpg" class="img-circle">
+
+                                </div>
+                                <div class="msg">
+                                    <div class="sf">
+                                        <span class="name">你是晨的皮皮虾子</span>
+                                        <time>昨天12:02</time>
+                                    </div>
+                                    <div class="text">
+                                        萨瓦迪卡，欢迎大家，欢迎大家来到美丽的泰国
+                                    </div>
+                                </div>
+                                <!-- 最近消息显示 -->
+                                <div class="mesCount">5</div>
+                            </li>
+                            <li>
+                                <div class="otherImg">
+                                    <img src="http://photocdn.sohu.com/20120216/Img334903378.jpg" class="img-circle">
+
+                                </div>
+                                <div class="msg">
+                                    <div class="sf">
+                                        <span class="name">你是晨的皮皮虾子</span>
+                                        <time>昨天12:02</time>
+                                    </div>
+                                    <div class="text">
+                                        萨瓦迪卡，欢迎大家，欢迎大家来到美丽的泰国
+                                    </div>
+                                </div>
+                                <!-- 最近消息显示 -->
+                                <div class="mesCount">3</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="rs">
+                        <div class="allMsg">
+                            <!-- 进程模板，下单 -->
+                            <div class="course" style="height: 60px; background: #fff5cd; padding-left: 20px">
+                                <div style="float: left">
+                                    <div>
+                                        <img v-bind:src="course.src"
+                                            style="margin-right: 10px;transform: translateY(8px)" width="50" height="50">
+
+                                    </div>
+
+                                </div>
+                                <div style="float: left">
+                                    <h5 style="margin-bottom: 0; font-size:22px "><b>{{course.name}}</b></h5>
+                                    <span>{{course.price}}</span>
+                                </div>
+                                <div style="float: right;padding-right: 20px ">
+                                    <button
+                                        style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)">下单</button>
+                                </div>
+                            </div>
+                            <!-- 进程模板, 已下单,接单者申请开始， -->
+                            <div class="course" style="height: 60px; background: #fff5cd; padding-left: 20px">
+                                <div style="float: left">
+                                    <div>
+                                        <img :src="course.src"style="margin-right: 10px;transform: translateY(8px)" width="50" height="50">
+                                    </div>
+
+                                </div>
+                                <div style="float: left">
+                                    <h5 style="margin-bottom: 0; font-size:22px "><b>{{course2.name}}</b></h5>
+                                    <span>{{course2.price}}</span>
+                                </div>
+                                <div style="float: right;padding-right: 20px ">
+                                    <button
+                                        style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)">{{course2.no}}</button>
+                                    <button v-show="course2.yes"
+                                        style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)">{{course2.yes}}</button>
+                                </div>
+                                <!-- 陪玩模板 -->
+                                <div style="float: left">
+                                    <!-- 已经隐藏 -->
+                                    <h5
+                                        style="display: none; color: #FF5760;margin-bottom: 0; font-size:14px ;margin-left:20px; line-height: 40px">
+                                        <b>已接单，申请开始?</b></h5>
+                                        <!-- 用户模板 -->
+                                        <h5
+                                        style="color: #FF5760;margin-bottom: 0; font-size:14px ;margin-left:20px; line-height: 40px">
+                                        <b>{{course2.info}}</b></h5>
+                                </div>
+
+                            </div>
+                            <!-- 用户模板 -->
+
+                            <div class="myMsg">
+                                <div style="overflow: hidden">
+                                    <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
+                                            alt="" class="img-circle"></div>
+                                </div>
+                                <div class="getMsg">
+                                    123
+                                </div>
+                            </div>
+                            <div class="otherMsh">
+                                <div style="overflow: hidden">
+                                    <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
+                                            alt="" class="img-circle"></div>
+                                </div>
+                                <div class="getMsg">
+                                    123
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="sendMsg">
+                            <div class="sendIco">
+                                <ul>
+                                    <li class="iconfont">&#xe629;</li>
+                                    <li class="iconfont">&#xe6ee;</li>
+                                    <li class="iconfont">&#xe64d;</li>
+                                    <li class="iconfont">&#xe61b;</li>
+                                </ul>
+                            </div>
+                            <div class="fillText">
+                                <textarea name="" id="" cols="110" rows="6" placeholder="对Ta说点什么吧">
+
+                                </textarea>
+                                <button id="sendTo">发 送</button>
+                                <span id="hint">请输入消息</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

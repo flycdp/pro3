@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: '微软雅黑';
+}
+body{
+  background: #f6f6f6;
+}
+#box{
+  height: 100%;
+  position: relative;
+}
+#mainBox{
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  margin-left: -600px;
+  width: 1200px;
+}
+#leftBox {
+  height: 100%;
+  width: 844px;
+  float: left;
+  background: white;
+  margin-bottom: 20px;
+  .newsMain{
+    font-size: 22px;
+    color: rgb(50, 50, 50);
+    border-bottom: #f6f6f6 2px solid;
+    padding-left: 30px;
+    a{
+      color: rgb(50, 50, 50);
+      line-height: 80px;
+      &:hover{
+        color: #ffbf29;
+      }
+    }
+    em{
+      margin: 0 10px;
+      font-style: normal;
+      font-family: monospace;
+      letter-spacing: -6px;
+    }
+  }
+  .newsCon{
+    position: relative;
+    padding: 30px 30px 0 30px;
+    .newsInfo{
+      padding: 10px;
+      .tag {
+        display: flex;
+        flex-direction: row;
+        li {
+          border-radius: 8px;
+          padding: 2px 10px;
+          font-size: 12px;
+          color: white;
+          background: #ff8b3e;
+          margin-right: 10px;
+        }
+      }
+      .firInfo{
+        font-size: 12px;
+        line-height: 20px;
+      }
+      .secInfo{
+        line-height: 20px;
+        margin-left: 20px;
+        font-size: 12px;
+        color: #ababab;
+      }
+    }
+    .newsText{
+      border-bottom: #f6f6f6 2px solid;
+      p{
+        padding: 0 10px 0 10px;
+        span{
+          line-height: 24px;
+        }
+      }
+    }
+    .prev{
+      float: left;
+      margin: 15px 0 15px 20px;
+      p{
+        text-align: left;
+      }
+    }
+    .next{
+      float: right;
+      margin: 15px 20px 15px 0;
+      p{
+        text-align: right;
+      }
+    }
+    a{
+      color: #0f0f0f;
+      display: flex;
+      flex-direction: row;
+      &:hover{
+        color: #ffbf29;
+      }
+      i{
+        font-size: 30px;
+        margin: 0 10px;
+        font-style: normal;
+        font-family: monospace;
+        letter-spacing: -6px;
+        line-height: 48px;
+      }
+      div{
+        p{
+          line-height: 24px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.msgBox{
+  border-top: #f6f6f6 24px solid;
+  .msg{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    border-top: #f6f6f6 2px solid;
+    img{
+      border-radius: 50%;
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    div{
+      textarea{
+        font-size: 14px;
+        border-style: solid;
+        resize: none;
+        width: 580px;
+        height: 100px;
+        border-radius: 0px;
+        border-color: #ffbf29;
+        padding: 5px 0 0 10px;
+      }
+    }
+    .msgBtn{
+      width: 109px;
+      height:109px;
+      background: #ffbf29;
+      border: 1px #ffbf29 solid;
+      font-size: 16px;
+      color: white;
+    }
+  }
+}
+#rightBox{
+  height: 100%;
+  width: 332px;
+  background: white;
+  float: left;
+  margin-left: 24px;
+  #playerBox{
+    h2{
+      line-height: 24px;
+    }
+    div{
+      position: relative;
+      display: flex;
+      padding: 12px 0;
+      border-top: #f6f6f6 2px solid;
+      a{
+        margin: 0 auto;
+        position: relative;
+        border-radius: 10px;
+        width: 300px;
+        height: 220px;
+        overflow: hidden;
+        img{
+          position: absolute;
+          margin: auto;
+          transition: all .2s ease-in;
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
+      }
+      p{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-indent: 8px;
+        line-height: 30px;
+        color: white;
+        background: rgba(0,0,0,0.6);
+      }
+    }
+  }
+}
+#newsBox{
+  margin-top: 24px;
+  background: white;
+  width: 844px;
+  height: 100%;
+  #bannerBox{
+    #banner{
+      border-bottom: #f6f6f6 2px solid;
+      padding-left: 30px;
+      div{
+        display: inline-block;
+        padding: 20px 0;
+        font-size: 22px;
+        margin-right: 70px;
+        a{
+          &:hover{
+            color: #ffbf29;
+          }
+        }
+      }
+    }
+  }
+}
+.title{
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  color: black;
+  margin: 20px 0 20px 15px;
+  padding-left: 10px;
+  border-left: 3px #ffa800 solid;
+}
+.hotNews{
+  border-top: 20px #f6f6f6 solid;
+  margin-top: 20px;
+}
+.newsList{
+  padding: 10px 0;
+  border-top: #f6f6f6 2px solid;
+  a{
+    display: flex;
+    flex-direction: row;
+    .hotNewsImg{
+      overflow: hidden;
+      position: relative;
+      width: 70px;
+      height: 70px;
+      margin-left: 15px;
+      margin-right: 20px;
+      div{
+        width: 70px;
+        height: 70px;
+        position: relative;
+        img{
+          position: absolute;
+          height: 100%;
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+    }
+    .hotNewsCon{
+      h4{
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 180px;
+        color: rgb(51, 51, 51);
+      }
+      div{
+        p{
+          max-height: 48px;
+          width: 220px;
+          font-size: 12px;
+          color: rgb(154, 154, 154);
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+.clearfix{
+  clear: both;
+}
+.pageBox{
+  ul{
+    padding: 15px 0 15px 300px;
+    li{
+      a{
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        color: #0f0f0f;
+        font-size: 14px;
+        border: 1px #0f0f0f solid;
+        line-height: 32px;
+        margin-right: 10px;
+        &:hover{
+          color: #ffa800;
+          border: 1px #ffa800 solid;
+        }
+      }
+      .page{
+        width: 50px;
+        height: 32px;
+      }
+      .noPage{
+        color: #ababab;
+        border: 1px #ababab solid;
+      }
+      .pageActive{
+        color: #ffa800;
+        border: 1px #ffa800 solid;
+      }
+    }
+  }
+}
