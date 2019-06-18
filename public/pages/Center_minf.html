@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../less/Center_Minf.css">
+    <script src="../pulg/bootstrap/js/jquery-3.4.0.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="div1">
+        <a href=""><img src="../images/logo.png" alt="" class="img1"></a>
+        <span class="s1"><b>YAY</b></span>
+        <a href="" class="a2"><img src="../images/download_app.png" alt="" class="img2"></a>
+    </div>
+    <div class="div2">
+        <ul>
+            <li><a href=""><span>首页</span><span class="glyphicon glyphicon-chevron-down s3"></span></a></li>
+            <li><a href=""><span>全部陪玩</span></a></li>
+            <li><a href=""><span>聊天室</span></a></li>
+            <li><a href=""><span>折扣专区</span></a></li>
+            <li><a href=""><span>代练</span></a></li>
+        </ul>
+        <div class="div3">
+            <input type="text" placeholder="请输入大神昵称" class="inp1">
+            <div class="div4"><button class="btn1"><span class="glyphicon glyphicon-search s4"></span></button></div>
+        </div>
+        <div class="div5">
+            <ul>
+                <li><a href=""><span>充值</span></a></li>
+                <li><a href=""><span>订单</span></a></li>
+                <li><a href=""><span>消息</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="div6">
+        <a href="">
+            <img src="../images/user.jpg" alt="">
+            <span>XXXXXX</span>
+        </a>
+    </div>
+</div>
+    <div id="contentbox">
+    <div id="content">
+        <div class="div8">
+            <div class="div7">
+                <ul>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的订单</span></a></li>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">会员中心</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="div9">
+            <div class="div10">
+                <ul>
+                    <li class="active1"><a href="javascript:;" class="active1"><span>我的资料</span></a></li>
+                </ul>
+            </div>
+            <div class="div11">
+                <div class="minf_header">
+                    <div class="user_img"><img src="../images/user.jpg" alt=""></div>
+                    <div class="mod_img">
+                        <button>修改头像</button>
+                        <p>请选择jpg、png、gif格式，小于2M的图片（使用高质量图片，可生成高清头像）</p>
+                    </div>
+                </div>
+                <div class="minf_body">
+                    <div><span>昵称：</span><p>雪都知道风是怎么吹的</p></div>
+                    <div><span>男：</span><p>男</p></div>
+                    <div><span>所在地：</span><p>全国</p></div>
+                    <div><span>年龄：</span><p>21</p></div>
+                    <div><span>兴趣爱好：</span><p></p></div>
+                    <div><span>签名：</span><p></p></div>
+                    <div><span>背景墙：</span><p></p></div>
+                    <span class="minf_edit">编辑</span>
+                </div>
+                <form action="">
+                    <div class="form_box">
+                        <div class="form_lf"><span>*</span>昵称：</div>
+                        <div class="form_rg"><input type="text" name="" placeholder="雪都知道风是怎么吹的"></div>
+                    </div>
+                    <div class="form_box">
+                        <div class="form_lf"><span>*</span>性别：</div>
+                        <div class="form_rg sexbox">
+                            <div class="sexkong">
+                                <div class="sexbai"></div>
+                                <div class="sexcon">
+                                    <p class="sexman"><input type="radio"  class="sex">&nbsp男</p>
+                                    <p class="sexwom"><input type="radio"  class="sex">&nbsp女</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <div class="form_lf"><span>*</span>出生日期：</div>
+                        <div class="form_rg"><input type="date" name="" placeholder="雪都知道风是怎么吹的"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $('.div10 li').click(function () {
+        $('.div10 li').removeClass('active1');
+        $('.div10 li a').removeClass('active1');
+        $(this).addClass('active1');
+        $('.div10 li a').eq($(this).index()).addClass('active1');
+    })
+</script>
+</html>

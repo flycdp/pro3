@@ -1,0 +1,255 @@
+.path {
+  color: red;
+  font-size: 16px; }
+
+li {
+  list-style: none; }
+
+.all {
+  background-image: url("../images/bg.jpg"); }
+
+.order_message {
+  width: 100%;
+  margin: 0 auto; }
+
+.myheader {
+  background-color: #fff;
+  border-radius: 60px;
+  margin: 20px auto;
+  position: relative; }
+  .myheader .user_play_name {
+    font-size: 20px;
+    text-align: left; }
+  .myheader .user_play_information {
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10%; }
+  .myheader .weixin {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10%; }
+  .myheader .myhead {
+    width: 95%;
+    text-align: center; }
+    .myheader .myhead > div {
+      position: aboulute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .myheader .myhead .share {
+      margin: 10px 0; }
+  .myheader img {
+    width: 65%;
+    border-radius: 50%; }
+  .myheader .foucsme {
+    text-align: center; }
+    .myheader .foucsme .foucsbutton {
+      font-size: 18px;
+      border: 1px solid orange;
+      border-radius: 15px;
+      overflow: hidden;
+      height: 40px; }
+      .myheader .foucsme .foucsbutton span {
+        margin-left: 20px; }
+      .myheader .foucsme .foucsbutton .foucs {
+        background-color: orange;
+        color: wheat;
+        height: 40px;
+        line-height: 40px; }
+      .myheader .foucsme .foucsbutton .fanscount {
+        height: 40px;
+        line-height: 40px; }
+
+.content {
+  background-color: #fff; }
+  .content .left {
+    margin-top: 3%; }
+    .content .left .headerimgbig img {
+      width: 100%; }
+    .content .left .choice {
+      text-align: center;
+      background-color: #fff8d5;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+      .content .left .choice span img {
+        width: 21%;
+        margin: 2px; }
+      .content .left .choice span:nth-child(2) img {
+        border: 2px solid orange; }
+    .content .left .sendgift {
+      margin-top: 20px;
+      border: 1px solid #ececec;
+      border-radius: 5px; }
+      .content .left .sendgift .giftheader > div {
+        text-align: center;
+        color: #7e7e7e;
+        background-color: #ebebeb;
+        height: 42px;
+        line-height: 42px; }
+      .content .left .sendgift .gift_detail {
+        text-align: center; }
+        .content .left .sendgift .gift_detail .giftmessage {
+          width: 22%;
+          border: 1px red solid;
+          border-radius: 8px;
+          padding: 0 6px 0 6px;
+          margin-left: 5px;
+          margin-right: 5px;
+          margin-top: 10px;
+          text-align: center; }
+          .content .left .sendgift .gift_detail .giftmessage img {
+            width: 70%; }
+          .content .left .sendgift .gift_detail .giftmessage p {
+            text-align: center;
+            line-height: 8px;
+            color: #7e7e7e; }
+    .content .left .pay {
+      background-color: #ebebeb;
+      padding-top: 10px;
+      margin-top: 10px;
+      padding-bottom: 10px; }
+      .content .left .pay .price {
+        color: #7e7e7e;
+        font-size: 16px; }
+    .content .left .rank {
+      height: 1000px;
+      border: 1px solid #ececec;
+      margin-top: 20px;
+      border-radius: 5px; }
+      .content .left .rank .rankheader {
+        margin-top: 20px; }
+        .content .left .rank .rankheader div {
+          text-align: center;
+          font-size: 22px;
+          height: 50px;
+          line-height: 50px;
+          color: orange; }
+      .content .left .rank .ranklist {
+        margin-top: 20px; }
+        .content .left .rank .ranklist li {
+          margin-top: 20px; }
+        .content .left .rank .ranklist div {
+          display: inline-block;
+          margin-left: 20px;
+          font-size: 20px;
+          vertical-align: middle;
+          color: orangered; }
+          .content .left .rank .ranklist div :nth-child(2) {
+            font-size: 14px; }
+        .content .left .rank .ranklist span {
+          font-size: 26px;
+          font-weight: bolder; }
+        .content .left .rank .ranklist img {
+          width: 30%;
+          border-radius: 50%; }
+  .content .right {
+    margin-top: 3%;
+    border: 1px solid #ececec;
+    height: 1000px; }
+    .content .right .headerplaymessage div {
+      font-size: 18px;
+      text-align: center;
+      background-color: #f6f6f6;
+      border: 2px solid #f6f6f6;
+      padding: 12px; }
+    .content .right .headerplaymessage div:hover {
+      background-color: #fff;
+      color: orange;
+      border-top: 2px solid orange; }
+    .content .right .playmessage {
+      margin-top: 40px; }
+      .content .right .playmessage .videoimg img {
+        width: 100%;
+        border-radius: 8px; }
+      .content .right .playmessage .getorder {
+        text-align: right; }
+        .content .right .playmessage .getorder .helptext {
+          color: red; }
+        .content .right .playmessage .getorder .Ymoney {
+          color: orange;
+          margin-top: 510x;
+          font-size: 40px; }
+          .content .right .playmessage .getorder .Ymoney span {
+            font-size: 14px;
+            color: gray; }
+        .content .right .playmessage .getorder > div :nth-child(1) {
+          margin-left: 25%; }
+        .content .right .playmessage .getorder > div div {
+          text-align: center;
+          border: solid 1px red;
+          color: red;
+          border-radius: 5px;
+          height: 40px;
+          font-size: 16px;
+          line-height: 40px;
+          margin-left: 10px; }
+    .content .right .promise {
+      margin-top: 20px;
+      color: #8f8f8f;
+      background-color: #f9f9f9;
+      padding: 5px; }
+      .content .right .promise div {
+        text-align: center; }
+    .content .right .introduce {
+      margin-top: 20px;
+      line-height: 50px;
+      height: 50px; }
+      .content .right .introduce .en {
+        color: gray; }
+      .content .right .introduce > :nth-child(1) > p {
+        font-size: 22px;
+        border-bottom: 2px solid #f6f6f6; }
+    .content .right .introducemessage {
+      margin-top: 20px;
+      color: gray;
+      line-height: 50px;
+      height: 50px;
+      font-size: 18px; }
+    .content .right .comment {
+      margin-top: 20px;
+      line-height: 50px;
+      height: 50px; }
+      .content .right .comment div {
+        font-size: 22px;
+        border-bottom: 2px solid #f6f6f6; }
+      .content .right .comment .en {
+        color: gray; }
+      .content .right .comment .tags {
+        background-color: #f6f6f6;
+        width: 90%; }
+    .content .right .tags > div > div {
+      background-color: #f6f6f6; }
+    .content .right .tagmessage {
+      line-height: 30px;
+      height: 30px;
+      margin: 10px auto;
+      border-left: 3px solid orange; }
+    .content .right .tagofcount {
+      color: #7e7e7e;
+      background-color: white;
+      margin: 0px 20px 10px 0px;
+      padding: 5px 12px;
+      border-radius: 24px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #e6e6e6;
+      border-image: initial; }
+      .content .right .tagofcount > span {
+        color: orange; }
+    .content .right .tags, .content .right .tag {
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .content .right .commentlists {
+      margin-top: 20px; }
+    .content .right .userimgs img {
+      width: 80%;
+      border-radius: 50%; }
+    .content .right .stars {
+      text-align: right; }
+    .content .right .commentitem {
+      margin-top: 20px; }
+
+/*# sourceMappingURL=detail.css.map */

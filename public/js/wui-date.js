@@ -477,7 +477,7 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 			'<div class="wui-date wui-date" ng-app="wui.date">' +
 			'<div class="wui-date-editor" ng-click="openPicker()">' +
 			'<input class="wui-input wui-input-block wui-date-input" id="choseDate" type="text" placeholder="{{placeholder}}" ng-model="ngModel" autocomplete="off" ng-blur=checkDateFormat()>' +
-			'<i class="iconfont icon1" style="text-algin:right"></i>' +
+			'<i class="iconfont icon1" style="text-algin:right">&#xe627;</i>' +
 			'</div>' +
 			'<br/>' +
 			'<div class="wui-date-picker" ng-show="date.showPicker">' +
@@ -598,7 +598,7 @@ angular.module('wui.date',[]).directive('wuiDate', function() {
 			'<div class="wui-select wui-select-block time-select" id="time">' +
 			'<div class="wui-select-selection time-selection">' +
 			'<input type="hidden" name="" value="" >' +
-			'<span class="wui-select-icon iconfont time-icon"></span>' +
+			'<span class="wui-select-icon iconfont time-icon">&#xe661;</span>' +
 			'<span class="wui-select-placeholder placeholder">{{date.hours}}:{{date.minutes}}</span>' +
 			'<span class="wui-select-selected-value value"></span>' +
 			'</div>' +
