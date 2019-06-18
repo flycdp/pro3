@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#header {
+  width: 1600px;
+  height: 60px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+#header .img1 {
+  width: 48px;
+  height: 48px;
+  vertical-align: middle;
+}
+#header .img2 {
+  width: 84px;
+  height: 30px;
+  vertical-align: middle;
+}
+.a2 {
+  margin-left: 10px;
+}
+.s1 {
+  margin-left: 10px;
+  height: 60px;
+  line-height: 60px;
+}
+.div1 {
+  float: left;
+  width: 200px;
+}
+.div2 {
+  width: 1200px;
+  float: left;
+  height: 60px;
+}
+.div2 ul {
+  float: left;
+  width: 500px;
+}
+.div2 li {
+  float: left;
+  width: 80px;
+  font-size: 18px;
+  line-height: 60px;
+  padding: 0 10px;
+  color: black;
+}
+.div2 li a {
+  text-decoration: none;
+}
+.div3 {
+  float: left;
+  width: 300px;
+  line-height: 60px;
+}
+.inp1 {
+  border: 1px solid #fed101;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 25px;
+  width: 120px;
+  float: left;
+  margin-top: 17px;
+}
+.btn1 {
+  height: 27px;
+  width: 40px;
+  border: 1px solid #fed101;
+  border-left: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: black;
+  background: #ffa800;
+}
+.div4 {
+  margin-top: 7px;
+  width: 30px;
+  float: left;
+}
+.s3 {
+  color: black;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.s4 {
+  color: white;
+}
+.div5 {
+  line-height: 60px;
+  float: right;
+  width: 240px;
+}
+.div5 li {
+  width: 60px;
+  float: left;
+}
+.div6 img {
+  width: 31px;
+  height: 31px;
+  vertical-align: middle;
+  border-radius: 15px;
+}
+.div6 {
+  float: left;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+}
+.div6 a {
+  text-decoration: none;
+}
+#contentbox {
+  padding: 20px 0 38px 0;
+  background: #f6f6f6;
+}
+#content {
+  width: 1200px;
+  background: #ffffff;
+  margin: 0 auto;
+  height: 700px;
+}
+.div8 {
+  float: left;
+  width: 160px;
+  padding: 0 30px 0 0;
+  overflow: hidden;
+}
+.div7 {
+  background: #fffaef;
+  width: 160px;
+  height: 364px;
+  padding: 40px 0;
+  float: left;
+}
+.div7 li {
+  width: 160px;
+  height: 52px;
+  line-height: 52px;
+  position: relative;
+  z-index: 99;
+}
+.div7 p {
+  width: 190px;
+  border: 1px solid yellow;
+}
+.div7 .b1 {
+  width: 160px;
+  height: 52px;
+  background: #ffa800;
+  _display: inline-block;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+.div7 .b2 {
+  position: absolute;
+  top: 0px;
+  left: 160px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-bottom: 26px solid;
+  border-top: 26px solid;
+  border-left: 15px solid;
+  border-color: transparent transparent transparent #ffa800;
+  display: none;
+  _display: inline-block;
+}
+.s5 {
+  position: absolute;
+  width: 160px;
+  height: 52px;
+  text-align: center;
+  z-index: 2;
+}
+.div9 {
+  float: left;
+  width: 950px;
+  padding: 20px 30px;
+}
+.div9 li {
+  width: 72px;
+  height: 40px;
+  padding: 6px 10px;
+  margin-right: 36px;
+  text-align: center;
+  line-height: 40px;
+  float: left;
+}
+.div9 li a:link {
+  color: black;
+}
+.div9 li a.active1 {
+  color: #ffa800;
+}
+.div9 li a.active1 a:link {
+  color: #ffa800;
+}
+.div11 > div {
+  display: none;
+}
+.div11 > div.active {
+  display: block;
+}
+.div11 {
+  width: 950px;
+  padding: 30px 0 0 0 ;
+  float: left;
+}
+.div11 .div12 {
+  width: 950px;
+  padding: 30px 0;
+  background: #FBFBFB;
+  height: 30px;
+  overflow: hidden;
+}
+.div11 .div12 .div13 {
+  overflow: hidden;
+  text-align: center;
+  float: left;
+  padding: 0 20px;
+  width: 275px;
+  height: 30px;
+}
+.div11 .div12 .div13 strong {
+  color: #ffa800;
+  font-size: 24px;
+}
+.div11 .div12 .div13 b {
+  color: #ffa800;
+  font-size: 24px;
+}
+.div11 .div12 .div13 .btn2 {
+  color: white;
+  background: #ffa800;
+  padding: 0 15px;
+  margin-right: 20px;
+  width: 103px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+.div11 .div12 .div13 .btn3 {
+  color: white;
+  background: #ff5760;
+  padding: 0 15px;
+  margin-right: 20px;
+  border-radius: 5px;
+  border: none;
+  width: 73px;
+  height: 30px;
+}
+.div11 .div14 {
+  width: 950px;
+  height: 300px;
+  margin-top: 30px;
+}
+.div11 .div14 .p5 {
+  width: 950px;
+  height: 39px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.div11 .div14 table {
+  width: 950px;
+}
+.div11 .div14 table thead {
+  width: 950px;
+  height: 57px;
+}
+.div11 .div14 table thead tr {
+  background: #FBFBFB;
+  width: 950px;
+  height: 57px;
+}
+.div11 .div14 table thead tr th {
+  width: 160px;
+  height: 56px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: normal;
+  border-bottom: 1px solid #e0e0e0;
+}
+.div11 .div14 table tbody {
+  text-align: center;
+}
+.div11 .div14 table tbody tr {
+  height: 40px;
+  line-height: 40px;
+}
+.div13 {
+  width: 888px;
+  height: 90px;
+  padding: 30px;
+  margin-left: 1px;
+}
+.div14 {
+  width: 80px;
+  height: 110px;
+  float: left;
+}
+.img3 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  vertical-align: top;
+}
+.div9-foot {
+  width: 950px;
+  height: 32px;
+  float: right;
+}
+.div9-foot li {
+  float: left;
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  border: 1px solid #cccccc;
+  margin-right: 5px;
+  border-radius: 5px;
+  line-height: 30px;
+}
+.div9-foot {
+  float: right;
+  width: 230px;
+}
+.p4 {
+  width: 100px;
+}
+.div9-foot .l2 {
+  width: 100px;
+}
+.div9-foot li:hover {
+  border: 1px solid #FFA800;
+}
+.div10 li.active1 {
+  border-bottom: 1px solid #FFA800;
+}
+.div10 ul {
+  border-bottom: 1px solid #cccccc;
+}
+.div10 {
+  border-bottom: 1px solid #e0e0e0;
+  height: 52px;
+}
+.Rec .div16 {
+  margin-bottom: 15px;
+}
+.Rec .div16 img {
+  width: 950px;
+  height: 316px;
+}
+.Rec .div17 {
+  width: 900px;
+  height: 200px;
+  padding: 10px 0 10px 50px;
+  text-align: center;
+  background-color: #fffaf2;
+}
+.Rec .div17 .div19 {
+  width: 600px;
+  height: 200px;
+}
+.Rec .div17 .div19 .div18 {
+  width: 116px;
+  height: 66px;
+  margin: 15px 20px 15px 0;
+  float: left;
+  cursor: pointer;
+}
+.Rec .div17 .div19 .div18 .num {
+  height: 36px;
+  color: #ffffff;
+  background: #cccccc;
+  line-height: 36px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.Rec .div17 .div19 .div18 .num span {
+  font-size: 22px;
+}
+.Rec .div17 .div19 .div18 .active2 {
+  height: 36px;
+  color: #ffffff;
+  background: #e43a55;
+  line-height: 36px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.Rec .div17 .div19 .div18 .active2 span {
+  font-size: 22px;
+}
+.Rec .div17 .div19 .div18 .give-fee {
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #999999;
+  border-top: 2px solid #999999;
+  flex: 0 0 30px;
+  background: #f1f1f1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.Rec .div17 .div19 .div18 .active3 {
+  height: 30px;
+  line-height: 30px;
+  color: #930607;
+  border-top: 2px solid #930607;
+  background: #fade5b;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.Rec .div17 .div19 input {
+  width: 260px;
+  color: #e43a55;
+  height: 70px;
+  caret-color: #999999;
+  text-align: center;
+  font-size: 20px;
+  padding: 0 11px;
+  outline: 0;
+  overflow: visible;
+  line-height: 1.15;
+  float: left;
+  border: none;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+.Rec .pame {
+  width: 440px;
+  height: 80px;
+  overflow: hidden;
+}
+.Rec .pame .weix {
+  width: 196px;
+  text-align: center;
+  line-height: 80px;
+  margin-right: 20px;
+  float: left;
+  border: 1px solid #eeeeee;
+  background: #f9f9f9;
+  color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+  height: 78px;
+}
+.Rec .pame .zhifubao {
+  height: 78px;
+  text-align: center;
+  line-height: 80px;
+  width: 196px;
+  margin-right: 20px;
+  float: left;
+  border: 1px solid #eeeeee;
+  background: #f9f9f9;
+  color: rgba(0, 0, 0, 0.65);
+  cursor: pointer;
+}
+.Rec .pame div.active4 {
+  border: 1px solid #FFA800;
+}
+.Rec .Rec_xuzi {
+  padding: 15px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+.Rec .Rec_xuzi input {
+  width: 16px;
+  height: 16px;
+}
+.Rec .Rec_xuzi a:link {
+  color: black;
+}
+.Rec .Rec_xuzi a span {
+  color: #ffa800;
+}
+.Rec .Rec_foot {
+  padding: 20px 0;
+}
+.Rec .Rec_foot button {
+  height: 42px;
+  cursor: pointer;
+  float: right;
+  width: 138px;
+  padding: 0 15px;
+  border: 1px solid #ff5760;
+  background-color: #f22833;
+  color: #ffffff;
+  border-radius: 20px;
+  line-height: 42px;
+}
+.Rec .Rec_foot p {
+  float: right;
+  width: 120px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 22px;
+}
+.Rec .Rec_foot p span {
+  font-size: 22px;
+  color: #f22833;
+}
+/*# sourceMappingURL=Center_am.css.map */
