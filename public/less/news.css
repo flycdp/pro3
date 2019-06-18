@@ -24,6 +24,7 @@ body {
   width: 844px;
   float: left;
   background: white;
+  margin-bottom: 20px;
 }
 #leftBox .newsMain {
   font-size: 22px;
@@ -35,6 +36,9 @@ body {
   color: #323232;
   line-height: 80px;
 }
+#leftBox .newsMain a:hover {
+  color: #ffbf29;
+}
 #leftBox .newsMain em {
   margin: 0 10px;
   font-style: normal;
@@ -43,24 +47,110 @@ body {
 }
 #leftBox .newsCon {
   position: relative;
-  padding: 30px;
+  padding: 30px 30px 0 30px;
 }
 #leftBox .newsCon .newsInfo {
   padding: 10px;
 }
+#leftBox .newsCon .newsInfo .tag {
+  display: flex;
+  flex-direction: row;
+}
+#leftBox .newsCon .newsInfo .tag li {
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-size: 12px;
+  color: white;
+  background: #ff8b3e;
+  margin-right: 10px;
+}
 #leftBox .newsCon .newsInfo .firInfo {
   font-size: 12px;
+  line-height: 20px;
 }
 #leftBox .newsCon .newsInfo .secInfo {
+  line-height: 20px;
   margin-left: 20px;
   font-size: 12px;
   color: #ababab;
+}
+#leftBox .newsCon .newsText {
+  border-bottom: #f6f6f6 2px solid;
 }
 #leftBox .newsCon .newsText p {
   padding: 0 10px 0 10px;
 }
 #leftBox .newsCon .newsText p span {
   line-height: 24px;
+}
+#leftBox .newsCon .prev {
+  float: left;
+  margin: 15px 0 15px 20px;
+}
+#leftBox .newsCon .prev p {
+  text-align: left;
+}
+#leftBox .newsCon .next {
+  float: right;
+  margin: 15px 20px 15px 0;
+}
+#leftBox .newsCon .next p {
+  text-align: right;
+}
+#leftBox .newsCon a {
+  color: #0f0f0f;
+  display: flex;
+  flex-direction: row;
+}
+#leftBox .newsCon a:hover {
+  color: #ffbf29;
+}
+#leftBox .newsCon a i {
+  font-size: 30px;
+  margin: 0 10px;
+  font-style: normal;
+  font-family: monospace;
+  letter-spacing: -6px;
+  line-height: 48px;
+}
+#leftBox .newsCon a div p {
+  line-height: 24px;
+  font-size: 14px;
+}
+.msgBox {
+  border-top: #f6f6f6 24px solid;
+}
+.msgBox .msg {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  border-top: #f6f6f6 2px solid;
+}
+.msgBox .msg img {
+  border-radius: 50%;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.msgBox .msg div textarea {
+  font-size: 14px;
+  border-style: solid;
+  resize: none;
+  width: 580px;
+  height: 100px;
+  border-radius: 0px;
+  border-color: #ffbf29;
+  padding: 5px 0 0 10px;
+}
+.msgBox .msg .msgBtn {
+  width: 109px;
+  height: 109px;
+  background: #ffbf29;
+  border: 1px #ffbf29 solid;
+  font-size: 16px;
+  color: white;
 }
 #rightBox {
   height: 100%;
@@ -176,5 +266,38 @@ body {
   font-size: 12px;
   color: #9a9a9a;
   text-overflow: ellipsis;
+}
+.clearfix {
+  clear: both;
+}
+.pageBox ul {
+  padding: 15px 0 15px 300px;
+}
+.pageBox ul li a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  color: #0f0f0f;
+  font-size: 14px;
+  border: 1px #0f0f0f solid;
+  line-height: 32px;
+  margin-right: 10px;
+}
+.pageBox ul li a:hover {
+  color: #ffa800;
+  border: 1px #ffa800 solid;
+}
+.pageBox ul li .page {
+  width: 50px;
+  height: 32px;
+}
+.pageBox ul li .noPage {
+  color: #ababab;
+  border: 1px #ababab solid;
+}
+.pageBox ul li .pageActive {
+  color: #ffa800;
+  border: 1px #ffa800 solid;
 }
 /*# sourceMappingURL=news.css.map */
