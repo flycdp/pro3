@@ -1,0 +1,365 @@
+
+.path{
+    color:red;
+    font-size: 16px;
+}
+li{
+    list-style: none;
+}
+
+.all{
+    background-image: url('../images/bg.jpg');
+}
+
+.order_message{
+    width: 100%;
+    margin: 0 auto;
+}
+.myheader{
+    background-color: #fff;
+    border-radius:60px;
+    // width: 90%;
+    .user_play_name{
+        font-size: 20px;
+        text-align: left;
+    }
+    .user_play_information{
+        font-size: 12px;
+        text-align: left;
+        margin-top: 10%;
+    }
+    .weixin{
+        font-size: 14px;
+        text-align: left;
+        margin-top: 10%;
+    }
+    margin:20px auto;
+    position: relative;
+    .myhead{
+        width: 95%;
+        text-align: center;
+        >div{
+            position: aboulute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .share{
+            margin: 10px 0;
+        }
+    }
+    img{
+        width: 65%;
+        border-radius: 50%;
+        // margin: 10px 0 10px 30px;
+    }
+    .foucsme{
+        text-align: center;
+        .foucsbutton{
+            font-size: 18px;
+            border:1px solid orange;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 40px;
+            span{
+                margin-left: 20px;
+            }
+            .foucs{
+                background-color: orange;
+                color: wheat;
+                height: 40px;
+                line-height:40px;
+            }
+            .fanscount{
+                height: 40px;
+                line-height:40px;
+            }
+        }
+    }
+}
+.content{
+    background-color: #fff;
+    .left{
+        margin-top: 3%;
+        .headerimgbig{
+            img{
+                width: 100%;
+
+            }
+        }
+        .choice{
+            text-align: center;
+            background-color:rgb(255, 248, 213);
+            // .choice_detail{
+            //     margin-top: 10px;
+            //     margin-bottom: 10px;
+            // }
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            span{
+                // display: inline-block;
+                img{
+                    width: 21%;
+                    margin:2px;
+                }
+            }
+            span:nth-child(2){
+                img{
+                    border: 2px solid orange;
+                }
+            }
+        }
+        .sendgift{
+            margin-top: 20px;
+            border: 1px solid rgb(236, 236, 236);
+            border-radius: 5px;
+            .giftheader{
+                >div{
+                    text-align: center; 
+                    color: rgb(126, 126, 126);
+                    background-color: rgb(235, 235, 235);
+                    height: 42px;
+                    line-height: 42px;
+                }
+            }
+            .gift_detail{
+                text-align: center;
+                .giftmessage{
+                    // border: 1px red solid;
+                    // border-radius: 8px;
+                    width: 22%;
+                        border: 1px red solid;
+                        border-radius: 8px;
+                        padding: 0 6px 0 6px;
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        margin-top: 10px;
+                    img{
+                        width: 70%;
+                    }
+                    text-align: center;
+                    p{
+                        text-align: center;
+                        line-height: 8px;
+                        color: rgb(126, 126, 126);
+                    }
+                }
+
+            }
+        }
+        .pay{
+            background-color: rgb(235, 235, 235);
+
+            .price{
+                color: rgb(126, 126, 126);
+                font-size: 16px;
+            }
+            padding-top: 10px;
+            margin-top: 10px;
+            padding-bottom: 10px;
+
+        }
+        .rank{
+            height: 1000px;
+            border: 1px solid rgb(236, 236, 236);
+            margin-top: 20px;
+            border-radius: 5px;
+            .rankheader{
+                margin-top: 20px;
+                div{
+                    text-align: center;
+                    font-size: 22px;
+                    height: 50px;
+                    line-height: 50px;
+                    color: orange;
+                }
+            }
+            .ranklist{
+                margin-top: 20px;
+                li{
+                    margin-top:20px;
+                }
+                div{
+                    display: inline-block;
+                    margin-left: 20px;
+                    font-size: 20px;
+                    vertical-align: middle;
+                    color: orangered;
+                    :nth-child(2){
+                        font-size: 14px;
+                    }
+                }
+                
+                span{
+                    font-size: 26px;
+                    font-weight: bolder;
+                }
+                img{
+                    width: 30%;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    .right{
+        margin-top: 3%;
+        border: 1px solid rgb(236, 236, 236);
+        height: 1000px;
+        .headerplaymessage{
+            div{
+                font-size: 18px;
+                // border: 1px solid orange;
+                text-align: center;
+                background-color: rgb(246, 246, 246);
+                border:2px solid rgb(246, 246, 246);
+                padding:12px;
+            }
+            div:hover{
+                background-color: #fff;
+                color: orange;
+                border-top:2px solid orange;
+            }
+        }
+        .playmessage{
+            margin-top: 40px;
+            .videoimg{
+                img{
+                    width: 100%;
+                    border-radius: 8px;
+                }
+            }
+            .getorder{
+                text-align: right;
+                .helptext{
+                    color: red;
+                    
+                }
+                .Ymoney{
+                    color:orange;
+                    margin-top: 510x;
+                    font-size: 40px;
+                    span{
+                        font-size: 14px;
+                        color: gray;
+                    }
+                }
+                >div {
+                    :nth-child(1){
+                        margin-left: 25%;
+                    }
+                    div{
+                    text-align: center;
+                    border:solid 1px red;
+                    color:red;
+                    border-radius: 5px;
+                    height: 40px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .promise{
+            margin-top: 20px;
+            color: rgb(143, 143, 143);
+            background-color: rgb(249, 249, 249);
+            padding: 5px;
+            div{
+                text-align: center;
+            }
+        }
+        .introduce{
+            margin-top: 20px;
+            line-height: 50px;
+            height: 50px;
+
+            .en{
+                color:gray;
+            }
+            > :nth-child(1)>p{
+                font-size: 22px;
+                border-bottom:2px solid rgb(246, 246, 246);
+            }
+        }
+        .introducemessage{
+            margin-top: 20px;
+            color:gray;
+            line-height: 50px;
+            height: 50px;
+            font-size: 18px;
+        }
+        .comment{
+            
+            margin-top: 20px;
+            line-height: 50px;
+            height: 50px;
+            div{
+                font-size: 22px;
+                border-bottom:2px solid rgb(246, 246, 246);
+            }
+            
+            .en{
+                color:gray;
+            }
+            > :nth-child(1)>div >p{
+           
+            }
+            .tags{
+                background-color:  rgb(246, 246, 246);
+                width: 90%;
+            }
+
+        }
+        .tags{
+            >div >div{
+                background-color:  rgb(246, 246, 246);
+            }
+            // width: 90%;
+        }
+        .tagmessage{
+            line-height: 30px;
+            height: 30px;
+            margin: 10px auto;;
+            border-left: 3px solid orange;
+        }
+        .tagofcount{
+            color: rgb(126, 126, 126);
+            background-color: rgb(255, 255, 255);
+            margin: 0px 20px 10px 0px;
+            padding: 5px 12px;
+            border-radius: 24px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(230, 230, 230);
+            border-image: initial;
+            >span{
+                color:orange;
+            }
+        }
+        .tags,.tag{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .commentlists{
+            margin-top:20px;
+        }
+        .userimgs{
+            img{
+                width: 80%;
+                border-radius: 50%;
+            }
+        }
+        .stars{
+            text-align: right;
+        }
+        .commentitem{
+            margin-top: 20px;
+        }
+    }
+
+}
