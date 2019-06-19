@@ -3,336 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-   <!-- <link rel="stylesheet" href="../pulg/bootstrap/css/bootstrap.css">-->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        a{
-            text-decoration: none;
-        }
-        #header{
-            width: 1600px;
-            height: 60px;
-            margin: 0 auto;
-            background: #ffffff;
-        }
-        #header .img1{
-            width: 48px;
-            height: 48px;
-            vertical-align: middle;
-        }
-        #header .img2{
-            width: 84px;
-            height: 30px;
-            vertical-align: middle;
-        }
-        .a2{
-            margin-left: 10px;
-        }
-        .s1{
-            margin-left: 10px;
-            height: 60px;
-            line-height: 60px;
-        }
-        .div1{
-            float: left;
-            width: 200px;
-        }
-        .div2{
-            width: 1200px;
-            float: left;
-            height: 60px;
-        }
-        .div2 ul{
-            float: left;
-            width: 500px;
-        }
-        .div2 li{
-            float: left;
-            width: 80px;
-            font-size: 18px;
-            line-height: 60px;
-            padding: 0 10px;
-            color: black;
-        }
-        .div2 li a{
-            text-decoration: none;
-        }
-        .div3{
-            float: left;
-            width: 300px;
-            line-height: 60px;
-        }
-        .inp1{
-            border: 1px solid #fed101;
-            border-top-left-radius: 15px;
-            border-bottom-left-radius: 15px;
-            height: 25px;
-            width: 120px;
-            float: left;
-            margin-top: 17px;
-        }
-        .btn1{
-            height: 27px;
-            width: 40px;
-            border: 1px solid #fed101;
-            border-left: none;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            color:black;
-            background: #ffa800;
-        }
-        .div4{
-            margin-top: 7px;
-            width: 30px;
-            float: left;
-        }
-        .s3{
-            color: black;
-            font-size: 12px;
-            font-weight: lighter;
-        }
-        .s4{
-            color: white;
-        }
-        .div5{
-            line-height: 60px;
-            float: right;
-            width: 240px;
-        }
-        .div5 li{
-            width: 60px;
-            float: left;
-        }
-        .div6 img{
-            width: 31px;
-            height: 31px;
-            vertical-align: middle;
-            border-radius: 15px;
-        }
-        .div6{
-            float: left;
-            width: 200px;
-            height: 60px;
-            line-height: 60px;
-            font-size: 18px;
-
-        }
-        .div6 a{
-            text-decoration: none;
-        }
-        #contentbox{
-            padding: 20px 0 38px 0;
-            background: #f6f6f6;
-
-        }
-        #content{
-            width: 1200px;
-            background: #ffffff;
-            margin: 0 auto;
-            height: 700px;
-        }
-        .div8{
-            float: left;
-            width: 160px;
-            padding: 0 30px 0 0;
-            overflow: hidden;
-        }
-        .div7{
-            background: #fffaef;
-            width: 160px;
-            height: 364px;
-            padding: 40px 0;
-            float: left;
-        }
-        .div7 li{
-            width: 160px;
-            height: 52px;
-            line-height: 52px;
-            position: relative;
-            z-index: 99;
-        }
-        .div7 p{
-            width: 190px;
-            border:1px solid yellow;
-        }
-        .div7 .b1{
-            width: 160px;
-            height: 52px;
-            background: #ffa800;
-            _display: inline-block;
-            position: absolute;
-            z-index: 1;
-            display: none;
-        }
-        .div7 .b2{
-            position: absolute;
-            top: 0px;
-            left: 160px;
-            z-index: 1;
-            width: 0;
-            height: 0;
-            border-bottom: 26px solid;
-            border-top: 26px solid;
-            border-left: 15px solid;
-            border-color: transparent  transparent transparent #ffa800;
-            display: none;
-            _display: inline-block;
-        }
-        .s5{
-            position: absolute;
-            width: 160px;
-            height: 52px;
-            text-align: center;
-            z-index: 2;
-        }
-        .div9{
-            float: left;
-            width: 950px;
-            padding: 20px 30px;
-        }
-        .div9 li{
-            width: 72px;
-            height: 40px;
-            padding: 6px 10px;
-            margin-right: 36px;
-            text-align: center;
-            line-height: 40px;
-            float: left;
-        }
-        .div11{
-            width: 950px;
-            padding: 30px 0 0 0 ;
-            float: left;
-        }
-        .div11 li{
-            width: 950px;
-            border: 1px solid #ffa800;
-            padding: 0;
-            margin-bottom: 42px;
-            margin-right: 0px;
-            height: 192px;
-        }
-        .div12{
-            padding: 0 30px;
-            width: 888px;
-            background: #fffaef;
-            height: 42px;
-            color: #999999;
-            margin-left: 1px;
-        }
-        .s6{
-            float: left;
-        }
-        .s7{
-            float: right;
-        }
-        .div13{
-            width: 888px;
-            height: 90px;
-            padding: 30px;
-            margin-left: 1px;
-        }
-        .div14{
-            width: 80px;
-            height: 110px;
-            float: left;
-        }
-        .img3{
-            width: 80px;
-            height: 80px;
-            border-radius: 50px;
-            vertical-align: top;
-        }
-        .p3{
-            text-align: center;
-            line-height: 20px;
-            background: red;
-            color: white;
-        }
-        .div-left dl{
-            padding: 0 0 0 18px;
-            width: 280px;
-            height: 90px;
-            float: left;
-            text-align: left;
-        }
-        .div-left dt{
-            height: 28px;
-        }
-        .div-left dd{
-            height: 28px;
-        }
-        .s8{
-            color: #999999;
-        }
-        .div-left{
-            float: left;
-        }
-        .div-right{
-            float: right;
-            padding-right: 98px;
-            width: 300px;
-        }
-        .div-right dl{
-            width: 300px;
-            text-align: right;
-        }
-        .div-right dt{
-            height: 28px;
-        }
-        .div-right dd{
-            height: 28px;
-        }
-        .s9{
-            color: red;
-        }
-        .div11 li:hover{
-            box-shadow: 2px 2px 5px #888888;
-        }
-        .div9-foot{
-            width: 950px;
-            height: 32px;
-            float: right;
-        }
-        .div9-foot li{
-            float: left;
-            width: 30px;
-            height: 30px;
-            padding: 1px;
-            border: 1px solid #cccccc;
-            margin-right: 5px;
-            border-radius: 5px;
-            line-height: 30px;
-        }
-        .div9-foot{
-            float: right;
-            width: 230px;
-        }
-        .p4{
-            width: 100px;
-        }
-        .div9-foot .l2{
-            width: 100px;
-        }
-        .div9-foot li:hover{
-            border: 1px solid #FFA800;
-        }
-        .div10 li:hover{
-            color: #FFA800;
-            border-bottom: 1px solid #FFA800;
-        }
-        .div10 ul{
-            border-bottom: 1px solid #cccccc;
-        }
-        .div10{
-            border-bottom: 1px solid #e0e0e0;
-            height: 52px;
-        }
-    </style>
+    <link rel="stylesheet" href="../less/Center.css">
+    <script src="../pulg/bootstrap/js/jquery-3.4.0.js"></script>
+   <style></style>
 </head>
 <body>
     <div id="header">
@@ -387,14 +60,15 @@
             <div class="div9">
                 <div class="div10">
                     <ul>
-                        <li><a href=""><span>全部订单</span></a></li>
-                        <li><a href=""><span>待付款</span></a></li>
-                        <li><a href=""><span>进行中</span></a></li>
-                        <li><a href=""><span>已完成</span></a></li>
+                        <li class="active1" ><a href="javascript:;" class="active1"><span>全部订单</span></a></li>
+                        <li><a href="javascript:;"><span>待付款</span></a></li>
+                        <li><a href="javascript:;"><span>进行中</span></a></li>
+                        <li><a href="javascript:;"><span>已完成</span></a></li>
                     </ul>
                 </div>
                 <div class="div11">
-                    <ul>
+                    <div class="all_dingdan active">
+                        <ul>
                         <li>
                             <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单已取消</span></div>
                             <div class="div13">
@@ -403,11 +77,13 @@
                                         <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
                                     </a>
                                 </div>
-                                <div class="div-left"><dl>
-                                    <dt>嗷呜酱🍥下单秒接</dt>
-                                    <dd>品类：<span class="s8">绝地求生</span></dd>
-                                    <dd>备注：<span class="s8">跳唱rap</span></dd>
-                                </dl></div>
+                                <div class="div-left">
+                                    <dl>
+                                        <dt>嗷呜酱🍥下单秒接</dt>
+                                        <dd>品类：<span class="s8">绝地求生</span></dd>
+                                        <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                    </dl>
+                                </div>
                                 <div class="div-right">
                                     <dl>
                                         <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
@@ -425,11 +101,13 @@
                                         <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
                                     </a>
                                 </div>
-                                <div class="div-left"><dl>
-                                    <dt>嗷呜酱🍥下单秒接</dt>
-                                    <dd>品类：<span class="s8">绝地求生</span></dd>
-                                    <dd>备注：<span class="s8">跳唱rap</span></dd>
-                                </dl></div>
+                                <div class="div-left">
+                                    <dl>
+                                        <dt>嗷呜酱🍥下单秒接</dt>
+                                        <dd>品类：<span class="s8">绝地求生</span></dd>
+                                        <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                    </dl>
+                                </div>
                                 <div class="div-right">
                                     <dl>
                                         <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
@@ -440,15 +118,200 @@
                             </div>
                         </li>
                     </ul>
-                </div>
-                <div class="div9-foot">
-                    <div class="div15">
+                        <div class="div9-foot">
+                            <div class="div15">
+                                <ul>
+                                    <li><span>←</span></li>
+                                    <li><span>1</span></li>
+                                    <li><span>→</span></li>
+                                    <li class="l2"><p class="p4">10条/页</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dai_fukuan">
                         <ul>
-                            <li><span>←</span></li>
-                            <li><span>1</span></li>
-                            <li><span>→</span></li>
-                            <li class="l2"><p class="p4">10条/页</p></li>
+                            <li>
+                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单待支付</span></div>
+                                <div class="div13">
+                                    <div class="div14">
+                                        <a href="">
+                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
+                                        </a>
+                                    </div>
+                                    <div class="div-left">
+                                        <dl>
+                                            <dt>嗷呜酱🍥下单秒接</dt>
+                                            <dd>品类：<span class="s8">绝地求生</span></dd>
+                                            <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="div-right">
+                                        <dl>
+                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
+                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
+                                            <dd><span class="s9">已优惠5Y币</span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单待支付</span></div>
+                                <div class="div13">
+                                    <div class="div14">
+                                        <a href="">
+                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
+                                        </a>
+                                    </div>
+                                    <div class="div-left">
+                                        <dl>
+                                            <dt>嗷呜酱🍥下单秒接</dt>
+                                            <dd>品类：<span class="s8">绝地求生</span></dd>
+                                            <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="div-right">
+                                        <dl>
+                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
+                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
+                                            <dd><span class="s9">已优惠5Y币</span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
+                        <div class="div9-foot">
+                            <div class="div15">
+                                <ul>
+                                    <li><span>←</span></li>
+                                    <li><span>1</span></li>
+                                    <li><span>→</span></li>
+                                    <li class="l2"><p class="p4">10条/页</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jing_fukuan">
+                        <ul>
+                            <li>
+                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单进行中</span></div>
+                                <div class="div13">
+                                    <div class="div14">
+                                        <a href="">
+                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
+                                        </a>
+                                    </div>
+                                    <div class="div-left">
+                                        <dl>
+                                            <dt>嗷呜酱🍥下单秒接</dt>
+                                            <dd>品类：<span class="s8">绝地求生</span></dd>
+                                            <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="div-right">
+                                        <dl>
+                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
+                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
+                                            <dd><span class="s9">已优惠5Y币</span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单进行中</span></div>
+                                <div class="div13">
+                                    <div class="div14">
+                                        <a href="">
+                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
+                                        </a>
+                                    </div>
+                                    <div class="div-left">
+                                        <dl>
+                                            <dt>嗷呜酱🍥下单秒接</dt>
+                                            <dd>品类：<span class="s8">绝地求生</span></dd>
+                                            <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                         </dl>
+                                    </div>
+                                    <div class="div-right">
+                                        <dl>
+                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
+                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
+                                            <dd><span class="s9">已优惠5Y币</span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="div9-foot">
+                            <div class="div15">
+                                <ul>
+                                    <li><span>←</span></li>
+                                    <li><span>1</span></li>
+                                    <li><span>→</span></li>
+                                    <li class="l2"><p class="p4">10条/页</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wancheng_fukuan">
+                        <ul>
+                            <li>
+                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单已完成</span></div>
+                                <div class="div13">
+                                    <div class="div14">
+                                        <a href="">
+                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
+                                        </a>
+                                    </div>
+                                    <div class="div-left">
+                                        <dl>
+                                            <dt>嗷呜酱🍥下单秒接</dt>
+                                            <dd>品类：<span class="s8">绝地求生</span></dd>
+                                            <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="div-right">
+                                        <dl>
+                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
+                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
+                                            <dd><span class="s9">已优惠5Y币</span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单已完成</span></div>
+                                <div class="div13">
+                                    <div class="div14">
+                                        <a href="">
+                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
+                                        </a>
+                                    </div>
+                                    <div class="div-left"><dl>
+                                        <dt>嗷呜酱🍥下单秒接</dt>
+                                        <dd>品类：<span class="s8">绝地求生</span></dd>
+                                        <dd>备注：<span class="s8">跳唱rap</span></dd>
+                                    </dl></div>
+                                    <div class="div-right">
+                                        <dl>
+                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
+                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
+                                            <dd><span class="s9">已优惠5Y币</span></dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="div9-foot">
+                            <div class="div15">
+                                <ul>
+                                    <li><span>←</span></li>
+                                    <li><span>1</span></li>
+                                    <li><span>→</span></li>
+                                    <li class="l2"><p class="p4">10条/页</p></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -456,6 +319,20 @@
     </div>
 </body>
 <script>
+   /* $('.div10 li').click(function () {
+        $('.div10 li').removeClass('active1');
+        $('.div10 li a').removeClass('active1');
+        $(this).addClass('active1');
+        $('.div10 li a').eq($(this).index()).addClass('active1');
+    })*/
+    $('.div10 li').click(function () {
+        $('.div10 li').removeClass('active1');
+        $('.div10 li a').removeClass('active1');
+        $('.div11>div').removeClass('active');
+        $(this).addClass('active1');
+        $('.div11>div').eq($(this).index()).addClass('active');
+        $('.div10 li a').eq($(this).index()).addClass('active1');
+    })
 
 </script>
 </html>

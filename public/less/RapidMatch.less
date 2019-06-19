@@ -18,7 +18,7 @@ i {
         position: absolute;
         box-sizing: border-box;
         padding-top: 14px;
-
+        width: 275px;
         >div {
             float: left;
             height: 50px;
@@ -40,20 +40,31 @@ i {
 
             span b {
                 font-size: 22px;
+
+            }
+            >b{
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
         }
 
         .rs {
             width: 200px;
-
+            position: relative;
             b {
                 font-size: 14px;
                 line-height: 1.9;
+               
             }
 
             span {
                 display: block;
                 text-indent: 2rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             span:nth-last-child {
@@ -65,7 +76,6 @@ i {
 
 header {
     height: 60px;
-    background: pink;
 }
 
 .bg {
@@ -229,9 +239,16 @@ section {
                     height: 460px;
                 }
                 >li:nth-child(6) {
+                    transition: all .3s ; 
+                    .dropdown{
+                        display: none;
+                    }
+                    .dropdown:nth-child(1){
+                        display: block;
+                    }
                     position: relative;
                     /* 测试 */
-                    overflow: hidden;
+                    /* overflow: hidden; */
 
                     >div:nth-child(2){
                         position: relative;
@@ -500,3 +517,30 @@ section {
 .today.on {
     color: whitesmoke !important;
 }
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/yhb/iconfont/iconfont.eot');
+    src: url('../font/yhb/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/yhb/iconfont/iconfont.woff2') format('woff2'),
+        url('../font/yhb/iconfont/iconfont.woff') format('woff'),
+        url('../font/yhb/iconfont/iconfont.ttf') format('truetype'),
+        url('../font/yhb/iconfont/iconfont.svg#iconfont') format('svg');
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .wui-date-editor i.icon1{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 16px;
+    transform: translate(170px,-4px);
+  }
+  .time-icon{
+    transform: translateY(-2px);
+  }
