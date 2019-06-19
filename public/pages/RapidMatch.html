@@ -16,10 +16,14 @@
     <script type="text/javascript" src="../js/angular.min.js"></script>
     <script type="text/javascript" src="../js/wui-date.js" charset="utf-8"> </script>
      <link rel="stylesheet" href="../css/less-index-top.css">
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+     <script src="../js/RapidMatch.js"></script>
+     <script>
+     </script>
 </head>
 
 <body>
-        <header style="height: 60px;">
+        <header>
                 <div class="wq-top">
                         <div class="wq-top1 clearfix">
                             <div class="wq-nav-left">
@@ -123,8 +127,9 @@
                 <div class="box_bd">
                     <ul class="choose">
                         <li>
+                            <!-- 游戏列表渲染 -->
                             <ul class="gameList">
-                                <li class="on">
+                                <li class="on" v-for="(item,index) in items">
                                     <img src="../images/cdplol.png">
                                     <span>LOL</span>
                                 </li>
@@ -478,7 +483,4 @@
         </div>
     </div>
 </body>
-<script>
-        
-</script>
 </html>
