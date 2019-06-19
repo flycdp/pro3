@@ -100,7 +100,40 @@
                     </div>
                     <div class="form_box">
                         <div class="form_lf"><span>*</span>出生日期：</div>
-                        <div class="form_rg"><input type="date" name="" placeholder="雪都知道风是怎么吹的"></div>
+                        <div class="form_rg">
+                            <input type="date">
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <div class="form_lf"><span>*</span>所在地：</div>
+                        <div class="form_rg">
+                            <input type="text" placeholder="北京市-朝阳区">
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <div class="form_lf"><span>*</span>兴趣爱好：</div>
+                        <div class="form_rg">
+                            <input type="text" placeholder="运动/游戏/学习">
+                        </div>
+                    </div>
+                    <div class="form_box textcon">
+                        <div class="form_lf"><span>*</span>兴趣爱好：</div>
+                        <div class="form_rg ">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                    <div class="form_box beijing">
+                        <div class="form_lf"><span>*</span>背景墙：</div>
+                        <div class="form_rg ">
+                            <div class="beijing1"></div>
+                        </div>
+                    </div>
+                    <div class="form_box">
+                        <div class="form_lf"><span></span></div>
+                        <div class="form_rg ">
+                            <button class="btn2">确定</button>
+                            <button class="btn3">取消</button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -115,5 +148,6 @@
         $(this).addClass('active1');
         $('.div10 li a').eq($(this).index()).addClass('active1');
     })
+
 </script>
 </html>
