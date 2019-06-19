@@ -124,7 +124,7 @@ a {
   width: 1200px;
   background: #ffffff;
   margin: 0 auto;
-  height: 1000px;
+  height: 1500px;
 }
 .div8 {
   float: left;
@@ -331,6 +331,38 @@ a {
   width: 300px;
   height: 28px;
 }
+.div11 form .form_box .form_rg .btn2 {
+  width: 128px;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 32px;
+  background-color: #ff5760;
+  color: #ffffff;
+}
+.div11 form .form_box .form_rg .btn2 :hover {
+  background-color: #f22833;
+  border-color: #f22833;
+}
+.div11 form .form_box .form_rg .btn3 {
+  width: 128px;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 32px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 32px;
+  background: white;
+  color: #c4c4c4;
+}
+.div11 form .form_box .form_rg .btn3 :hover {
+  border-color: #ffa800;
+  color: #ffa800;
+}
 .div11 form .form_box .form_rg .sex {
   width: 16px;
   height: 16px;
@@ -371,5 +403,20 @@ a {
 .div11 form .form_box .form_rg .sexkong .sexcon .sex {
   width: 16px;
   height: 16px;
+}
+.div11 form .textcon {
+  height: 60px;
+}
+.div11 form .textcon textarea {
+  width: 300px;
+  height: 58px;
+}
+.div11 form .beijing {
+  height: 105px;
+}
+.div11 form .beijing .beijing1 {
+  width: 103px;
+  height: 103px;
+  border: 1px dashed #eeeeee;
 }
 /*# sourceMappingURL=Center_Minf.css.map */
