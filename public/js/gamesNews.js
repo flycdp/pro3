@@ -4,3 +4,16 @@ $('.head').click(function () {
     $(this).addClass('active');
     $(this).parent().addClass('active1');
 });
+$('document').load(function () {
+    $.ajax({
+        url:'/getBanner',
+        type:'get',
+        success:function (res) {
+            if (error){
+                console.log(res.error)
+            } else {
+                alert('成功')
+            }
+        }
+    })
+});
