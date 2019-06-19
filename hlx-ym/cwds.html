@@ -22,7 +22,7 @@
         }
         #box{
             width: 1200px;
-            height: 1300px;
+            height: 1400px;
             background: #F6F6F6;
             margin: 0 auto;
         }
@@ -43,7 +43,7 @@
         }
         #box3{
             width: 1000px;
-            height: 1000px;
+            height: 1250px;
             background: white;
             position: absolute;
             margin-left: 100px;
@@ -69,17 +69,107 @@
             width: 80px;
             height: 30px;
             margin-left: 10px;
-
+            border-radius:10px;
         }
         .hb span{
             color: white;
         }
-        #xx{
+        .xx{
             width: 900px;
             height: 1px;
             background: gainsboro;
             margin-left: 50px;
             margin-top: 50px;
+        }
+        #xbb{
+            width: 900px;
+            height: 60px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        .p2{
+            position: absolute;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        #input1{
+            width: 230px;
+            height: 30px;
+            margin-left: 120px;
+            margin-top: 7px;
+            border: 1px solid gainsboro;
+        }
+        #qsr{
+            margin-left: 120px;
+            font-size: 14px;
+            color: red;
+        }
+        #xbb2{
+            width: 900px;
+            height: 60px;
+            margin-left: 50px;
+        }
+        #xdbox{
+            width: 50px;
+            height:30px;
+            margin-left: 120px;
+            float: left;
+        }
+        .dd1{
+            margin-top: 15px;
+        }
+        .ddp1{
+            font-size: 14px;
+            float: right;
+            margin-top: 10px;
+            margin-right: 15px;
+        }
+        #xdbox2{
+            width: 50px;
+            height:30px;
+            float: left;
+        }
+       #xbb3{
+           width: 900px;
+           height: 50px;
+           margin-top: 30px;
+           float: left;
+       }
+        #input2{
+            width: 230px;
+            height: 30px;
+            margin-left: 120px;
+            margin-top: 7px;
+            border: 1px solid gainsboro;
+        }
+        #xbb4{
+            width: 900px;
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        .brs{
+            margin-left: 100px;
+            border: 1px solid gainsboro;
+        }
+        .sz{
+            color: #999999;
+        }
+        #xbb5{
+            width: 900px;
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+        #zh{
+            width: 250px;
+            height: 40px;
+            margin-top: 30px;
+            margin-left: 50px;
+            background: red;
+            color: white;
+            font-size: 20px;
+            border-radius:100px;
         }
     </style>
 </head>
@@ -100,12 +190,54 @@
             <button class="hb">
                 <span>重新上传</span>
             </button>
-            <div id="xx"></div>
+            <div class="xx"></div>
             <p class="p1">形象照（0/4）
                 <span class="s1">(必填)</span>
                 <span class="s2">请使用个人真实照片，成为大神后需要人工审核</span>
             </p>
-            <svg></svg>
+            <img class="img1" src="下载%20(8).png" alt="">
+            <div class="xx"></div>
+            <p class="p1">个人信息
+                <span class="s1">(必填)</span>
+                <span class="s2">完整的个人信息能提升200%接单率</span>
+            </p>
+            <div id="xbb">
+                <p class="p2">昵称：</p>
+                <input id="input1">
+                <p id="qsr">请输入昵称</p>
+            </div>
+            <div id="xbb2">
+                <p class="p2">性别</p>
+                <div id="xdbox">
+                    <input type="radio" class="dd1">
+                    <p class="ddp1">男</p>
+                </div>
+                <div id="xdbox2">
+                    <input type="radio" class="dd1">
+                    <p class="ddp1">女</p>
+                </div>
+                <div id="xbb3">
+                    <p class="p2">所在地</p>
+                    <input id="input2" placeholder="全国">
+                </div>
+            </div>
+            <div class="xx"></div>
+            <p class="p1">介绍一下自己
+                <span class="s1">(必填)</span>
+                <span class="s2">一段好的个人介绍能提升300%接单率</span>
+            </p>
+            <div id="xbb4">
+                <p class="p2">签名：</p>
+                <textarea name="" class="brs" cols="50" rows="5" placeholder="请认真填写个人简介（不少于20字），建议填写基本介绍，游戏特色，风格特色，在线时间，随意填写和抄袭无法通过审核哟"></textarea>
+                <span class="sz">0/200</span>
+            </div>
+            <div id="xbb5">
+                <p class="p2">聊天欢迎语：</p>
+                <textarea name="" class="brs" cols="50" rows="5" placeholder="有人想和你聊天，你想对他说些什么呢？"></textarea>
+                <span class="sz">0/50</span>
+            </div>
+            <div class="xx"></div>
+            <button id="zh">下一步</button>
         </div>
     </div>
 </body>
