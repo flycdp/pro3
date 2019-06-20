@@ -49,7 +49,7 @@
             <div class="div7">
                 <ul>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的订单</span></a></li>
-                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
+                    <li><a href=""><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">账号管理</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
@@ -193,6 +193,22 @@
         $('.div18 .give-fee').removeClass('active3');
         $('.div18 .num').eq($(this).index()).addClass('active2');
         $('.div18 .give-fee').eq($(this).index()).addClass('active3');
+    })
+    $('.div7 a').click(function () {
+        $('.div7 b').removeClass('active-show');
+        $('.div7 .s5').removeClass('active-color');
+        $(this).children(0).children(0).addClass('active-show');
+        $(this).children(1).addClass('active-color');
+    });
+    $('.div7 a').mouseover(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
+        $(this).children(0).children(0).addClass('active-show1');
+        $(this).children(1).addClass('active-color1');
+    });
+    $('.div7 a').mouseleave(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
     })
 </script>
 </html>

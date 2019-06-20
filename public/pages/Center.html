@@ -39,7 +39,6 @@
                 <img src="../images/user.jpg" alt="">
                 <span>XXXXXX</span>
             </a>
-
         </div>
     </div>
     <div id="contentbox">
@@ -47,13 +46,13 @@
             <div class="div8">
                 <div class="div7">
                     <ul>
-                        <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的订单</span></a></li>
-                        <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
-                        <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
-                        <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
-                        <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
-                        <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
-                        <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">会员中心</span></a></li>
+                        <li><a href="javascript:;" class="myorder"><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">我的订单</span></a></li>
+                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
+                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
+                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
+                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
+                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
+                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">会员中心</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -319,12 +318,6 @@
     </div>
 </body>
 <script>
-   /* $('.div10 li').click(function () {
-        $('.div10 li').removeClass('active1');
-        $('.div10 li a').removeClass('active1');
-        $(this).addClass('active1');
-        $('.div10 li a').eq($(this).index()).addClass('active1');
-    })*/
     $('.div10 li').click(function () {
         $('.div10 li').removeClass('active1');
         $('.div10 li a').removeClass('active1');
@@ -332,7 +325,26 @@
         $(this).addClass('active1');
         $('.div11>div').eq($(this).index()).addClass('active');
         $('.div10 li a').eq($(this).index()).addClass('active1');
+    });
+    //myorder
+    //post
+    //content:用户id
+    //date{error：0；data}
+    $('.div7 a').click(function () {
+        $('.div7 b').removeClass('active-show');
+        $('.div7 .s5').removeClass('active-color');
+        $(this).children(0).children(0).addClass('active-show');
+        $(this).children(1).addClass('active-color');
+    });
+    $('.div7 a').mouseover(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
+        $(this).children(0).children(0).addClass('active-show1');
+        $(this).children(1).addClass('active-color1');
+    });
+    $('.div7 a').mouseleave(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
     })
-
 </script>
 </html>
