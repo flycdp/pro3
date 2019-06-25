@@ -35,16 +35,44 @@ body{
       overflow: hidden;
       transition: max-height 0.5s ease 0s;
       a{
+        border:1px white solid;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
-        width: 90px;
-        height: 80px;
+        width: 80px;
+        height: 67px;
         padding: 8px;
-        margin-right: 10px;
+        margin-right: 25px;
         cursor: pointer;
         margin-bottom: 5px;
+        &:hover{
+          border:1px rgb(255, 168, 0) solid;
+          background: rgb(248, 248, 248);
+          border-radius:4px; 
+          &:before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 0px;
+            height: 0px;
+            border-left: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid rgb(255, 168, 0);
+            border-right: 10px solid rgb(255, 168, 0);
+          }
+          &::after{
+            content: "√";
+            position: absolute;
+            top: -3px;
+            right: 1px;
+            color: transparent;
+            text-align: center;
+            font-size: 12px;
+            background: url(//static.yay.com.cn/pei/static/media/tick.c9921b3f.png) center center no-repeat;
+          }
+        }
       }
       .icon{
         height: 40px;
@@ -60,7 +88,7 @@ body{
       }
     }
   }
-  .select2{
+  .select2,.select3,.select4{
     height: 50px;
     display: flex;
     flex-direction: row;
@@ -88,14 +116,14 @@ body{
           text-align: center;
           line-height: 30px;
           cursor: pointer;
-          margin: 10px 34px 0 22px;
+          margin: 10px 40px 0 22px;
         }
       }
     }
   }
 }
 .list{
-  padding: 10px 25px;
+  padding: 10px 0 25px 25px;
   margin-top: 20px;
   background: white;
   div{
@@ -150,7 +178,7 @@ body{
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
   cursor: pointer;
-  margin: 0 20px 30px 0;
+  margin: 0 23px 30px 0;
   &:hover{
     box-shadow:-3px 3px 5px 3px #bdb7b6;
     transition: all 0.3s ease-in 0s;
@@ -203,6 +231,8 @@ body{
       transform: scale(3);
       position: absolute;
       margin: auto;
+      top: 35%;
+      left: 35%;
 
     }
   }
@@ -244,6 +274,7 @@ body{
 }
 .wrapper{
   float: right;
+  margin-bottom: 10px;
   mark{
     background-color: transparent;
     font-size: 12px;
@@ -252,5 +283,48 @@ body{
       font-size: 30px;
       color: rgb(255, 168, 0);
     }
+  }
+}
+.icon{
+  
+  &:hover{
+    
+    &::after{
+      content: "√";
+      position: absolute;
+      top: -3px;
+      right: 1px;
+      color: transparent;
+      text-align: center;
+      font-size: 12px;
+      background: url(//static.yay.com.cn/pei/static/media/tick.c9921b3f.png) center center no-repeat;
+    }
+  }
+}
+.onclick{
+  border:1px rgb(255, 168, 0) solid !important;
+  background: rgb(248, 248, 248);
+  border-radius:4px; 
+  &:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid rgb(255, 168, 0);
+    border-right: 10px solid rgb(255, 168, 0);
+  }
+  &::after{
+    content: "√";
+    position: absolute;
+    top: -3px;
+    right: 1px;
+    color: transparent;
+    text-align: center;
+    font-size: 12px;
+    background: url(//static.yay.com.cn/pei/static/media/tick.c9921b3f.png) center center no-repeat;
   }
 }

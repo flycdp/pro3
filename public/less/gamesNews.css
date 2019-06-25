@@ -3,7 +3,7 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: '微软雅黑';
+  font-family: '微软雅黑', SArial;
 }
 body {
   background: #f6f6f6;
@@ -24,16 +24,9 @@ body {
   width: 844px;
   float: left;
 }
-#leftBox #imgBox {
-  position: relative;
-}
-#leftBox #imgBox ul {
-  overflow: hidden;
-}
-#leftBox #imgBox li div {
+#leftBox .swiper-container {
   width: 844px;
   height: 360px;
-  background: rgba(0, 0, 0, 0) url("https://static.yay.com.cn/banner/5be4ed3d4e457.jpg") no-repeat scroll center center / cover;
 }
 #rightBox {
   height: 100%;
@@ -130,18 +123,14 @@ a {
 }
 .allContent .news a .newsImg {
   border-radius: 8px;
-  position: relative;
   width: 190px;
   height: 140px;
-  overflow: hidden;
   margin-right: 20px;
 }
 .allContent .news a .newsImg img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
   height: 100%;
-  transform: translate(-50%, -50%);
+  width: 190px;
+  border-radius: 8px;
 }
 .newsCon .tag {
   display: flex;
@@ -219,10 +208,15 @@ a {
 }
 .newsList a .hotNewsCon div p {
   max-height: 48px;
+  line-height: 22px;
   width: 220px;
   font-size: 12px;
   color: #9a9a9a;
+  overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 .pageBox ul {
   padding: 15px 0 15px 300px;
@@ -254,4 +248,3 @@ a {
   color: #ffa800;
   border: 1px #ffa800 solid;
 }
-/*# sourceMappingURL=gamesNews.css.map */
