@@ -51,8 +51,8 @@
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
-                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
-                    <li><a href=""><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">安全设置</span></a></li>
+                    <li><a href=""><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">我的资料</span></a></li>
+                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">会员中心</span></a></li>
                 </ul>
             </div>
@@ -65,83 +65,70 @@
             </div>
             <div class="div11">
                 <div class="minf_header">
-                    <div class="user_img"><img src="../images/user.jpg" alt=""></div>
+                    <div class="user_img"><!--<img src="../images/user.jpg" alt="">--></div>
                     <div class="mod_img">
                         <button>修改头像</button>
                         <p>请选择jpg、png、gif格式，小于2M的图片（使用高质量图片，可生成高清头像）</p>
                     </div>
                 </div>
-                <div class="minf_body">
-                    <div><span>昵称：</span><p>雪都知道风是怎么吹的</p></div>
-                    <div><span>男：</span><p>男</p></div>
-                    <div><span>所在地：</span><p>全国</p></div>
-                    <div><span>年龄：</span><p>21</p></div>
-                    <div><span>兴趣爱好：</span><p></p></div>
-                    <div><span>签名：</span><p></p></div>
-                    <div><span>背景墙：</span><p></p></div>
-                    <span class="minf_edit">编辑</span>
-                </div>
-                <form action="">
-                    <div class="form_box">
-                        <div class="form_lf"><span>*</span>昵称：</div>
-                        <div class="form_rg"><input type="text" name="" placeholder="雪都知道风是怎么吹的"></div>
-                    </div>
-                    <div class="form_box">
-                        <div class="form_lf"><span>*</span>性别：</div>
-                        <div class="form_rg sexbox">
-                            <div class="sexkong">
-                                <div class="sexbai"></div>
-                                <div class="sexcon">
-                                    <p class="sexman"><input type="radio"  class="sex">&nbsp男</p>
-                                    <p class="sexwom"><input type="radio"  class="sex">&nbsp女</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form_box">
-                        <div class="form_lf"><span>*</span>出生日期：</div>
-                        <div class="form_rg">
-                            <input type="date">
-                        </div>
-                    </div>
-                    <div class="form_box">
-                        <div class="form_lf"><span>*</span>所在地：</div>
-                        <div class="form_rg">
-                            <input type="text" placeholder="北京市-朝阳区">
-                        </div>
-                    </div>
-                    <div class="form_box">
-                        <div class="form_lf"><span>*</span>兴趣爱好：</div>
-                        <div class="form_rg">
-                            <input type="text" placeholder="运动/游戏/学习">
-                        </div>
-                    </div>
-                    <div class="form_box textcon">
-                        <div class="form_lf"><span>*</span>兴趣爱好：</div>
-                        <div class="form_rg ">
-                            <textarea></textarea>
-                        </div>
-                    </div>
-                    <div class="form_box beijing">
-                        <div class="form_lf"><span>*</span>背景墙：</div>
-                        <div class="form_rg ">
-                            <div class="beijing1"></div>
-                        </div>
-                    </div>
-                    <div class="form_box">
-                        <div class="form_lf"><span></span></div>
-                        <div class="form_rg ">
-                            <button class="btn2">确定</button>
-                            <button class="btn3">取消</button>
-                        </div>
-                    </div>
-                </form>
+                <div class="minf_bodycon"></div>
+                <form action="" class="js"></form>
             </div>
         </div>
     </div>
 </div>
+<div class="pre_box">
+    <div class="pre_mask"></div>
+    <div class="pre_con">
+        <p class="pre_p2"><span class="pre_s2">×</span></p>
+        <p>应付金额<span class="pre_money">10</span>元</p>
+        <img class="Rec_img" src="" alt="">
+        <p>
+            请打开<span></span><span class="Rec_payc"></span>“扫一扫”<br>
+            完成支付
+        </p>
+    </div>
+</div>
 </body>
 <script>
+    var user={
+        data:[
+            {user_id:'01',user_nickname:'会玩的小哥哥',user_sex:'男',user_addr:'四川-成都',user_age:'22',user_like:'打篮球，运动，唱歌',user_aut:'除了帅一无所有',user_hpor:'/images/user1.jpg'}
+        ]
+    };
+    var minf_backImg={
+        data:[
+            {user:'01',user_backimg:'/images/user.jpg'},
+            {user:'01',user_backimg:'/images/hpjy.png'},
+            {user:'01',user_backimg:'/images/jdqs.png'}
+        ]
+    }
+    function minf(){
+        //头像
+        var oImg=document.createElement('img');
+        $(oImg).attr('src',`..${user.data[0].user_hpor}`);
+        $('.user_img').append(oImg)
+        //资料
+        var oDiv=document.createElement('div');
+        $(oDiv).addClass('minf_body');
+        $(oDiv).html(`
+               <div><span>昵称：</span><p>${user.data[0].user_nickname}</p></div>
+                <div><span>性别：</span><p>${user.data[0].user_sex}</p></div>
+                <div><span>所在地：</span><p>${user.data[0].user_addr}</p></div>
+                <div><span>年龄：</span><p>${user.data[0].user_age}</p></div>
+                <div><span>兴趣爱好：</span><p>${user.data[0].user_like}</p></div>
+                <div><span>签名：</span><p>${user.data[0].user_aut}</p></div>
+                <div><span>背景墙：</span><p class="minf_backp"></p></div>
+                <span class="minf_edit">编辑</span>
+        `)
+        $('.minf_bodycon').append(oDiv)
+    };
+    minf();
+    $.each(minf_backImg.data,function (i,v) {
+       var oImg=document.createElement('img')
+        $(oImg).attr('src',`..${v.user_backimg}`)
+        $('.minf_backp').append(oImg)
+    })
     $('.div10 li').click(function () {
         $('.div10 li').removeClass('active1');
         $('.div10 li a').removeClass('active1');
@@ -163,6 +150,118 @@
     $('.div7 a').mouseleave(function () {
         $('.div7 b').removeClass('active-show1');
         $('.div7 .s5').removeClass('active-color1');
+    });
+    //编辑按钮
+    function minf_edit(){
+        $('.minf_edit').click(function () {
+            $('.minf_body').css('display','none');
+            $('form').css('display','block');
+            $('form').html(`
+                <div class="form_box">
+                    <div class="form_lf"><span>*</span>昵称：</div>
+                    <div class="form_rg"><input type="text" name="" placeholder="${user.data[0].user_nickname}"></div>
+                </div>
+                <div class="form_box">
+                    <div class="form_lf"><span>*</span>性别：</div>
+                    <div class="form_rg sexbox">
+                        <div class="sexkong">
+                            <div class="sexbai"></div>
+                            <div class="sexcon">
+                                <p class="sexman"><input type="radio"  class="sex">&nbsp男</p>
+                                <p class="sexwom"><input type="radio"  class="sex">&nbsp女</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="form_lf"><span>*</span>出生日期：</div>
+                    <div class="form_rg">
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="form_lf"><span></span>所在地：</div>
+                    <div class="form_rg">
+                        <input type="text" placeholder="${user.data[0].user_addr}">
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="form_lf"><span></span>兴趣爱好：</div>
+                    <div class="form_rg">
+                        <input type="text" placeholder="${user.data[0].user_like}">
+                    </div>
+                </div>
+                <div class="form_box textcon">
+                    <div class="form_lf"><span></span>签名：</div>
+                    <div class="form_rg ">
+                        <textarea>${user.data[0].user_aut}</textarea>
+                    </div>
+                </div>
+                <div class="form_box beijing">
+                    <div class="form_lf beijing_top"><span>*</span>背景墙：</div>
+                    <div class="form_rg ">
+                        <div class="beijing1">
+                            <div class="back_box"></div>
+                            <div class="form_shang"><p>上传</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_box">
+                    <div class="form_rg ">
+                        <button class="btn2">确定</button>
+                        <button class="btn3">取消</button>
+                    </div>
+                </div>
+        `);
+            $.each(minf_backImg.data,function (i,v) {
+                /* var oDiv1=document.createElement('div');*/
+                var oDiv2=document.createElement('div');
+                $(oDiv2).addClass('back');
+                /* $(oDiv1).addClass('bac_mask');
+                 var oImg=document.createElement('img');
+                 $(oImg).addClass('add_img');
+                 $(oImg).attr('src',``);
+                 $(oDiv2).append(oDiv1);
+                 $(oDiv2).append(oImg);
+                 $('.back_box').append(oDiv2)*/
+                $(oDiv2).html(`
+                <div class="bac_mask"><div class="box_mask"><span class="back_move">删除</span><span class="back_preview">预览</span></div></div>
+                <img src="..${v.user_backimg}" alt="">
+            `)
+                $('.back_box').append(oDiv2)
+            })
+
+        });
+    };
+    minf_edit();
+    $('body').on('mouseenter','.bac_mask',function () {
+        $('.bac_mask').removeClass('mask_col')
+        $(this).addClass('mask_col')
+        $('.box_mask').css('display','none')
+        $(this).children().css('display','block')
+    });
+    $('body').on('mouseleave','.bac_mask',function () {
+        $(this).removeClass('mask_col');
+        $('.box_mask').css('display','none')
+    });
+    //删除背景墙图片
+    $('form').on('click','.back_move',function () {
+        console.log($(this).parent().parent().next().attr('src'))
+        var oSrc=$(this).parent().parent().next().attr('src')
+        var oSrc1=oSrc.slice(2);
+        console.log(oSrc1);
+        minf_edit();
+        /*$.each(minf_backImg.data,function (i,v) {
+            if(oSrc1==v.user_backimg){
+                console.log(i,v)
+                minf_backImg.data.splice(i,1)
+                console.log(minf_backImg.data)
+                return
+            }
+        })*/
+    });
+    $('form').on('click','.back_preview',function () {
+
     })
 </script>
 </html>

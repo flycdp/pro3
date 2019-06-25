@@ -267,11 +267,13 @@ a{
         padding: 0 15px;
         height: 32px;
         font-size: 14px;
-        border-radius: 5px;
+        border-radius: 4px;
         text-align: center;
         line-height: 32px;
         background-color: rgb(255, 87, 96);
         color: rgb(255, 255, 255);
+        outline: none;
+        border: 2px solid rgb(255, 87, 96);
       }
       button:hover{
         background-color: rgb(242, 40, 51);
@@ -286,7 +288,7 @@ a{
   .minf_body{
     padding: 24px 120px 0 120px;
     width: 710px;
-    height: 600px;
+    height: 650px;
     position: relative;
     .minf_edit{
       position: absolute;
@@ -297,7 +299,6 @@ a{
       cursor: pointer;
     }
     div{
-      overflow: hidden;
       width: 710px;
       height: 50px;
       font-size: 16px;
@@ -315,10 +316,21 @@ a{
       }
     }
   }
+  .minf_backp{
+    width: 650px;
+    height: 200px;
+    margin-top: 10px;
+    img{
+      width: 104px;
+      height: 104px;
+      margin-right: 10px;
+      float: left;
+    }
+  }
   form{
-    width: 710px;
-    padding: 0 120px;
-    _display: none;
+    width: 950px;
+    padding: 30px 0 0;
+    display: none;
     span{
       display: inline-block;
       margin-right: 4px;
@@ -346,36 +358,40 @@ a{
           height: 28px;
         }
         .btn2{
-          width: 128px;
+          width: 108px;
           cursor:pointer;
           padding: 0 15px;
-          height: 32px;
+          height: 28px;
           font-size: 14px;
           border-radius: 5px;
           text-align: center;
-          line-height: 32px;
+          line-height: 28px;
+          border: 2px solid rgb(255, 87, 96);
           background-color: rgb(255, 87, 96);
           color: rgb(255, 255, 255);
-          :hover {
-            background-color: rgb(242, 40, 51);
-            border-color: rgb(242, 40, 51);
-          }
+          outline: none;
+        }
+        .btn2:hover {
+          background-color: rgb(242, 40, 51);
+          border: 2px solid rgb(242, 40, 51);
         }
         .btn3{
-          width: 128px;
+          width: 108px;
           cursor:pointer;
           padding: 0 15px;
-          height: 32px;
+          height: 28px;
           font-size: 14px;
           border-radius: 5px;
           text-align: center;
-          line-height: 32px;
+          line-height: 28px;
           background: white;
+          outline: none;
+          border: 2px solid #c4c4c4;
           color: #c4c4c4;
-          :hover {
-            border-color: rgb(255, 168, 0);
-            color: rgb(255, 168, 0);
-          }
+        }
+        .btn3:hover {
+          color: rgb(255, 168, 0);
+          border: 2px solid rgb(255, 168, 0);
         }
         .sex{
           width: 16px;
@@ -428,11 +444,71 @@ a{
       }
     }
     .beijing{
-      height: 105px;
+      height: 106px;
       .beijing1{
-        width: 103px;
-        height: 103px;
-        border: 1px  dashed #eeeeee;
+        width: 650px;
+        height: 106px;
+        >div{
+          height: 104px;
+          float: left;
+          margin-right: 10px;
+          img{
+            width: 104px;
+            height: 104px;
+            margin-right: 10px;
+          }
+        }
+        .back_box{
+          position: relative;
+          height: 104px;
+          .back{
+            width: 104px;
+            height: 104px;
+            margin-right: 10px;
+            float: left;
+          }
+        }
+        .bac_mask{
+          position: absolute;
+          width: 104px;
+          height: 104px;
+          background: rgba(238, 238, 238, 0.2);
+          .box_mask{
+            display: none;
+            span{
+              color: black;
+              line-height: 104px;
+              width: 50px;
+              margin: 0;
+              display: inline;
+            }
+            .back_move{
+              text-align: right;
+              cursor: pointer;
+              margin-left: 20px;
+            }
+            .back_preview{
+              text-align: left;
+              cursor: pointer;
+            }
+          }
+        }
+        .mask_col{
+          background: rgba(0, 0, 0, 0.4);
+        }
+        .form_shang{
+          border: 1px  dashed #eeeeee;
+          width: 104px;
+          height: 104px;
+          background: #e3e3e3;
+          color: #6f6f6f;
+          text-align: center;
+          line-height: 104px;
+          cursor: pointer;
+          :hover{
+            border: 1px dashed #FFA800;
+          }
+        }
       }
     }
   }

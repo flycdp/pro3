@@ -548,22 +548,29 @@ a{
   }
   .Rec_foot{
     padding: 20px 0;
+    height: 40px;
     button{
       height: 42px;
-      cursor:pointer;
       float: right;
       width: 138px;
       padding: 0 15px;
       border-radius: 20px;
       line-height: 42px;
-      border-color: rgb(217, 217, 217);
       background-color: rgb(245, 245, 245);
       color: rgba(0, 0, 0, 0.25);
+      border: 2px solid rgb(217, 217, 217);
+      outline: none;
+      cursor: not-allowed;
+      :hover{
+        background: red;
+        border: 2px solid red;
+      }
     }
     .btn4{
       background-color: rgb(255, 87, 96);
       color: rgb(255, 255, 255);
-      border-color: rgb(255, 87, 96);
+      border: 2px solid rgb(255, 87, 96);
+      cursor:pointer;
     }
     p{
       float: right;
@@ -577,4 +584,55 @@ a{
       }
     }
   }
+}
+.Rec_box{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  display: none;
+}
+.Rec_mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+.Rec_con{
+  width: 450px;
+  height: 430px;
+  background: white;
+  border-top: 3px solid #ffa800;
+  position: absolute;
+  z-index: 30;
+  top: 20%;
+  left: 50%;
+  margin-left: -225px;
+  border-radius: 8px;
+  text-align: center;
+}
+.Rec_p2{
+  overflow: hidden;
+  height: 60px;
+  margin-bottom: 10px;
+}
+.Rec_s2{
+  float: right;
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: lighter;
+  cursor: pointer;
+}
+.Rec_money{
+  color: red;
+}
+.Rec_con img{
+  width: 200px;
+  height: 200px;
+  margin: 30px auto 10px;
+  border: 2px solid rgb(236, 236, 236);
 }

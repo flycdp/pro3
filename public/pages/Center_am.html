@@ -9,6 +9,18 @@
     </style>
 </head>
 <body>
+<div class="Rec_box">
+    <div class="Rec_mask"></div>
+    <div class="Rec_con">
+        <p class="Rec_p2"><span class="Rec_s2">×</span></p>
+        <p>应付金额<span class="Rec_money">10</span>元</p>
+        <img class="Rec_img" src="" alt="">
+        <p>
+            请打开<span></span><span class="Rec_payc"></span>“扫一扫”<br>
+            完成支付
+        </p>
+    </div>
+</div>
     <div id="header">
         <div class="div1">
             <a href=""><img src="../images/logo.png" alt="" class="img1"></a>
@@ -179,7 +191,7 @@
                         </div>
                         <p class="Rec_xuzi"><input type="checkbox"><a href="javascript:;">我已阅读并同意<span>《充值须知》</span></a></p>
                         <div class="Rec_foot">
-                            <button class="btn4">充 值</button>
+                            <button class="">充 值</button>
                             <p>需支付<span>10</span></p>
                         </div>
                     </div>
@@ -187,6 +199,7 @@
             </div>
         </div>
     </div>
+
 </body>
 <script>
     var am={
@@ -257,6 +270,7 @@
         $('.div11>div').eq($(this).index()).addClass('active');
         $('.div10 li a').eq($(this).index()).addClass('active1');
     });
+
     //充值方式
     $('.pame>div').click(function () {
         $('.pame div').removeClass('active4');
@@ -264,17 +278,35 @@
         $(this).addClass('active4');
         /*$('.pame>div div').eq($(this).index()).addClass('ritop');*/
         $(this).children().eq(0).addClass('ritop')
-    })
+    });
+
     //充值须知
     $('.Rec_xuzi input').click(function () {
-
         if ($(this.checked).length) {
-
+           $('.Rec .Rec_foot button').addClass('btn4')
+        }else {
+            $('.Rec .Rec_foot button').removeClass('btn4')
         }
+    });
 
+    //点击充值
+    $('.Rec_foot').on('click','.btn4',function () {
+        $('.Rec_money').html(' ')
+        $('.Rec_box').css('display','block');
+        var oMun=$('.Rec_foot span').html();
+        $('.Rec_money').html(oMun);
+        var oStr=$('.active4').children().eq(2).html();
+        $('.Rec_payc').html(oStr);
+        if (oStr=='微信'){
+            $('.Rec_img').attr('src','../images/pay_img1.png');
+        }else {
+            $('.Rec_img').attr('src','../images/pay_img2.png');
+        }
+    });
+    $('.Rec_s2').click(function () {
+        $('.Rec_box').css('display','none')
     })
     $('.div18').click(function () {
-
         $('.div18 .num').removeClass('active2');
         $('.div18 .give-fee').removeClass('active3');
         $('.div18 .num').eq($(this).index()).addClass('active2');
@@ -285,7 +317,6 @@
     })
     $('.div19 input').on("input",function () {
         var num=$(this).val()
-        console.log(num)
         if (num>100000){
             alert('你输入的金额过大，一次充值最多为10万元')
             return
