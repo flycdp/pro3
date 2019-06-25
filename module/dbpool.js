@@ -1,10 +1,10 @@
 const mysql=require('mysql');
 const yhb=require('./yhb.js');
-const hlx=require('./hlx.js');
+/* const hlx=require('./hlx.js');
 const fy=require('./fy.js');
 const jf=require('./jf.js');
 const ljy=require('./ljy.js');
-const wq=require('./wq.js')
+const wq=require('./wq.js') */
 const dbPool={
     pool:null,
     config:{
