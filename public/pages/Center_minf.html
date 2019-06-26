@@ -9,6 +9,7 @@
     </style>
 </head>
 <body>
+<div class="pre_body"></div>
 <div id="header">
     <div class="div1">
         <a href=""><img src="../images/logo.png" alt="" class="img1"></a>
@@ -77,18 +78,6 @@
         </div>
     </div>
 </div>
-<div class="pre_box">
-    <div class="pre_mask"></div>
-    <div class="pre_con">
-        <p class="pre_p2"><span class="pre_s2">×</span></p>
-        <p>应付金额<span class="pre_money">10</span>元</p>
-        <img class="Rec_img" src="" alt="">
-        <p>
-            请打开<span></span><span class="Rec_payc"></span>“扫一扫”<br>
-            完成支付
-        </p>
-    </div>
-</div>
 </body>
 <script>
     var user={
@@ -102,7 +91,8 @@
             {user:'01',user_backimg:'/images/hpjy.png'},
             {user:'01',user_backimg:'/images/jdqs.png'}
         ]
-    }
+    };
+    //加载我的资料
     function minf(){
         //头像
         var oImg=document.createElement('img');
@@ -174,9 +164,9 @@
                     </div>
                 </div>
                 <div class="form_box">
-                    <div class="form_lf"><span>*</span>出生日期：</div>
+                    <div class="form_lf"><span>*</span>年龄：</div>
                     <div class="form_rg">
-                        <input type="date">
+                        <input type="text" placeholder="${user.data[0].user_age}">
                     </div>
                 </div>
                 <div class="form_box">
@@ -214,23 +204,14 @@
                 </div>
         `);
             $.each(minf_backImg.data,function (i,v) {
-                /* var oDiv1=document.createElement('div');*/
                 var oDiv2=document.createElement('div');
                 $(oDiv2).addClass('back');
-                /* $(oDiv1).addClass('bac_mask');
-                 var oImg=document.createElement('img');
-                 $(oImg).addClass('add_img');
-                 $(oImg).attr('src',``);
-                 $(oDiv2).append(oDiv1);
-                 $(oDiv2).append(oImg);
-                 $('.back_box').append(oDiv2)*/
                 $(oDiv2).html(`
                 <div class="bac_mask"><div class="box_mask"><span class="back_move">删除</span><span class="back_preview">预览</span></div></div>
                 <img src="..${v.user_backimg}" alt="">
             `)
                 $('.back_box').append(oDiv2)
             })
-
         });
     };
     minf_edit();
@@ -246,11 +227,12 @@
     });
     //删除背景墙图片
     $('form').on('click','.back_move',function () {
-        console.log($(this).parent().parent().next().attr('src'))
-        var oSrc=$(this).parent().parent().next().attr('src')
+        var oSrc=$(this).parent().parent().next().attr('src');
         var oSrc1=oSrc.slice(2);
         console.log(oSrc1);
-        minf_edit();
+        var oDiv=$(this).parent().parent().parent();
+        $(oDiv).remove()
+       /* minf_edit();*/
         /*$.each(minf_backImg.data,function (i,v) {
             if(oSrc1==v.user_backimg){
                 console.log(i,v)
@@ -260,8 +242,34 @@
             }
         })*/
     });
+    //预览
     $('form').on('click','.back_preview',function () {
-
+        var oSrc=$(this).parent().parent().next().attr('src')
+        var oDiv=document.createElement('div');
+        $(oDiv).addClass('pre_box');
+        $(oDiv).html(`
+                <div class="pre_box">
+                    <div class="pre_mask"></div>
+                    <div class="pre_con">
+                        <span class="pre_s2">×</span>
+                        <img class="pre_img" src='${oSrc}' alt="">
+                    </div>
+                </div>
+        `);
+        $('.pre_body').append(oDiv)
+    });
+    //关闭预览
+    $('.pre_body').on('click','.pre_s2',function () {
+        $('.pre_box').remove('.pre_box');
+    });
+    $('form').on('click','.form_shang',function () {
+        var oDiv2=document.createElement('div');
+        $(oDiv2).addClass('back');
+        $(oDiv2).html(`
+                <div class="bac_mask"><div class="box_mask"><span class="back_move">删除</span><span class="back_preview">预览</span></div></div>
+                <img src="..${minf_backImg.data[0].user_backimg}" alt="">
+            `)
+        $('.back_box').append(oDiv2)
     })
 </script>
 </html>

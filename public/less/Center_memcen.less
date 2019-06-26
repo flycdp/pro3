@@ -280,9 +280,11 @@ a{
           margin-top: 10px;
           float: left;
           background-image:url("../images/vip_sript..png");
-          background-position: 0px 0px;
+          background-position-x: 0px;
+          background-position-y: 0px;
         }
-        .mem_prob{
+        .mem_vipbox{
+          position: relative;
           width: 520px;
           height: 10px;
           margin-top: 18px;
@@ -290,6 +292,23 @@ a{
           background: #f2e9dd;
           float: left;
           border-radius: 5px;
+          .men_vipmask{
+            width: 20%;
+            height: 10px;
+            cursor: pointer;
+            background: #FFA800;
+            float: left;
+            border-radius: 5px;
+            position: absolute;
+          }
+          .mem_prob{
+            width: 520px;
+            height: 10px;
+            cursor: pointer;
+            background: #f2e9dd;
+            float: left;
+            border-radius: 5px;
+          }
         }
         .mem_levemo{
           width: 70px;
@@ -414,4 +433,26 @@ a{
     }
   }
 }
-
+.alertbox{
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ffa800;
+  background: #fffaf2;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 3px;
+}
+.alertdown{
+  width: 0;
+  height: 0;
+  border-right: 10px solid;
+  border-left: 10px solid;
+  border-top: 10px solid;
+  border-color: rgb(255, 168, 0) transparent  transparent transparent ;
+  margin-left: 40px;
+}
+.alerbody{
+  position: absolute;
+  top: -55px;
+  left: 180px;
+}
