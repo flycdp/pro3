@@ -6,8 +6,17 @@
 body {
     background: rgb(256, 256, 246);
 }
+html::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+    background-color: #ffa800;
+  }
+  html::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+  html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
 
-.box>div {
+  .box>div {
     float: left;
     height: 100%;
 }
@@ -88,7 +97,7 @@ body {
 
 .sf span {
     float: left;
-    width: 100px;
+    width: 70px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -106,6 +115,11 @@ li {
 
 .sf time {
     float: right;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
 }
 
 .text {
@@ -194,7 +208,7 @@ li {
     background: #ff5760;
     color:#fff;
     position: absolute;
-    bottom: -2rem;
+    bottom: -1rem;
     right: 0;
     width: 80px;
     height: 30px;

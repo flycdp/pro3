@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
 
-   <head>
-       <meta charset="UTF-8">
-       <title></title>
-       <script  src="../pulg/dateYHB/jeDate/dist/jedate.min.js"></script>
-   </head>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
 
-   <body>
-       <input  id="date"/>
-       
-   </body>
-   <script type="text/javascript">
-       jeDate("#date",{
-           format: "YYYY-MM-DD", //控制是否显示小时
-       });
+<body>
+    <div id="root">
+        <my-div></my-div>
+        <my-table></my-table>
+    </div>
+   
+    <template id="roo">
+        <div>
+            <p>{{title}}</p>
+            <ul>
+                <li v-for="(item, index) in list" >{{item}}</li>
+            </ul>
+        </div>
+    </template>
+    <script type="text/javascript">
+        new Vue({
+            el: "#root",
+            components: {
+                'my-table': {
+                    template: '#roo',
+                    data:function(){
+                        return {
+                           title:'title',
+                           list:[1,2,3,4]
+                        }
+                    }
+                },
+                'my-div': {
+                    template: '<h1>hello World</h1>',
+                }
+            }
+        })
+    </script>
+</body>
 
-   </script>
 
 </html>
