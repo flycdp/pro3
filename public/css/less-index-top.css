@@ -83,6 +83,9 @@
     height: 60px;
     position: relative;
 }
+.wq-nav-center-left .shou span{
+    color: white;
+}
 .wq-nav-center-left .HomePage{
     width: 120px;
     height: 60px;
@@ -136,10 +139,40 @@
 .wq-nav-center-left>ul>li:hover .menu{
     display: block;
 }
+/*鼠标移入字体变色*/
+.wq-nav-center-left>ul>li:hover span{
+    color: white;
+}
 .wq-nav-center-left .pei{
     width: 120px;
     height: 60px;
     background-color: transparent;
+}
+.wq-nav-center-left .lobby{
+    position: relative;
+    top:15px;
+    left: 6px;
+    z-index: 2;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+   background-image: url("../images/index.images/nav1.gif");
+    background-size: 30px;
+}
+.wq-nav-center-left .hot{
+    position: absolute;
+    top: -8px;
+    right: -15px;
+    width: 30px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /*背景图 背景位置 背景图大小 是否平铺 背景色*/
+    background: url(../images/index.images/nav2.png) center center no-repeat rgb(249, 78, 86);
+    border-radius: 25px;
 }
 .wq-nav-center-left .indent{
     width: 66px;
@@ -154,6 +187,9 @@
     margin-top: -15px;
     margin-left: -33px;
     z-index: 1;
+}
+.wq-nav-center-left .kyg{
+    width: 87px;
 }
 .wq-nav-center-left .caret{
     position: absolute;
@@ -181,6 +217,7 @@
     top:13px;
     left: 0;
     background-color: rgb(255, 191, 41);
+    transition: all 0.3s linear;
 }
 .wq-nav-center-right .search .input{
     position: absolute;
@@ -195,16 +232,19 @@
     border-radius: 16px;
     border-right: none;
 }
+.wq-nav-center-right .search .input-placeholder{
+    color: #c4c4c4;
+}
 .wq-nav-center-right>ul>li{
     float:left;
 }
 .wq-nav-center-right .search1{
-    width:46px;
+    width:51px;
     height: 60px;
+    margin-left: 14px;
 }
 .wq-nav-center-right .search1>span{
     font-size: 14px;
-    margin: 25px;
     line-height: 60px;
 }
 .wq-nav-center-right .search1>span:hover{
@@ -215,9 +255,11 @@
 }
 .wq-nav-center-right .search1>span a{
     color:#000;
+    transition: all 0.3s linear;
 }
 .wq-nav-right a{
     color:#000;
+    transition: all 0.3s linear;
 }
 .wq-nav-center-right .button{
     width: 46px;
@@ -227,6 +269,18 @@
     z-index: 2;
     background-color: rgb(255, 191, 41);
     border:none;
+    transition: all 0.3s linear;
+}
+/*搜索按钮移入*/
+.wq-nav-center-right .search:hover{
+    background: #FED101;
+}
+.wq-nav-center-right .button:hover{
+    background: #FED101;
+}
+.wq-nav-center-right .button span{
+    color: white;
+    font-weight: bold;
 }
 .wq-nav-right{
     width: 300px;
@@ -234,12 +288,18 @@
     float: left;
     position: relative;
 }
+.wq-nav-right .deng{
+    background: white;
+    border:none;
+    font-size: 14px;
+    color: black;
+}
+.wq-nav-right a:visited{
+    color: black;
+}
 .wq-nav-right>span{
     height:60px;
     line-height: 60px;
-}
-.wq-nav-right>span:hover{
-    color: rgb(255, 191, 41);
 }
 .wq-nav-right>span:hover a{
     color: rgb(255, 191, 41);
@@ -247,6 +307,135 @@
 .wq-nav-right::after{
     content:url("../images/index.images/nav3.png");
     position: absolute;
-    left: 85px;
-    top: 15px;
+    left: 98px;
+    top: 17px;
+}
+.wq-nav-right .content{
+    width: 760px;
+    height: 423px;
+    border-top:3px solid rgb(255,199,0);
+    border-radius: 8px;
+    margin-top: 250px;
+    margin-left: -79px;
+    overflow: hidden;
+}
+.wq-nav-right .top{
+    width: 760px;
+    height: 98px;
+    background: url("../images/index.images/tan.png");
+    background-size: 760px 98px;
+}
+.wq-nav-right .login{
+    width: 760px;
+    height: 275px;
+}
+.wq-nav-right .login .le{
+    width: 342px;
+    height: 245px;
+}
+.wq-nav-right .le div{
+    width: 275px;
+    height: 22px;
+}
+.wq-nav-right .le h4,form{
+    margin-left: 30px;
+}
+.wq-nav-right .le .shou{
+    width: 275px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+.wq-nav-right .le p{
+    color:#FF5760;
+    font-size: 14px;
+    display: none;
+}
+.wq-nav-right .le .shou:hover{
+    border-color:  rgb(255,199,0);
+}
+.wq-nav-right .le .qd{
+    display: block;
+    width: 275px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    background-color: #FF5760;
+}
+.wq-nav-right .le .zidong{
+    margin-left: -73px;
+}
+.wq-nav-right .le .hq{
+    color: rgb(204, 166, 131);
+    background-color: white;
+    border: none;
+    position: relative;
+    top: -51px;
+    left: 196px;
+}
+.wq-nav-right .le input[value]{
+    color: #c4c4c4;
+}
+.wq-nav-right .login .ri{
+    width: 342px;
+    height: 245px;
+    padding-left: 78px;
+}
+.wq-nav-right .login .shadow{
+    width: 40px;
+    height: 245px;
+    box-shadow: rgb(247, 247, 247) 0 0 15px;
+    background: rgb(247, 247, 247);
+    border-radius: 50px;
+}
+.wq-nav-right .login div{
+    float: left;
+}
+.wq-nav-right .content .down{
+    width: 760px;
+    height: 50px;
+    background-image: url("../images/index.images/tan1.png");
+    background-repeat: no-repeat;
+    background-size: 760px 50px;
+    text-align: left;
+}
+.wq-nav-right .down a{
+    color: #FEB425;
+}
+.wq-nav-right .ri button{
+    width: 180px;
+    height: 40px;
+    border-radius:20px;
+    border:none;
+}
+.wq-nav-right .ri span{
+    font-size: 16px;
+    color: white;
+}
+.wq-nav-right .ri .tb{
+    font-size: 24px;
+    margin-right: 15px;
+}
+.wq-nav-right .ri .wx{
+    background: #5FCD54;
+    transition: all 0.3s linear;
+}
+.wq-nav-right .ri .wx:hover{
+    background: #00ff00;
+}
+.wq-nav-right .ri .wb{
+    background: #F3614B;
+    transition: all 0.3s linear;
+}
+.wq-nav-right .ri .wb:hover{
+    background: #ff0000;
+}
+.wq-nav-right .ri .qq{
+    background: #3AA1E8;
+    transition: all 0.3s linear;
+}
+.wq-nav-right .ri .qq:hover{
+    background: #0000ff;
 }

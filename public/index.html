@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="font/wq/iconfont/iconfont.css">
     <link rel="stylesheet" href="css/less-index.css">
+    <script src="js/jQuery.js"></script>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/less-index-top.css">
     <script src="js/bootstrap.js"></script>
     <script src="js/swiper.js"></script>
-    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
     <!--导航栏-->
-    <div class="wq-top">
+    <div class="wq-top" id="wq-top">
         <div class="wq-top1 clearfix">
             <div class="wq-nav-left">
                 <a href="#" class="wq-nav-left-a1"></a>
@@ -23,11 +25,14 @@
             <div class="wq-nav-center">
                 <div class="wq-nav-center-left">
                     <ul>
-                        <li>
+                        <li class="shou">
                             <a href="#" class="HomePage wq-slide">
                                 <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
-                                <span class="indent">首页</span>
-                                <span class="caret"></span>
+                                <span class="indent">
+                                    首页
+                                     <span class="iconfont icon-icon-arrow-down"></span>
+                                </span>
+
                                 <ul class="menu">
                                     <li><a href="#" class="underline">成为大神</a></li>
                                     <li><a href="#" class="underline overline">急速下单</a></li>
@@ -42,13 +47,18 @@
                         </li>
                         <li>
                             <a href="#"  class="pei wq-slide">
-                                <span class="indent">聊天室</span>
+                                <span class="lobby"></span>
+                                <span class="indent">聊天室
+                                <mark class="hot"></mark>
+                                </span>
                             </a>
                         </li>
                         <li>
                             <a href="#"  class="pei wq-slide">
-                                <span class="indent">折扣专区</span>
-                                <span class="caret"></span>
+                                <span class="indent kyg">
+                                    折扣专区
+                                     <span class="iconfont icon-icon-arrow-down"></span>
+                                </span>
                                 <ul class="menu">
                                     <li><a href="#" class="underline">限时折扣</a></li>
                                     <li><a href="#" class="underline  overline">免单专区</a></li>
@@ -65,38 +75,112 @@
                 </div>
                 <div class="wq-nav-center-right">
                     <ul>
+                        <!--搜索框-->
                         <li class="search">
-                            <input type="text" class="input">
+                            <input type="text" class="input" placeholder="请输入大神昵称">
                             <button class="button">
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                <span class="iconfont icon-sousuo"></span>
                             </button>
                         </li>
+                        <!--充值-->
                         <li class="search1">
                             <span>
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                <a href="#">充值</a>
+                                <a href="#">
+                                    <span class="iconfont icon-chongzhi"></span>
+                                    充值
+                                </a>
                             </span>
                         </li>
+                        <!--订单-->
                         <li class="search1">
                             <span>
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                <a href="">订单</a>
+
+                                <a href="">
+                                    <span class="iconfont icon-dingdan"></span>
+                                    订单
+                                </a>
                             </span>
                         </li>
+                        <!--消息-->
                         <li class="search1">
                             <span>
-                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                <a href="">消息</a>
+
+                                <a href="">
+                                     <span class="iconfont icon-xiaoxi"></span>
+                                    消息
+                                </a>
                             </span>
                         </li>
                     </ul>
                 </div>
             </div>
+            <!--注册/登陆-->
             <div class="wq-nav-right">
                 <span>
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    <a href="">注册/登陆</a>
+                    <a href="" class="btn btn-primary btn-lg deng" data-toggle="modal" data-target="#myModal">
+                        <span class="iconfont icon-denglu"></span>
+                        注册/登陆
+                    </a>
                 </span>
+                <!--登陆/注册页面-->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content content">
+                            <div class="modal-header top">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body login clearfix">
+                                <div class="le">
+                                    <h4>手机登陆</h4>
+                                    <form id="form">
+                                        <input type="text" class="shou" id="t1" placeholder="手机号码" name="tel">
+                                        <div>
+                                            <p class="kong" id="p1">请输入手机号码</p>
+                                            <p class="bzq" id="p2">手机号码格式不正确</p>
+                                        </div>
+                                        <input type="text" class="dong shou" id="t2" placeholder="动态密码">
+                                        <br>
+                                        <br>
+                                        <button type="button" class="hq" id="yzm">获取验证码</button>
+                                        <div>
+                                            <p class="dm" id="p3">请输入动态密码</p>
+                                        </div>
+                                        <input type="checkbox" checked class="zidong"> 自动登陆
+                                        <br>
+                                        <br>
+                                        <button class="qd">确定</button>
+                                    </form>
+                                </div>
+                                <div class="shadow"></div>
+                                <div class="ri">
+                                    <h4>第三方登陆</h4>
+                                    <br>
+                                    <br>
+                                    <button type="button" class="wx">
+                                        <span class="iconfont icon-changyonglogo28 tb"></span>
+                                        <span>微信登陆</span>
+                                    </button>
+                                    <br>
+                                    <br>
+                                    <button type="button" class="wb">
+                                        <span class="iconfont icon-weibo tb"></span>
+                                        <span>微博登陆</span>
+                                    </button>
+                                    <br>
+                                    <br>
+                                    <button type="button" class="qq">
+                                        <span class="iconfont icon-qq tb"></span>
+                                        <span>QQ登陆</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-footer down">
+                                使用即为同意
+                                <a href="#">《用户协议》</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -114,30 +198,44 @@
                 <!-- 如果需要分页器 -->
                 <div class="swiper-pagination"></div>
                 <!-- 如果需要导航按钮 -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev z"></div>
+                <div class="swiper-button-next y"></div>
                 <!-- 如果需要滚动条 -->
                 <!--<div class="swiper-scrollbar"></div>-->
             </div>
         </div>
         <ul class="hu">
             <li>
-                <i class="anticon">
-                    <span></span>
-                </i>
-                <span>咨询客服</span>
+                <a href="#">
+                    <span class="iconfont icon-13zixun tu"></span>
+                    <span class="zi">咨询客服</span>
+                </a>
             </li>
             <li>
-                <span>公众号</span>
+                <a href="#" class="erwei">
+                    <span class="iconfont icon-changyonglogo28 tu"></span>
+                    <span class="zi1">公众号</span>
+                    <img src="images/index.images/er.png" alt="" class="er">
+                </a>
             </li>
             <li>
-                <span>意见反馈</span>
+                <a href="pages/Opinion.html" target="_blank">
+                    <span class="iconfont icon-yijianfankui tu"></span>
+                    <span class="zi2">意见反馈</span>
+                </a>
             </li>
             <li>
-                <span>APP下载</span>
+                <a href="#" class="erwei">
+                    <span class="iconfont icon-app tu"></span>
+                    <span class="zi3">APP下载</span>
+                    <img src="images/index.images/fixed1.png" alt="" class="xin">
+                </a>
             </li>
             <li>
-                <span>TOP</span>
+                <a href="#wq-top">
+                    <span class="iconfont icon-shang tu"></span>
+                    <span class="zi4">TOP</span>
+                </a>
             </li>
         </ul>
         <div class="rapidly"></div>
@@ -396,15 +494,16 @@
 
                 </div>
             </div>
-            <div class="wq-Recommend-right">
+            <!--********************************************************************************************************************************************************-->
+            <div class="wq-Recommend-right" id="gas">
                 <!--人气土豪排行榜-->
                 <div class="nav">
-                    <div class="nav1">
-                        <span class="ren">人气大神</span>
-                        <span class="tu">土豪玩家</span>
+                    <div class="nav1" id="people">
+                        <span data-index="0" class="ren active">人气大神</span>
+                        <span data-index="1" class="tu">土豪玩家</span>
                     </div>
                 </div>
-                <div class="list clearfix">
+                <div class="list  clearfix lu active">
                     <!--人气大神图片-->
                     <!--1-->
                     <a href="#" class="no1" target="_blank" >
@@ -534,6 +633,137 @@
                     </a>
 
                 </div>
+                <div class="list1 clearfix lu " id="howe">
+                        <!--人气大神图片-->
+                        <!--1-->
+                        <a href="#" class="no1" target="_blank" >
+                            <div class="index">
+                                <span class="index1">1</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/wang.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="葵兮兮" class="p">
+                                    <span>葵兮兮</span>
+                                </p>
+                                <span class="s">接单1055次</span>
+                            </div>
+                        </a>
+                        <!--2-->
+                        <a href="#" class="no2" target="_blank" >
+                            <div class="index">
+                                <span class="index1">2</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/ren1.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="包包" class="p">
+                                    <span>包包</span>
+                                    <img src="images/index.images/logo1%20(4).gif" alt="">
+                                    <span>Koko</span>
+                                </p>
+                                <span class="s">接单772次</span>
+                            </div>
+                        </a>
+                        <!--3-->
+                        <a href="#" class="no3" target="_blank" >
+                            <div class="index">
+                                <span class="index1">3</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/ren2.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="葵兮兮" class="p">
+                                    <span>葵兮兮</span>
+                                </p>
+                                <span class="s">接单761次</span>
+                            </div>
+                        </a>
+                        <!--4-->
+                        <a href="#" class="no4" target="_blank" >
+                            <div class="index">
+                                <span class="index1">4</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/tu3.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="喵喵" class="p">
+                                    <span>喵喵</span>
+                                    <img src="images/index.images/logo1%20(4).gif" alt="">
+                                    <span>Koko</span>
+                                </p>
+                                <span class="s">接单756次</span>
+                            </div>
+                        </a>
+                        <!--5-->
+                        <a href="#" class="no5" target="_blank" >
+                            <div class="index">
+                                <span class="index1">5</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/ren4.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="葵兮兮" class="p">
+                                    <span>葵兮兮</span>
+                                </p>
+                                <span class="s">接单1055次</span>
+                            </div>
+                        </a>
+                        <!--6-->
+                        <a href="#" class="no6" target="_blank" >
+                            <div class="index">
+                                <span class="index1">6</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/ren5.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="葵兮兮" class="p">
+                                    <span>葵兮兮</span>
+                                </p>
+                                <span class="s">接单1055次</span>
+                            </div>
+                        </a>
+                        <!--7-->
+                        <a href="#" class="no7" target="_blank" >
+                            <div class="index">
+                                <span class="index1">7</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/ren6.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="姜泥" class="p">
+                                    <span>姜泥</span>
+                                    <img src="images/index.images/logo1%20(4).gif" alt="">
+                                    <span>CtL_</span>
+                                </p>
+                                <span class="s">接单588次</span>
+                            </div>
+                        </a>
+                        <!--8-->
+                        <a href="#" class="no8" target="_blank" >
+                            <div class="index">
+                                <span class="index1">8</span>
+                            </div>
+                            <div class="avatar">
+                                <img src="images/index.images/ren7.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <p title="葵兮兮" class="p">
+                                    <span>葵兮兮</span>
+                                </p>
+                                <span class="s">接单1055次</span>
+                            </div>
+                        </a>
+
+
+                </div>
             </div>
         </div>
         <!--包场-->
@@ -545,6 +775,7 @@
                     <i>更多</i>
                 </a>
             </div>
+
             <ul>
                 <li>
                     <a href="#" >
@@ -663,6 +894,7 @@
                 </li>
 
             </ul>
+
         </div>
         <!--最新入驻-->
         <div class="wq-gBq">
@@ -670,46 +902,623 @@
                 <img src="images/index.images/zui20.png" alt="">
                 <span>最新入驻</span>
             </div>
-            <button></button>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+            <button class="b1 ">
+                <span></span>
+            </button>
+            <ul class="clearfix">
+                <li>
+                    <a href="#">
+                        <img src="images/index.images/a4.jpg" alt="">
+                    </a>
+                    <span>招财小仙女</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/index.images/a4.jpg" alt="">
+                    </a>
+                    <span>招财小仙女</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/index.images/a4.jpg" alt="">
+                    </a>
+                    <span>招财小仙女</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/index.images/a4.jpg" alt="">
+                    </a>
+                    <span>招财小仙女</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/index.images/a4.jpg" alt="">
+                    </a>
+                    <span>招财小仙女</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/index.images/a4.jpg" alt="">
+                    </a>
+                    <span>招财小仙女</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/index.images/a4.jpg" alt="">
+                    </a>
+                    <span>招财小仙女</span>
+                </li>
             </ul>
+            <button class="b2">
+                <span></span>
+            </button>
+        </div>
+        <!--LOL 绝地求生 王者荣耀 -->
+        <div class="wq-ixU">
+            <div class="header">
+                <ul>
+                    <li class="l1"><span>LOL</span></li>
+                    <li class="l2"><span>绝地求生</span></li>
+                    <li class="l3"><span>王者荣耀</span></li>
+                    <li class="l4"><span>声优聊天</span></li>
+                    <li class="l5"><span>哄睡觉</span></li>
+                    <li class="l6"><span>APEX英雄</span></li>
+                </ul>
+                <a href="#" target="_blank">
+                    <i>更多</i>
+                </a>
+            </div>
+            <div class="list">
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="images/index.images/per.jpg" alt="">
+                    <div class="Beauty-buttom">
+                        <div class="Beauty-buttom-top t">
+                            <div class="t1">
+                                <div class="t2">. 在线</div>
+                                <span>
+                                        <span>云久</span>
+                                        <img src="images/index.images/logo1%20(4).gif" alt="">
+                                        <span>宠丹丹</span>
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="Beauty-buttom-down t clearfix">
+                            <div class="ri">
+                                <div class="ri1">
+                                    <!--语音-->
+                                    <audio src="#"></audio>
+                                    <div>
+                                        <img src="images/index.images/audio_02.png" alt="" class="audio">
+                                        <span class="time">00:16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <mark class="le">
+                                <strong>42</strong>
+                                Y币/小时
+                            </mark>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="footer">
+                <a href="#" target="_blank">更多陪玩</a>
+            </div>
         </div>
     </div>
+    <!--底部-->
+    <div class="wq-bottom">
+        <ul class="u1 clearfix">
+            <li class="nei first">
+                <mark>01</mark>
+                <span>下单未开始，订单随时退</span>
+            </li>
+            <li class="jian"></li>
+            <li class="nei">
+                <mark>02</mark>
+                <span>15分钟未接单，订单自动退</span>
+            </li>
+            <li class="jian"></li>
+            <li class="nei">
+                <mark>03</mark>
+                <span>消费不满意，为您来免单</span>
+            </li>
+            <li class="jian"></li>
+            <li class="nei">
+                <mark>04</mark>
+                <span>假一赔三</span>
+            </li>
+        </ul>
+        <!--分割线-->
+        <div class="fen"></div>
+        <ul class="u2 clearfix">
+            <li>
+                <p>我是用户</p>
+                <a href="#" target="_blank">注册须知</a>
+                <a href="#" target="_blank">用户须知</a>
+            </li>
+            <li>
+                <p>我是大神</p>
+                <a href="#" target="_blank">大神申请须知</a>
+                <a href="#" target="_blank">大神使用须知</a>
+                <a href="#" target="_blank">大神使用手册</a>
+            </li>
+            <li>
+                <p>平台守则</p>
+                <a href="#" target="_blank">大腿陪玩守则</a>
+                <a href="#" target="_blank">陪玩流程须知</a>
+                <a href="#" target="_blank">包场流程须知</a>
+            </li>
+            <li>
+                <p>常见问题</p>
+                <a href="#" target="_blank">大腿下单方式</a>
+                <a href="#" target="_blank">无法联系大神</a>
+                <a href="#" target="_blank">大腿版本介绍</a>
+            </li>
+            <li>
+                <p>协议与声明</p>
+                <a href="#" target="_blank">隐私政策</a>
+                <a href="#" target="_blank">用户协议</a>
 
-
-
+            </li>
+            <li>
+                <p>关于我们</p>
+                <a href="#" target="_blank">你好大腿</a>
+                <a href="#" target="_blank">联系我们</a>
+            </li>
+        </ul>
+        <!--分割线-->
+        <div class="fen"></div>
+        <div class="you">
+            <p>友情链接:</p>
+            <ul class="clearfix">
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="images/index.images/you.ico" alt="">
+                        V6电竞
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="images/index.images/you1.ico" alt="">
+                        STMBUY
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="images/index.images/you2.ico" alt="">
+                        小白浏览器
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="images/index.images/you3.ico" alt="">
+                        小妖
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="images/index.images/you4.ico" alt="">
+                        深度传媒
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">八圈智能wifi</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="images/index.images/you5.png" alt="">
+                        QAQ
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <img src="images/index.images/you6.jpg" alt="">
+                        胡啦麻将
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">绝地求生陪玩</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">大腿陪玩</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">王者荣耀代练</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">大腿代练</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">绝地求生CDK</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">电子竞技</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">最新游戏资讯</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">手机游戏下载</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">网游加速器</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">达龙云电脑</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">江湖聊天室</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">v6互娱</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">云电脑IOS版</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">赛雷加速器</a>
+                </li>
+            </ul>
+        </div>
+        <!--分割线-->
+        <div class="fen"></div>
+        <div class="dian">
+            <p>
+               <span>客服电话：400-8926-766</span>
+               <span>客服 QQ：3095726430</span>
+               <span>服务时间：10：00—22：00 7*12小时</span>
+               <span>|</span>
+               <span>商业合作QQ：1486806702</span>
+               <span>工作日服务时间：10：00—18：00</span>
+               <span>|</span>
+               <span>举报邮箱：YAY@snto.com</span>
+            </p>
+            <p>COPYRIGHT ©2012-2018 SNTO CORPORATION, ALL RIGHTS RESERVED</p>
+        </div>
+        <div class="down">四川盛通智联网络科技有限公司 保留权利 版权所有 | 蜀 ICP 备 16036519 号-3 | 京公网安备 110108008330</div>
+    </div>
 </body>
 <script>
     var mySwiper = new Swiper ('.swiper-container', {
         // direction: 'vertical', // 垂直切换选项
         loop: true, // 循环模式选项
         autoplay: true,
-
-
         // 如果需要分页
         pagination: {
             el: '.swiper-pagination'
         },
-
         // 如果需要前进后退按钮
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
-
         // 如果需要滚动条
         scrollbar: {
             el: '.swiper-scrollbar'
         }
-
     });
+    <!--以上是banner图-->
 
+    //人气玩家和土豪玩家相互切换
+    var oP=document.getElementById('people');
+
+    var oS=oP.getElementsByTagName('span');
+
+    var oG=document.getElementById('gas');
+    var oDiv=oG.getElementsByClassName('lu');
+
+
+    for(var i=0;i<oS.length;i++){
+        oS[i].onclick=function () {
+            for(var i=0;i<oS.length;i++){
+                oS[i].classList.remove('active');
+                oDiv[i].classList.remove('active');
+            }
+            this.classList.add('active');
+            oDiv[this.dataset.index].classList.add('active');
+        };
+    }
+    //以上是人气玩家和土豪玩家相互切换
+    //发送验证码
+    var oYzm=document.getElementById('yzm');
+    var oT=document.getElementById('t1');
+    oYzm.onclick=function () {
+        $.ajax({
+            url:'yzm',
+            data:{
+                name1:oT.value
+
+            },
+             type:'post',
+            success:function(res){//成功时候执行的函数
+                //res 成功时候接受到的数据
+            },
+            error:function(err){//失败时候执行的函数
+                //err 错误信息
+            }
+        });
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var reg={
+        tel:/^1[3-9]\d{9}$/
+    };
+    var oF=document.getElementById('from');
+    var oT1=document.getElementById('t1');
+    var oT2=document.getElementById('t2');
+    var p1=document.getElementById('p1');
+    var p2=document.getElementById('p2');
+    var p3=document.getElementById('p3');
+
+    function test(str) {
+//    非空判断
+        //正则验证
+        if(reg .tel.test(str)){
+            return true
+        }else{
+            p2.style.display='block';
+            p1.style.display='none';
+            return false
+        }
+    }
+    oT1.onblur=function(){
+            if(!this.value.trim()){
+                p1.style.display='block';
+                p2.style.display='none';
+                return false
+            }else {
+                test(this.value);
+            }
+    };
+    oT2.onblur=function(){
+        test(this);
+        if(str=oT2.value){
+            if(!str.trim()){
+                p3.style.display='block';
+                return false
+            }
+        }
+    };
 </script>
 </html>
