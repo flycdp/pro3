@@ -3,7 +3,7 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  font-family: '微软雅黑';
+  font-family: '微软雅黑',SArial;
 }
 body{
   background: #f6f6f6;
@@ -23,18 +23,9 @@ body{
   height: 100%;
   width: 844px;
   float: left;
-  #imgBox{
-    position: relative;
-    ul{
-      overflow: hidden;
-    }
-    li{
-      div{
-        width: 844px;
-        height: 360px;
-        background: rgba(0, 0, 0, 0) url("https://static.yay.com.cn/banner/5be4ed3d4e457.jpg") no-repeat scroll center center / cover
-      }
-    }
+  .swiper-container{
+    width: 844px;
+    height: 360px;
   }
 }
 #rightBox{
@@ -120,7 +111,7 @@ a{
   padding-left: 10px;
   border-left: 3px #ffa800 solid;
 }
-.content{
+.allContent{
   position: relative;
   width: 844px;
   .news{
@@ -135,17 +126,13 @@ a{
       cursor: pointer;
       .newsImg{
         border-radius: 8px;
-        position: relative;
         width: 190px;
         height: 140px;
-        overflow: hidden;
         margin-right: 20px;
         img{
-          position: absolute;
-          left: 50%;
-          top: 50%;
           height: 100%;
-          transform: translate(-50%,-50%);
+          width: 190px;
+          border-radius: 8px;
         }
       }
     }
@@ -229,10 +216,15 @@ a{
       div{
         p{
           max-height: 48px;
+          line-height: 22px;
           width: 220px;
           font-size: 12px;
           color: rgb(154, 154, 154);
-          text-overflow: ellipsis;
+          overflow:hidden; 
+          text-overflow:ellipsis;
+          display:-webkit-box; 
+          -webkit-box-orient:vertical;
+          -webkit-line-clamp:2;
         }
       }
     }

@@ -146,6 +146,12 @@ a {
   position: relative;
   z-index: 99;
 }
+.div7 li .active-show {
+  display: inline-block;
+}
+.div7 li .active-show1 {
+  display: inline-block;
+}
 .div7 li a span {
   color: black;
 }
@@ -182,6 +188,12 @@ a {
   height: 52px;
   text-align: center;
   z-index: 2;
+}
+.div7 ul li a .active-color {
+  color: white;
+}
+.div7 ul li a .active-color1 {
+  color: white;
 }
 .div9 {
   float: left;
@@ -264,12 +276,31 @@ a {
   margin-top: 10px;
   float: left;
   background-image: url("../images/vip_sript..png");
-  background-position: 0px 0px;
+  background-position-x: 0px;
+  background-position-y: 0px;
 }
-.div11 .mem_box .mem_header .mem_hedcon .mem_prob {
+.div11 .mem_box .mem_header .mem_hedcon .mem_vipbox {
+  position: relative;
   width: 520px;
   height: 10px;
   margin-top: 18px;
+  cursor: pointer;
+  background: #f2e9dd;
+  float: left;
+  border-radius: 5px;
+}
+.div11 .mem_box .mem_header .mem_hedcon .mem_vipbox .men_vipmask {
+  width: 20%;
+  height: 10px;
+  cursor: pointer;
+  background: #FFA800;
+  float: left;
+  border-radius: 5px;
+  position: absolute;
+}
+.div11 .mem_box .mem_header .mem_hedcon .mem_vipbox .mem_prob {
+  width: 520px;
+  height: 10px;
   cursor: pointer;
   background: #f2e9dd;
   float: left;
@@ -443,5 +474,28 @@ a {
   height: 80px;
   line-height: 80px;
   text-align: right;
+}
+.alertbox {
+  width: 100px;
+  height: 40px;
+  border: 1px solid #ffa800;
+  background: #fffaf2;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 3px;
+}
+.alertdown {
+  width: 0;
+  height: 0;
+  border-right: 10px solid;
+  border-left: 10px solid;
+  border-top: 10px solid;
+  border-color: #ffa800 transparent transparent transparent;
+  margin-left: 40px;
+}
+.alerbody {
+  position: absolute;
+  top: -55px;
+  left: 180px;
 }
 /*# sourceMappingURL=Center_memcen.css.map */

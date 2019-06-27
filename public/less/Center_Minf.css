@@ -124,7 +124,7 @@ a {
   width: 1200px;
   background: #ffffff;
   margin: 0 auto;
-  height: 1000px;
+  height: 1500px;
 }
 .div8 {
   float: left;
@@ -145,6 +145,12 @@ a {
   line-height: 52px;
   position: relative;
   z-index: 99;
+}
+.div7 li .active-show {
+  display: inline-block;
+}
+.div7 li .active-show1 {
+  display: inline-block;
 }
 .div7 li a span {
   color: black;
@@ -182,6 +188,12 @@ a {
   height: 52px;
   text-align: center;
   z-index: 2;
+}
+.div7 ul li a .active-color {
+  color: white;
+}
+.div7 ul li a .active-color1 {
+  color: white;
 }
 .div9 {
   float: left;
@@ -252,11 +264,13 @@ a {
   padding: 0 15px;
   height: 32px;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 4px;
   text-align: center;
   line-height: 32px;
   background-color: #ff5760;
   color: #ffffff;
+  outline: none;
+  border: 2px solid #ff5760;
 }
 .div11 .minf_header .mod_img button:hover {
   background-color: #f22833;
@@ -269,7 +283,7 @@ a {
 .div11 .minf_body {
   padding: 24px 120px 0 120px;
   width: 710px;
-  height: 600px;
+  height: 650px;
   position: relative;
 }
 .div11 .minf_body .minf_edit {
@@ -281,7 +295,6 @@ a {
   cursor: pointer;
 }
 .div11 .minf_body div {
-  overflow: hidden;
   width: 710px;
   height: 50px;
   font-size: 16px;
@@ -298,10 +311,21 @@ a {
   line-height: 50px;
   font-size: 16px;
 }
+.div11 .minf_backp {
+  width: 650px;
+  height: 200px;
+  margin-top: 10px;
+}
+.div11 .minf_backp img {
+  width: 104px;
+  height: 104px;
+  margin-right: 10px;
+  float: left;
+}
 .div11 form {
-  width: 710px;
-  padding: 0 120px;
-  _display: none;
+  width: 950px;
+  padding: 30px 0 0;
+  display: none;
 }
 .div11 form span {
   display: inline-block;
@@ -330,6 +354,42 @@ a {
 .div11 form .form_box .form_rg input {
   width: 300px;
   height: 28px;
+}
+.div11 form .form_box .form_rg .btn2 {
+  width: 108px;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 28px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 28px;
+  border: 2px solid #ff5760;
+  background-color: #ff5760;
+  color: #ffffff;
+  outline: none;
+}
+.div11 form .form_box .form_rg .btn2:hover {
+  background-color: #f22833;
+  border: 2px solid #f22833;
+}
+.div11 form .form_box .form_rg .btn3 {
+  width: 108px;
+  cursor: pointer;
+  padding: 0 15px;
+  height: 28px;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 28px;
+  background: white;
+  outline: none;
+  border: 2px solid #c4c4c4;
+  color: #c4c4c4;
+}
+.div11 form .form_box .form_rg .btn3:hover {
+  color: #ffa800;
+  border: 2px solid #ffa800;
 }
 .div11 form .form_box .form_rg .sex {
   width: 16px;
@@ -371,5 +431,123 @@ a {
 .div11 form .form_box .form_rg .sexkong .sexcon .sex {
   width: 16px;
   height: 16px;
+}
+.div11 form .textcon {
+  height: 60px;
+}
+.div11 form .textcon textarea {
+  width: 300px;
+  height: 58px;
+}
+.div11 form .beijing {
+  height: 106px;
+}
+.div11 form .beijing .beijing1 {
+  width: 650px;
+  height: 106px;
+}
+.div11 form .beijing .beijing1 > div {
+  height: 104px;
+  float: left;
+  margin-right: 10px;
+}
+.div11 form .beijing .beijing1 > div img {
+  width: 104px;
+  height: 104px;
+  margin-right: 10px;
+}
+.div11 form .beijing .beijing1 .back_box {
+  position: relative;
+  height: 104px;
+}
+.div11 form .beijing .beijing1 .back_box .back {
+  width: 104px;
+  height: 104px;
+  margin-right: 10px;
+  float: left;
+}
+.div11 form .beijing .beijing1 .bac_mask {
+  position: absolute;
+  width: 104px;
+  height: 104px;
+  background: rgba(238, 238, 238, 0.2);
+}
+.div11 form .beijing .beijing1 .bac_mask .box_mask {
+  display: none;
+}
+.div11 form .beijing .beijing1 .bac_mask .box_mask span {
+  color: black;
+  line-height: 104px;
+  width: 50px;
+  margin: 0;
+  display: inline;
+}
+.div11 form .beijing .beijing1 .bac_mask .box_mask .back_move {
+  text-align: right;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.div11 form .beijing .beijing1 .bac_mask .box_mask .back_preview {
+  text-align: left;
+  cursor: pointer;
+}
+.div11 form .beijing .beijing1 .mask_col {
+  background: rgba(0, 0, 0, 0.4);
+}
+.div11 form .beijing .beijing1 .form_shang {
+  border: 1px dashed #eeeeee;
+  width: 104px;
+  height: 104px;
+  background: #e3e3e3;
+  color: #6f6f6f;
+  text-align: center;
+  line-height: 104px;
+  cursor: pointer;
+}
+.div11 form .beijing .beijing1 .form_shang :hover {
+  border: 1px dashed #FFA800;
+}
+.pre_box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  _display: none;
+}
+.pre_mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+.pre_con {
+  width: 472px;
+  height: 472px;
+  padding: 24px;
+  background: white;
+  border-top: 2px solid #ffa800;
+  position: absolute;
+  z-index: 30;
+  top: 20%;
+  left: 50%;
+  margin-left: -260px;
+  border-radius: 8px;
+}
+.pre_s2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-weight: lighter;
+  cursor: pointer;
+}
+.pre_con img {
+  width: 472px;
+  height: 472px;
 }
 /*# sourceMappingURL=Center_Minf.css.map */

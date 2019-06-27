@@ -8,389 +8,382 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
     <title>小杨</title>
     <link rel="stylesheet" href="../pulg/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href=../pulg/dateYHB/jeDate/skin/jedate.css>
+
     <link rel="stylesheet" href="../css/RapidMatch.css">
     <script src="../js/jQuery.js"></script>
     <script src="../pulg/bootstrap/js/bootstrap.js"></script>
-    <link rel="stylesheet" type="text/css" href="../css/wui.min.css">
     <script src="../js/jQuery.js"></script>
-    <script type="text/javascript" src="../js/angular.min.js"></script>
-    <script type="text/javascript" src="../js/wui-date.js" charset="utf-8">
-    </script>
+    <link rel="stylesheet" href="../css/less-index-top.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../js/RapidMatch.js"></script>
+    <script  src="../pulg/dateYHB/jeDate/dist/jedate.min.js"></script>
+    <link rel="stylesheet" href="../font/yhb/iconfont/iconfont.css">
 </head>
 
 <body>
-    <header></header>
-    <div class="bg">
-        <section>
-            <div class="box">
-                <div class="box_hd">
-                    <div class="list">
-                        <span class="game cur">游戏陪玩</span>
-                        <span class="recreation">娱乐陪玩</span>
+    <header>
+        <div class="wq-top">
+            <div class="wq-top1 clearfix">
+                <div class="wq-nav-left">
+                    <a href="#" class="wq-nav-left-a1"></a>
+                    <span class="wq-nav-left-s1">大腿陪玩</span>
+                    <a href="#" class="wq-nav-left-a2"></a>
+                </div>
+                <div class="wq-nav-center">
+                    <div class="wq-nav-center-left">
+                        <ul>
+                            <li>
+                                <a href="#" class="HomePage wq-slide">
+                                    <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                                    <span class="indent">首页</span>
+                                    <span class="caret"></span>
+                                    <ul class="menu">
+                                        <li><a href="#" class="underline">成为大神</a></li>
+                                        <li><a href="#" class="underline overline">急速下单</a></li>
+                                        <li><a href="#" class="underline overline">游戏咨询</a></li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="pei wq-slide">
+                                    <span class="indent">全部陪玩</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="pei wq-slide">
+                                    <span class="indent">聊天室</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="pei wq-slide">
+                                    <span class="indent">折扣专区</span>
+                                    <span class="caret"></span>
+                                    <ul class="menu">
+                                        <li><a href="#" class="underline">限时折扣</a></li>
+                                        <li><a href="#" class="underline  overline">免单专区</a></li>
+                                        <li><a href="#" class="underline  overline">深夜专区</a></li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="pei wq-slide">
+                                    <span class="indent">代练</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <p>用户可根据服务需求付款下单，平台将订单需求全网推送至符合要求的大神，大神自行抢单，抢单成功后订单生效，订单超时将自动取消；<br />
-                        大神抢单前用户可取消订单，大神抢单成功后取消订单则需大神同意。
-                    </p>
+                    <div class="wq-nav-center-right">
+                        <ul>
+                            <li class="search">
+                                <input type="text" class="input">
+                                <button class="button">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </li>
+                            <li class="search1">
+                                <span>
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    <a href="#">充值</a>
+                                </span>
+                            </li>
+                            <li class="search1">
+                                <span>
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    <a href="">订单</a>
+                                </span>
+                            </li>
+                            <li class="search1">
+                                <span>
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    <a href="">消息</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="box_bd">
-                    <ul class="choose">
-                        <li>
-                            <ul class="gameList">
-                                <li class="on">
-                                    <img src="../images/cdplol.png">
-                                    <span>LOL</span>
-                                </li>
-                                <li>
-                                    <img src="../images/cdplol.png">
-                                    <span>LOL</span>
-                                </li>
-                                <li>
-                                    <img src="../images/cdplol.png">
-                                    <span>LOL</span>
-                                </li>
-                                <li>
-                                    <img src="../images/cdplol.png">
-                                    <span>LOL</span>
-                                </li>
-                                <li>
-                                    <img src="../images/cdplol.png">
-                                    <span>LOL</span>
-                                </li>
-                                <li>
-                                    <img src="../images/cdplol.png">
-                                    <span>LOL</span>
-                                </li>
-                                <li>
-                                    <img src="../images/cdplol.png">
-                                    <span>LOL</span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <label for="choseDate">
-                                <h4>选择时间</h4>
-                            </label>
-                            <!-- <div><input type="text" placeholder="现在"></div> -->
-                            <div class="wui-content" ng-app="app">
-                                <div class="wui-area">
-                                    <wui-date format="yyyy-mm-dd hh:mm" placeholder="现在" id="date3"
-                                        btns="{'ok':'确定','now':'此刻'}" ng-model="date3">
-                                    </wui-date>
-                                </div>
-                                <script type="text/javascript">
-                                    var app = angular.module('app', ["wui.date"]);
-                                </script>
-                            </div>
-
-                        </li>
-                        <li>
-                            <label for="choseCount">
-                                <h4>选择数量</h4>
-                            </label>
-                            <div>
-                                <input type="number" id="choseCount" value="1" min="1" max="99"> 小时
-                            </div>
-                            <span>
-                                单价：32Y币/小时
-                            </span>
-                        </li>
-                        <li>
-                            <label>
-                                <h4>选择数量</h4>
-                            </label>
-                            <div id="chooseSex">
-                                <span class="on">不限</span>
-                                <span>女神</span>
-                                <span>男神</span>
-                            </div>
-                        </li>
-                        <!-- 数据库里面调出优惠券信息 -->
-                        <li>
-                            <label>
-                                <h4>优惠券</h4>
-                            </label>
-                            <div class="goodJoin">
-                                <div class="joinBox">
-                                    <div class="ls">
-                                        <span><b>9</b>折</span> <br />
-                                        <b>最高减10</b>
-                                    </div>
-                                    <div class="rs">
-                                        <span><b>新用户全品9折优惠</b></span>
-                                        <span>到期时间：2019-06-19 15:57:26</span>
-                                    </div>
-                                    <!-- 是否过期 -->
-                                    <div class="loseEfficacy"
-                                        style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
-                                        即将过期
-                                        <span
-                                            style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
-                                    </div>
-                                    <!-- 是否能被选中 -->
-                                    <i style="display: block ;position: absolute; right: 0.5rem; top:1rem;text-align: center; line-height: 16px;width: 18px;border: 1px solid rgb(254,205,1); border-radius: 50%; height: 18px; font-size: 12px;color:rgb(254,205,1);"
-                                        id="selectYhq" class="glyphicon glyphicon-ok"></i>
-                                </div>
-                                <img src="../images/yhq.png">
-                            </div>
-                            <div class="lookAllTicket">
-                                <div data-toggle="modal" data-target="#myModal">
-                                    查看更多
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <label for="otherMain">
-                                <h4>其他要求</h4>
-                            </label>
-                            <div>
-                                <!--  -->
-                                <div class="dropdown" style="position: absolute">
-                                    <div class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        全部等级分类
-                                        <span class="caret"></span>
-                                    </div>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="javascript:" class="on">全部等级分类</a></li>
-                                        <li><a href="javascript:">初级</a></li>
-                                        <li><a href="javascript:">中级</a></li>
-                                        <li><a href="javascript:">高级</a></li>
-                                    </ul>
-                                </div>
-                                <!--  -->
-                                <div class="dropdown" style="position: absolute">
-                                    <div class="dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false" >
-                                        全部区服
-                                        <span class="caret"></span>
-                                    </div>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <li><a href="javascript:" class="on">全部区服</a></li>
-                                        <li><a href="javascript:">艾欧尼亚</a></li>
-                                        <li><a href="javascript:">祖安</a></li>
-                                        <li><a href="javascript:">洛克萨斯</a></li>
-                                        <li><a href="javascript:">黑色玫瑰</a></li>
-                                        <li><a href="javascript:">钢铁烈阳</a></li>
-                                        <li><a href="javascript:">均衡教派</a></li>
-                                        <li><a href="javascript:">守望先锋</a></li>
-                                        <li><a href="javascript:">守望先锋</a></li>
-                                        <li><a href="javascript:">守望先锋</a></li>
-                                        <li><a href="javascript:">守望先锋</a></li>
-                                    </ul>
-                                </div>
-                                <!--  -->
-                                <div class="dropdown" style="position: absolute">
-                                    <div class="dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false">
-                                        全部游戏水平
-                                        <span class="caret"></span>
-                                    </div>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
-                                        <li><a href="javascript:" class="on">全部等级分类</a></li>
-                                        <li><a href="javascript:">黑铁</a></li>
-                                        <li><a href="javascript:">青铜</a></li>
-                                        <li><a href="javascript:">白银</a></li>
-                                        <li><a href="javascript:">黄金</a></li>
-                                        <li><a href="javascript:">铂金</a></li>
-                                        <li><a href="javascript:">砖石</a></li>
-                                        <li><a href="javascript:">大师</a></li>
-                                        <li><a href="javascript:">王者</a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown" style="position: absolute">
-                                    <h5>标签</h5>
-                                    <div class="dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown"
-                                        aria-haspopup="true" aria-expanded="false" style="color:#ccc">
-                                        Ta的个性标签
-                                    </div>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
-                                        <li><a href="javascript:" class="on">风骚走位</a></li>
-                                        <li><a href="javascript:">无敌打野</a></li>
-                                        <li><a href="javascript:">带飞</a></li>
-                                        <li><a href="javascript:">细心教学</a></li>
-                                        <li><a href="javascript:">暖心辅助</a></li>
-                                        <li><a href="javascript:">中单法王</a></li>
-                                        <li><a href="javascript:">会喊666</a></li>
-                                        <li><a href="javascript:">战士边路</a></li>
-                                        <li><a href="javascript:">坦克</a></li>
-                                    </ul>
-                                </div>
-                                <div class="dropdown" style="position: absolute">
-                                    <h5>备注</h5>
-                                    <textarea name="bz" style="resize: none" cols="60" rows="5" placeholder="有什么需求都写出来吧"></textarea>
-                                </div>
-                            </div>
-                            <div class="spread">
-                                <span class="on">展开<i class="glyphicon glyphicon-triangle-right"></i></span>
-                            </div>
-                        </li>
-
-
-
-                        <li>
-                            <div>
-                                <div><span>优惠券: </span>-3.20</div>
-                                <div><b>仅需24.8Y币</b></div>
-                                <div><i>下单马上为您匹配</i></div>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="wq-nav-right">
+                    <span>
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        <a href="">注册/登陆</a>
+                    </span>
                 </div>
-
-
             </div>
-    </div>
-    </section>
-    </div>
+        </div>
+    </header>
+    <div id="root">
+
+        <div class="bg">
+            <section>
+                <div class="box">
+                    <div class="box_hd">
+                        <div class="list">
+                            <span :class="cur0" @click="toggle(0)">游戏陪玩</span>
+                            <span :class="cur1" @click="toggle(1)">娱乐陪玩</span>
+                        </div>
+                        <p>用户可根据服务需求付款下单，平台将订单需求全网推送至符合要求的大神，大神自行抢单，抢单成功后订单生效，订单超时将自动取消；<br />
+                            大神抢单前用户可取消订单，大神抢单成功后取消订单则需大神同意。
+                        </p>
+                    </div>
+                    <div class="box_bd">
+                        <ul class="choose">
+                            <li>
+                                <ul class="gameList">
+                                    <li v-for="(item,index) in items" @click="listClassOn(index,item.name)"
+                                        :class="index==0?'on':''" :data-type="item.type" v-show="item.type==0">
+                                        <img :src="item.src">
+                                        <span v-text="item.name"></span>
+                                        <div v-if="isHot(item.hot)" v-show="index!=0"></div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <label for="choseDate" >
+                                    <h4>选择时间</h4>
+                                </label>
+                                <div class="dateBox iconfont icon-rili choseDate"  ><input  id="choseDate" type="text" readonly placeholder="选择时间"  class="dateinput dateicon  je-mr25 "/></div>
+                            </li>
+                            <li>
+                                <label for="choseCount">
+                                    <h4>选择数量</h4>
+                                </label>
+                                <div>
+                                    <input v-model="countNum" type="number" id="choseCount" value="1" min="1" max="99"
+                                        @input="isNumber(countNum)" @blur="conutBlur(countNum)"> 小时
+                                </div>
+                                <span>
+                                    单价：32Y币/小时
+                                </span>
+                                <span class="ifNull">请选择数量</span>
+                            </li>
+                            <li class='#sex'>
+                                <label>
+                                    <h4>选择数量</h4>
+                                </label>
+                                <div id="chooseSex">
+                                    <span class="on">不限</span>
+                                    <span>女神</span>
+                                    <span>男神</span>
+                                </div>
+                            </li>
+                            <!-- 数据库里面调出优惠券信息 -->
+                            <li>
+                                <label>
+                                    <h4>优惠券</h4>
+                                </label>
+                                <div class="goodJoin" id="ableGood">
+                                    <div class="joinBox" v-if="flag">
+                                        <div class="ls">
+                                            <span><b v-text="bestGoods.name[0]"></b>{{bestGoods.name[1]}}</span><br />
+                                            <b v-text="bestGoods.name[2]"></b>
+                                        </div>
+                                        <div class="rs" @click="yhqSelHandler()">
+                                            <span><b v-text="bestGoods.information"></b></span>
+                                            <span v-text="'到期时间：'+bestGoods.time"></span>
+                                        </div>
+                                        <!-- 是否快要过期 -->
+                                        <div v-show="(new Date(bestGoods.time).getTime()-new Date().getTime())<=1000*60*60*24*3"
+                                            class="loseEfficacy"
+                                            style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
+                                            即将过期
+                                            <span
+                                                style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
+                                        </div>
+                                        <!-- 是否能被选中 -->
+                                        <i v-show="yhqSel"
+                                            style="display: block ;position: absolute; right: 0.5rem; top:1rem;text-align: center; line-height: 16px;width: 18px;border: 1px solid rgb(254,205,1); border-radius: 50%; height: 18px; font-size: 12px;color:rgb(254,205,1);"
+                                            id="selectYhq" class="glyphicon glyphicon-ok"></i>
+                                    </div>
+                                    <img src="../images/yhq.png" v-if="flag">
+                                    <div v-show="!flag" style="font-size: 20px;font-weight: 600;color: #F94E56;">
+                                        亲，您无此类可用优惠券</div>
+                                </div>
+                                <div class="lookAllTicket" @click="lookMore()">
+                                    <div data-toggle="modal" data-target="#myModal">
+                                        查看更多
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="otherMain">
+                                <label style="float: left">
+                                    <h4>其他要求</h4>
+                                </label>
+                                <div class="otherMainBox" style="height: 0" @click="dropdownMenuclick($event)">
+                                    <!--  -->
+                                    <div class="dropdown">
+                                        <div class="dropdown-toggle" type="button" id="dropdownMenu1"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i>全部等级分类</i>
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="javascript:" class="on">全部等级分类</a></li>
+                                            <li><a href="javascript:">初级</a></li>
+                                            <li><a href="javascript:">中级</a></li>
+                                            <li><a href="javascript:">高级</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--  -->
+                                    <div class="dropdown" id="uk2">
+                                        <div class="dropdown-toggle" type="button" id="dropdownMenu2"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i>全部区服</i>
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <li><a href="javascript:" class="on">全部区服</a></li>
+                                            <li><a href="javascript:">艾欧尼亚</a></li>
+                                            <li><a href="javascript:">祖安</a></li>
+                                            <li><a href="javascript:">洛克萨斯</a></li>
+                                            <li><a href="javascript:">黑色玫瑰</a></li>
+                                            <li><a href="javascript:">钢铁烈阳</a></li>
+                                            <li><a href="javascript:">均衡教派</a></li>
+                                            <li><a href="javascript:">守望先锋</a></li>
+                                            <li><a href="javascript:">守望先锋</a></li>
+                                            <li><a href="javascript:">守望先锋</a></li>
+                                            <li><a href="javascript:">守望先锋</a></li>
+                                        </ul>
+                                    </div>
+                                    <!--  -->
+                                    <div class="dropdown" id="uk3">
+                                        <div class="dropdown-toggle" type="button" id="dropdownMenu3"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i>全部游戏水平</i>
+                                            <span class="caret"></span>
+                                        </div>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                            <li><a href="javascript:" class="on">全部等级分类</a></li>
+                                            <li><a href="javascript:">黑铁</a></li>
+                                            <li><a href="javascript:">青铜</a></li>
+                                            <li><a href="javascript:">白银</a></li>
+                                            <li><a href="javascript:">黄金</a></li>
+                                            <li><a href="javascript:">铂金</a></li>
+                                            <li><a href="javascript:">砖石</a></li>
+                                            <li><a href="javascript:">大师</a></li>
+                                            <li><a href="javascript:">王者</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="dropdown" id="uk4">
+                                        <h5>标签</h5>
+                                        <div class="dropdown-toggle" type="button" id="dropdownMenu4"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                            style="color:#ccc">
+                                            <i>Ta的个性标签</i>
+                                        </div>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+                                            <li><a href="javascript:" class="on">风骚走位</a></li>
+                                            <li><a href="javascript:">无敌打野</a></li>
+                                            <li><a href="javascript:">带飞</a></li>
+                                            <li><a href="javascript:">细心教学</a></li>
+                                            <li><a href="javascript:">暖心辅助</a></li>
+                                            <li><a href="javascript:">中单法王</a></li>
+                                            <li><a href="javascript:">会喊666</a></li>
+                                            <li><a href="javascript:">战士边路</a></li>
+                                            <li><a href="javascript:">坦克</a></li>
+                                        </ul>
+                                        <span style="line-height: 32px;margin-left: 30px">最多可选择三个标签</span>
+                                    </div>
+                                    <div class="dropdown">
+                                        <h5>备注</h5>
+                                        <textarea name="bz" style="resize: none;outline-color: #FFBA06" cols="60"
+                                            rows="5" placeholder="有什么需求都写出来吧"></textarea>
+                                    </div>
+                                </div>
+                                <div class="spread" @click="spreadclick()">
+                                    <span>展开<i class="glyphicon glyphicon-triangle-right"></i></span>
+                                </div>
+                            </li>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">我的优惠券</h4>
+
+                            <li class="lastList">
+                                <div>
+                                    <div v-show="yhqSel"><span>优惠券: </span>{{-bestCheap}}</div>
+                                    <div><em>仅需<b class="price"></b>币</em></div>
+                                    <div><i @click="submit">下单马上为您匹配</i></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
-                <div class="modal-body">
-                    <ul>
-                        <li>
-                            <div class="goodJoin">
-                                <div class="joinBox">
-                                    <div class="ls">
-                                        <span><b>9</b>折</span> <br />
-                                        <b>最高减10</b>
+            </section>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">我的优惠券</h4>
+                    </div>
+
+
+                    <div class="modal-body">
+                        <ul>
+                            <li v-if="yhq.length" v-for="(item,index) in ableYhq">
+                                <div class="goodJoin">
+                                    <div class="joinBox">
+                                        <div class="ls">
+                                            <span><b v-text="item.name[0]"></b>{{item.name[1]}}</span><br />
+                                            <b v-text="item.name[2]"></b>
+                                        </div>
+                                        <div class="rs" @click="myChoseYhq(index)">
+                                            <span><b v-text="item.information"></b></span>
+                                            <span v-text="'到期时间：'+item.time"></span>
+                                        </div>
+                                        <!-- 是否快要过期 -->
+                                        <div v-show="(new Date(item.time).getTime()-new Date().getTime())<=1000*60*60*24*3"
+                                            class="loseEfficacy"
+                                            style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
+                                            即将过期
+                                            <span
+                                                style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
+                                        </div>
                                     </div>
-                                    <div class="rs">
-                                        <span><b>新用户全品9折优惠</b></span>
-                                        <span>到期时间：2019-06-19 15:57:26</span>
-                                    </div>
-                                    <!-- 是否过期 -->
-                                    <div class="loseEfficacy"
-                                        style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
-                                        即将过期
-                                        <span
-                                            style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
-                                    </div>
-                                    <!-- 是否能被选中 -->
-                                    <i style="display: block ;position: absolute; right: 0.5rem; top:1rem;text-align: center; line-height: 16px;width: 18px;border: 1px solid rgb(254,205,1); border-radius: 50%; height: 18px; font-size: 12px;color:rgb(254,205,1);"
-                                        id="selectYhq" class="glyphicon glyphicon-ok"></i>
+                                    <img src="../images/yhq.png">
+                                    <div style="font-size: 20px;font-weight: 600;color: #F94E56;">
+                                        优惠 {{item.info}}</div>
                                 </div>
-                                <img src="../images/yhq.png">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodJoin">
-                                <div class="joinBox">
-                                    <div class="ls">
-                                        <span><b>9</b>折</span> <br />
-                                        <b>最高减10</b>
+                            </li>
+
+
+                            <li v-if="yhq.length" v-for="(item,index) in unableYhq">
+                                <div class="goodJoin">
+                                    <div class="joinBox">
+                                        <div class="ls">
+                                            <span><b v-text="item.name[0]"></b>{{item.name[1]}}</span><br />
+                                            <b v-text="item.name[2]"></b>
+                                        </div>
+                                        <div class="rs">
+                                            <span><b v-text="item.information"></b></span>
+                                            <span v-text="'到期时间：'+item.time"></span>
+                                        </div>
+                                        <!-- 是否快要过期 -->
+                                        <div v-show="(new Date(item.time).getTime()-new Date().getTime())<=1000*60*60*24*3"
+                                            class="loseEfficacy"
+                                            style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
+                                            即将过期
+                                            <span
+                                                style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
+                                        </div>
                                     </div>
-                                    <div class="rs">
-                                        <span><b>新用户全品9折优惠</b></span>
-                                        <span>到期时间：2019-06-19 15:57:26</span>
-                                    </div>
-                                    <!-- 是否过期 -->
-                                    <div class="loseEfficacy"
-                                        style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
-                                        即将过期
-                                        <span
-                                            style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
-                                    </div>
-                                    <!-- 是否能被选中 -->
-                                    <i style="display: block ;position: absolute; right: 0.5rem; top:1rem;text-align: center; line-height: 16px;width: 18px;border: 1px solid rgb(254,205,1); border-radius: 50%; height: 18px; font-size: 12px;color:rgb(254,205,1);"
-                                        id="selectYhq" class="glyphicon glyphicon-ok"></i>
+                                    <img src="../images/yhq1.png">
+                                    <div style="font-size: 20px;font-weight: 600;color: #F94E56;">
+                                        此类不可用</div>
                                 </div>
-                                <img src="../images/yhq.png">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodJoin">
-                                <div class="joinBox">
-                                    <div class="ls">
-                                        <span><b>9</b>折</span> <br />
-                                        <b>最高减10</b>
-                                    </div>
-                                    <div class="rs">
-                                        <span><b>新用户全品9折优惠</b></span>
-                                        <span>到期时间：2019-06-19 15:57:26</span>
-                                    </div>
-                                    <!-- 是否过期 -->
-                                    <div class="loseEfficacy"
-                                        style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
-                                        即将过期
-                                        <span
-                                            style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
-                                    </div>
-                                    <!-- 是否能被选中 -->
-                                    <i style="display: block ;position: absolute; right: 0.5rem; top:1rem;text-align: center; line-height: 16px;width: 18px;border: 1px solid rgb(254,205,1); border-radius: 50%; height: 18px; font-size: 12px;color:rgb(254,205,1);"
-                                        id="selectYhq" class="glyphicon glyphicon-ok"></i>
-                                </div>
-                                <img src="../images/yhq.png">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodJoin">
-                                <div class="joinBox">
-                                    <div class="ls">
-                                        <span><b>9</b>折</span> <br />
-                                        <b>最高减10</b>
-                                    </div>
-                                    <div class="rs">
-                                        <span><b>新用户全品9折优惠</b></span>
-                                        <span>到期时间：2019-06-19 15:57:26</span>
-                                    </div>
-                                    <!-- 是否过期 -->
-                                    <div class="loseEfficacy"
-                                        style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
-                                        即将过期
-                                        <span
-                                            style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
-                                    </div>
-                                    <!-- 是否能被选中 -->
-                                    <i style="display: block ;position: absolute; right: 0.5rem; top:1rem;text-align: center; line-height: 16px;width: 18px;border: 1px solid rgb(254,205,1); border-radius: 50%; height: 18px; font-size: 12px;color:rgb(254,205,1);"
-                                        id="selectYhq" class="glyphicon glyphicon-ok"></i>
-                                </div>
-                                <img src="../images/yhq.png">
-                            </div>
-                        </li>
-                        <li>
-                            <div class="goodJoin">
-                                <div class="joinBox">
-                                    <div class="ls">
-                                        <span><b>9</b>折</span> <br />
-                                        <b>最高减10</b>
-                                    </div>
-                                    <div class="rs">
-                                        <span><b>新用户全品9折优惠</b></span>
-                                        <span>到期时间：2019-06-19 15:57:26</span>
-                                    </div>
-                                    <!-- 是否过期 -->
-                                    <div class="loseEfficacy"
-                                        style="color:white;text-align: center;line-height:33px;width:72px;height: 33px;position: absolute;border-radius: 4px;right: 1rem; top:-2rem; background: #FF5760">
-                                        即将过期
-                                        <span
-                                            style="position: absolute;left: 50%; transform: translateX(-50%) rotate(45deg); width: 10px;height: 10px; bottom: -5px ;background: #FF5760"></span>
-                                    </div>
-                                    <!-- 是否能被选中 -->
-                                    <i style="display: block ;position: absolute; right: 0.5rem; top:1rem;text-align: center; line-height: 16px;width: 18px;border: 1px solid rgb(254,205,1); border-radius: 50%; height: 18px; font-size: 12px;color:rgb(254,205,1);"
-                                        id="selectYhq" class="glyphicon glyphicon-ok"></i>
-                                </div>
-                                <img src="../images/yhq.png">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary">确定</button>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-<script>
-        
-</script>
+
 </html>

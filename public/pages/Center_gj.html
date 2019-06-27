@@ -50,7 +50,7 @@
                 <ul>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的订单</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
-                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
+                    <li><a href=""><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">优惠券</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
@@ -68,7 +68,7 @@
             <div class="div11">
                 <div class="ava active">
                     <div class="div15">
-                        <div class="goodJoin">
+                        <!--<div class="goodJoin">
                             <div class="joinBox">
                                 <div class="ls">
                                     <p><span>￥</span><span>1</span></p>
@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                             <img src="../images/yhq.png" alt="">
-                        </div>
+                        </div>-->
                     </div>
                     <div class="div9-foot">
                         <div class="div15">
@@ -134,7 +134,7 @@
                 </div>
                 <div class="unava">
                     <div class="div15">
-                        <div class="goodJoin">
+                       <!-- <div class="goodJoin">
                             <div class="joinBox">
                                 <div class="ls">
                                     <p><span>￥</span><span>1</span></p>
@@ -172,7 +172,7 @@
                                 </div>
                             </div>
                             <img src="../images/yhq1.png" alt="">
-                        </div>
+                        </div>-->
                     </div>
                     <div class="div9-foot">
                         <div class="div15">
@@ -193,6 +193,54 @@
 </body>
 
 <script>
+    var gj={
+        data:[
+            {user_id:'01',gj_id:'01',gj_mess:'10',gj_much:'1',date:'2019-10-10 05:20:60',gj_class:'新用户全场满10减1Y'},
+            {user_id:'01',gj_id:'02',gj_mess:'39',gj_much:'5',date:'2019-10-10 05:20:60',gj_class:'绝地求生满39减5Y'},
+            {user_id:'01',gj_id:'03',gj_mess:'99',gj_much:'10',date:'2019-10-10 05:20:60',gj_class:'视频聊天满99减10Y'},
+            {user_id:'01',gj_id:'04',gj_mess:'79',gj_much:'8',date:'2019-10-10 05:20:60',gj_class:'绝地求生满79减8Y'},
+            {user_id:'01',gj_id:'05',gj_mess:'39',gj_much:'5',date:'2019-10-10 05:20:60',gj_class:'绝地求生满39减5Y'}
+        ]
+    };
+    //可用优惠券
+    $.each(gj.data,function (i,v) {
+        var oDiv=document.createElement('div')
+        $(oDiv).addClass('goodJoin');
+        $(oDiv).html(`
+                <div class="joinBox">
+                    <div class="ls">
+                        <p><span>￥</span><span>${v.gj_much}</span></p>
+                        <p class="p2"><b>满<span>${v.gj_mess}</span>可用</b></p>
+                    </div>
+                    <div class="rs">
+                        <span>${v.gj_class}</span>
+                        <p class="p3">到期时间：<span>${v.date}</span></p>
+                    </div>
+                </div>
+                <img src="../images/yhq.png" alt="">
+        `)
+        $('.ava>.div15').append(oDiv)
+    });
+    //不可用优惠券
+    $.each(gj.data,function (i,v) {
+        var oDiv=document.createElement('div')
+        $(oDiv).addClass('goodJoin');
+        $(oDiv).html(`
+                <div class="joinBox">
+                    <div class="ls">
+                        <p><span>￥</span><span>${v.gj_much}</span></p>
+                        <p class="p2"><b>满<span>${v.gj_mess}</span>可用</b></p>
+                    </div>
+                    <div class="rs">
+                        <span>${v.gj_class}</span>
+                        <p class="p3">到期时间：<span>${v.date}</span></p>
+                    </div>
+                </div>
+                <img src="../images/yhq1.png" alt="">
+        `)
+        $('.unava>.div15').append(oDiv)
+    });
+
     $('.div10 li').click(function () {
         $('.div10 li').removeClass('active1');
         $('.div10 li a').removeClass('active1');
@@ -201,6 +249,22 @@
         $(this).addClass('active1');
         $('.div11>div').eq($(this).index()).addClass('active');
         $('.div10 li a').eq($(this).index()).addClass('active1');
+    })
+    $('.div7 a').click(function () {
+        $('.div7 b').removeClass('active-show');
+        $('.div7 .s5').removeClass('active-color');
+        $(this).children(0).children(0).addClass('active-show');
+        $(this).children(1).addClass('active-color');
+    });
+    $('.div7 a').mouseover(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
+        $(this).children(0).children(0).addClass('active-show1');
+        $(this).children(1).addClass('active-color1');
+    });
+    $('.div7 a').mouseleave(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
     })
 </script>
 </html>

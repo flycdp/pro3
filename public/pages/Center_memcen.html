@@ -53,7 +53,7 @@
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
                     <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
-                    <li><a href=""><i><b class="b1"></b><b class="b2"></b></i><span class="s5">会员中心</span></a></li>
+                    <li><a href=""><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">会员中心</span></a></li>
                 </ul>
             </div>
         </div>
@@ -67,13 +67,9 @@
                 <div class="mem_box">
                     <div class="mem_header">
                         <div class="vip_img"><img src="../images/vip_border.png" alt=""></div>
-                        <div class="mem_hedcon">
-                            <div class="mem_leve">VIP等级</div>
-                            <div class="mem_levezhong"></div>
-                            <div class="mem_prob"></div>
-                            <div class="mem_levemo"></div>
-                            <p class="mem_levecon">距离升级 VIP 还差：<span>50</span>经验</p>
-                        </div>
+                        <!--<div class="mem_hedcon">
+
+                        </div>-->
                     </div>
                     <div class="mem_kong">
                         <p>如何升级:在产品中任意消费即可获得对应的等级经验累加</p>
@@ -83,7 +79,6 @@
                             <li><img src="../images/vip_center_fabu.png" alt=""><span>发布订单</span></li>
                             <li><img src="../images/vip_center_dashen.png" alt=""><span>大神约玩</span></li>
                         </ul>
-
                     </div>
                     <div class="mem_body">
                         <p>等级定义</p>
@@ -147,11 +142,85 @@
 </div>
 </body>
 <script>
+    var user={
+        data:[
+            {user_id:'01',user_vip:'0',user_recmoney:'12001'}
+        ]
+    };
+    var vip=[50,100,400,1200,3000,6000,12000,24000,48000,96000];
+
+    //会员加载
+    function mem(){
+       function run(){
+           for(var i=0;i<vip.length;i++){
+               if (vip[i]>user.data[0].user_recmoney){
+                   return i
+               }
+           }
+       };
+        var iNow=run();
+        var x=iNow*70;
+        var x1=(iNow+1)*70;
+        var oDiv=document.createElement('div');
+        var num=vip[iNow]-user.data[0].user_recmoney;
+        var per=((user.data[0].user_recmoney/vip[iNow]*100))+'%';
+
+        console.log(per);
+        console.log(num);
+        $(oDiv).addClass('mem_hedcon');
+        $(oDiv).html(`
+                <div class="mem_leve">VIP等级</div>
+                <div class="mem_levezhong"></div>
+                <div class="mem_vipbox">
+                    <div class="vip_alert">
+
+                    </div>
+                    <div class="men_vipmask"></div>
+                    <div class="mem_prob"></div>
+                </div>
+                <div class="mem_levemo"></div>
+                <p class="mem_levecon">距离升级&nbspVIP${iNow+1}&nbsp还差：<span>${num}</span>经验</p>
+        `)
+        $('.mem_header').append(oDiv)
+        $('.mem_levezhong').css({'background-position-x':`-${x}px`,'background-position-y':'0px'});
+        $('.mem_levemo').css({'background-position-x':`-${x1}px`,'background-position-y':'0px'});
+        $('.men_vipmask').css('width',`${per}`)
+    };
+    mem();
+
+    //移入vip经验条
+    $('.div11').on('mouseenter','.mem_vipbox',function () {
+        var oDiv=document.createElement('div');
+        $(oDiv).addClass('alerbody');
+        $(oDiv).html(`
+                 <div class="alertbox"><span>经验:${user.data[0].user_recmoney}</span></div>
+                 <div class="alertdown"></div>
+        `);
+        $('.vip_alert').append(oDiv);
+    });
+    $('.div11').on('mouseleave','.mem_vipbox',function () {
+        $('.alerbody').remove();
+    });
     $('.div10 li').click(function () {
         $('.div10 li').removeClass('active1');
         $('.div10 li a').removeClass('active1');
         $(this).addClass('active1');
         $('.div10 li a').eq($(this).index()).addClass('active1');
     })
+    $('.div7 a').click(function () {
+        $('.div7 b').removeClass('active-show');
+        $('.div7 .s5').removeClass('active-color');
+        $(this).children(0).children(0).addClass('active-show');
+        $(this).children(1).addClass('active-color');
+    });
+    $('.div7 a').mouseover(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
+        $(this).children(0).children(0).addClass('active-show1');
+        $(this).children(1).addClass('active-color1');
+    });
+    $('.div7 a').mouseleave(function () {
+        $('.div7 b').removeClass('active-show1');
+        $('.div7 .s5').removeClass('active-color1');
+    })
 </script>
-</html>
