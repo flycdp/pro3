@@ -1,3 +1,445 @@
+<<<<<<< HEAD
+/*头部 导航栏*/
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+/*导航栏*/
+.wq-top{
+    height: 60px;
+}
+.wq-top1{
+    width: 1800px;
+    height:60px;
+    margin:0 auto;
+}
+.wq-nav-left{
+    width:300px;
+    height: 60px;
+    float: left;
+    position: relative;
+}
+.wq-nav-left-a1{
+    display:inline-block;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top:50%;
+    left: 10px;
+    margin-top: -24px;
+    border-radius:6px;
+    box-sizing: border-box;
+    background-image: url("../images/index.images/logo1.png");
+}
+.wq-nav-left-s1{
+    display:inline-block;
+    width: 80px;
+    height: 60px;
+    margin-left: 70px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+.wq-nav-left-a2{
+    display:inline-block;
+    width: 84px;
+    height: 30px;
+    position: absolute;
+    top:50%;
+    margin-left: 10px;
+    margin-top: -15px;
+    background-image: url("../images/index.images/nav.png");
+}
+.wq-nav-center{
+    width: 1200px;
+    height:60px;
+    float: left;
+}
+.wq-nav-center-left{
+    width: 600px;
+    height: 60px;
+    float: left;
+}
+.wq-nav-center-left>ul{
+    width: 600px;
+    height: 60px;
+}
+.wq-nav-center-left>ul>li{
+    width: 120px;
+    height: 60px;
+    float: left;
+    position: relative;
+}
+.wq-nav-center-left>ul>li>a{
+    display:inline-block;
+    width: 120px;
+    height: 60px;
+    position: relative;
+}
+.wq-nav-center-left .shou span{
+    color: white;
+}
+.wq-nav-center-left .HomePage{
+    width: 120px;
+    height: 60px;
+    position: relative;
+    background-color: #FED101;
+}
+.wq-nav-center-left .menu li{
+    position: relative;
+    width: 140px;
+    height: 60px;
+}
+.wq-nav-center-left .menu .overline{
+    border-top:1px solid rgb(241,241,241);
+}
+.wq-nav-center-left .menu li:hover .underline{
+    background-color: #FFF6F1;
+}
+.wq-nav-center-left .underline{
+    position: absolute;
+    width: 140px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: rgb(75,75,75);
+    font-size: 16px;
+}
+.wq-nav-center-left .menu{
+    width: 140px;
+    height: 180px;
+    margin-left: -10px;
+    margin-top: -5px;
+    display: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+}
+/*nav移入效果*/
+.wq-slide::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 120px;
+    height: 0;
+    background-color: #FED101;
+    transition: all 0.3s linear;
+}
+.wq-nav-center-left>ul>li>:hover.wq-slide::after{
+    height: 60px;
+}
+.wq-nav-center-left>ul>li:hover .menu{
+    display: block;
+}
+/*鼠标移入字体变色*/
+.wq-nav-center-left>ul>li:hover span{
+    color: white;
+}
+.wq-nav-center-left .pei{
+    width: 120px;
+    height: 60px;
+    background-color: transparent;
+}
+.wq-nav-center-left .lobby{
+    position: relative;
+    top:15px;
+    left: 6px;
+    z-index: 2;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+   background-image: url("../images/index.images/nav1.gif");
+    background-size: 30px;
+}
+.wq-nav-center-left .hot{
+    position: absolute;
+    top: -8px;
+    right: -15px;
+    width: 30px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    /*背景图 背景位置 背景图大小 是否平铺 背景色*/
+    background: url(../images/index.images/nav2.png) center center no-repeat rgb(249, 78, 86);
+    border-radius: 25px;
+}
+.wq-nav-center-left .indent{
+    width: 66px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    color:#000;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin-top: -15px;
+    margin-left: -33px;
+    z-index: 1;
+}
+.wq-nav-center-left .kyg{
+    width: 87px;
+}
+.wq-nav-center-left .caret{
+    position: absolute;
+    top:27px;
+    left: 98px;
+    z-index: 1;
+}
+.wq-nav-center-right{
+    width: 400px;
+    height: 60px;
+    float: right;
+    box-sizing: border-box;
+}
+.wq-nav-center-right ul{
+    width: 400px;
+    height: 60px;
+}
+.wq-nav-center-right .search{
+    width: 190px;
+    height: 32px;
+    color: rgba(0,0,0,.65);
+    font-size: 14px;
+    border-radius: 16px;
+    position: relative;
+    top:13px;
+    left: 0;
+    background-color: rgb(255, 191, 41);
+    transition: all 0.3s linear;
+}
+.wq-nav-center-right .search .input{
+    position: absolute;
+    left: 0;
+    top:0;
+    background-color: #fff;
+    z-index: 1;
+    width: 144px;
+    height: 32px;
+    border: 1px solid rgb(255, 191, 41);
+    box-sizing: border-box;
+    border-radius: 16px;
+    border-right: none;
+}
+.wq-nav-center-right .search .input-placeholder{
+    color: #c4c4c4;
+}
+.wq-nav-center-right>ul>li{
+    float:left;
+}
+.wq-nav-center-right .search1{
+    width:51px;
+    height: 60px;
+    margin-left: 14px;
+}
+.wq-nav-center-right .search1>span{
+    font-size: 14px;
+    line-height: 60px;
+}
+.wq-nav-center-right .search1>span:hover{
+    color: rgb(255, 191, 41);
+}
+.wq-nav-center-right .search1>span:hover a{
+    color: rgb(255, 191, 41);
+}
+.wq-nav-center-right .search1>span a{
+    color:#000;
+    transition: all 0.3s linear;
+}
+.wq-nav-right a{
+    color:#000;
+    transition: all 0.3s linear;
+}
+.wq-nav-center-right .button{
+    width: 46px;
+    height: 32px;
+    position: absolute;
+    right: 12px;
+    z-index: 2;
+    background-color: rgb(255, 191, 41);
+    border:none;
+    transition: all 0.3s linear;
+}
+/*搜索按钮移入*/
+.wq-nav-center-right .search:hover{
+    background: #FED101;
+}
+.wq-nav-center-right .button:hover{
+    background: #FED101;
+}
+.wq-nav-center-right .button span{
+    color: white;
+    font-weight: bold;
+}
+.wq-nav-right{
+    width: 300px;
+    height:60px;
+    float: left;
+    position: relative;
+}
+.wq-nav-right .deng{
+    background: white;
+    border:none;
+    font-size: 14px;
+    color: black;
+}
+.wq-nav-right a:visited{
+    color: black;
+}
+.wq-nav-right>span{
+    height:60px;
+    line-height: 60px;
+}
+.wq-nav-right>span:hover a{
+    color: rgb(255, 191, 41);
+}
+.wq-nav-right::after{
+    content:url("../images/index.images/nav3.png");
+    position: absolute;
+    left: 98px;
+    top: 17px;
+}
+.wq-nav-right .content{
+    width: 760px;
+    height: 423px;
+    border-top:3px solid rgb(255,199,0);
+    border-radius: 8px;
+    margin-top: 250px;
+    margin-left: -79px;
+    overflow: hidden;
+}
+.wq-nav-right .top{
+    width: 760px;
+    height: 98px;
+    background: url("../images/index.images/tan.png");
+    background-size: 760px 98px;
+}
+.wq-nav-right .login{
+    width: 760px;
+    height: 275px;
+}
+.wq-nav-right .login .le{
+    width: 342px;
+    height: 245px;
+}
+.wq-nav-right .le div{
+    width: 275px;
+    height: 22px;
+}
+.wq-nav-right .le h4,form{
+    margin-left: 30px;
+}
+.wq-nav-right .le .shou{
+    width: 275px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+.wq-nav-right .le p{
+    color:#FF5760;
+    font-size: 14px;
+    display: none;
+}
+.wq-nav-right .le .shou:hover{
+    border-color:  rgb(255,199,0);
+}
+.wq-nav-right .le .qd{
+    display: block;
+    width: 275px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+    background-color: #FF5760;
+}
+.wq-nav-right .le .zidong{
+    margin-left: -73px;
+}
+.wq-nav-right .le .hq{
+    color: rgb(204, 166, 131);
+    background-color: white;
+    border: none;
+    position: relative;
+    top: -51px;
+    left: 196px;
+}
+.wq-nav-right .le input[value]{
+    color: #c4c4c4;
+}
+.wq-nav-right .login .ri{
+    width: 342px;
+    height: 245px;
+    padding-left: 78px;
+}
+.wq-nav-right .login .shadow{
+    width: 40px;
+    height: 245px;
+    box-shadow: rgb(247, 247, 247) 0 0 15px;
+    background: rgb(247, 247, 247);
+    border-radius: 50px;
+}
+.wq-nav-right .login div{
+    float: left;
+}
+.wq-nav-right .content .down{
+    width: 760px;
+    height: 50px;
+    background-image: url("../images/index.images/tan1.png");
+    background-repeat: no-repeat;
+    background-size: 760px 50px;
+    text-align: left;
+}
+.wq-nav-right .down a{
+    color: #FEB425;
+}
+.wq-nav-right .ri button{
+    width: 180px;
+    height: 40px;
+    border-radius:20px;
+    border:none;
+}
+.wq-nav-right .ri span{
+    font-size: 16px;
+    color: white;
+}
+.wq-nav-right .ri .tb{
+    font-size: 24px;
+    margin-right: 15px;
+}
+.wq-nav-right .ri .wx{
+    background: #5FCD54;
+    transition: all 0.3s linear;
+}
+.wq-nav-right .ri .wx:hover{
+    background: #00ff00;
+}
+.wq-nav-right .ri .wb{
+    background: #F3614B;
+    transition: all 0.3s linear;
+}
+.wq-nav-right .ri .wb:hover{
+    background: #ff0000;
+}
+.wq-nav-right .ri .qq{
+    background: #3AA1E8;
+    transition: all 0.3s linear;
+}
+.wq-nav-right .ri .qq:hover{
+    background: #0000ff;
+=======
 /*头部 导航栏*/
 *{
     margin:0;
@@ -249,4 +691,5 @@
     position: absolute;
     left: 85px;
     top: 15px;
+>>>>>>> 6d67eb273cf363bcfaf46709ee635139a183507e
 }

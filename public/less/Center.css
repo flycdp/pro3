@@ -180,7 +180,6 @@ a {
   border-left: 15px solid;
   border-color: transparent transparent transparent #ffa800;
   display: none;
-  _display: inline-block;
 }
 .s5 {
   position: absolute;

@@ -1,0 +1,237 @@
+
+html::-webkit-scrollbar-thumb{
+    border-radius: 6px;
+    background-color: #ffa800;
+}
+html::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;}
+html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
+/*滚动条*/
+
+
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+.clearfix::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+.wq-header{
+    height: 77px;
+}
+.wq-header .middle{
+    width: 1200px;
+    height: 77px;
+    position: relative;
+    margin: 0 auto;
+}
+.wq-header .middle>ul{
+    width: 600px;
+    height: 77px;
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: -300px;
+}
+.wq-header .u2>li{
+    width: 200px;
+    height: 77px;
+    position: relative;
+    float: left;
+}
+.wq-header .nv{
+    line-height: 77px;
+    color:#A7A7A7;
+    transition: all 0.3s linear;
+}
+.wq-header .nv:hover{
+    color: #343434;
+}
+.wq-header .n1{
+    margin-left: 80px;
+}
+.wq-header .n2{
+    margin-left: 65px;
+}
+.wq-header .n3{
+    margin-left: 55px;
+}
+/*移入后的颜色          #FFC30F*/
+/*移入前的颜色           #FFD20F*/
+.wq-header .ul{
+    width: 100%;
+    position: absolute;
+    top:60px;
+    left: 0;
+    height: 90px;
+    display: none;
+    background-color: #FFD20F;
+}
+.wq-header .han:hover .ul{
+    display: block;
+}
+.wq-header .ul li{
+    width: 100%;
+    height: 30px;
+}
+.wq-header .ul a{
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+.wq-header .ul li:hover{
+    background-color: #FFC30F;
+}
+.wq-header .middle>a{
+    width: 143px;
+    height: 77px;
+    position: absolute;
+    top:0;
+    left: -106px;
+}
+.wq-header a img{
+    margin-top: 10px;
+}
+.wq-header a span{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top:-19px;
+    color: #343434;
+}
+/**********************以上是导航栏**********************************/
+.wq-middle{
+    height: 735px;
+}
+.wq-middle .tit{
+    width: 1200px;
+    height: 233px;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+.wq-middle .gao{
+    width: 1200px;
+    height: 90px;
+}
+.wq-middle .form-box{
+    width: 1200px;
+    height: 511px;
+    margin: 0 auto;
+}
+.wq-middle #form{
+    width: 1200px;
+    height: 511px;
+}
+.wq-middle #form .tel{
+    width: 600px;
+    height: 108px;
+}
+.wq-middle .la{
+    font-size: 20px;
+    color:#666;
+    display: block;
+}
+.wq-middle .tel input{
+    width: 620px;
+    height: 34px;
+    border:1px solid #e5e5e5;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.wq-middle .tel p{
+    color: red;
+}
+.wq-middle .describe{
+    width: 600px;
+    height: 333px;
+    margin-top: 20px;
+}
+.wq-middle .describe .label::after{
+    content:url("../images/index.images/xia.png");
+    display: inline-block;
+    margin-left: 10px;
+}
+.wq-middle .describe textarea{
+    width: 607px;
+    height: 258px;
+    margin-top: 20px;
+    padding: 0 .5em;
+    border:1px solid #e5e5e5;
+    resize: none;
+}
+.wq-middle .submit{
+    width: 600px;
+    height: 40px;
+    margin-top: 10px;
+}
+.wq-middle .submit button{
+    width: 180px;
+    height: 38px;
+    background-color: #FFC20F;
+    color: white;
+    border-color: #FFC20F;
+    font-size: 20px;
+    border-radius:4px;
+}
+/****************以上是内容部分****************************/
+.wq-footer{
+    height: 369px;
+    background-image: url("../images/index.images/xia(1).png");
+    margin-top: 160px;
+}
+.wq-footer .wrapper{
+    width: 1200px;
+    height: 369px;
+    margin:0 auto;
+}
+.wq-footer .wrapper ul{
+    width: 1200px;
+    height: 268px;
+}
+.wq-footer .ul li{
+    float: left;
+    height: 115px;
+    margin-top: 90px;
+}
+.wq-footer .li a{
+    font-size:16px;
+    color:rgba(255,255,255,0.5);
+}
+.wq-footer .ul dt{
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+}
+.wq-footer .ul dd,span{
+    font-size:16px;
+    line-height: 30px;
+    color:rgba(255,255,255,0.5);
+}
+.wq-footer .li{
+    margin-right: 330px;
+}
+.wq-footer .ul p{
+    font-size: 36px;
+    line-height: 60px;
+    color:#ffd40f;
+}
+.wq-footer .bottom{
+    width: 1200px;
+    height: 100px;
+    color:rgba(255,255,255,.5);
+    text-align: center;
+    font-size: 14px;
+    padding-top: 43px;
+    border-top:solid 1px #5b515e;
+}
