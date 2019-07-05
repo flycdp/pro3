@@ -57,7 +57,7 @@
                             <a href="#"  class="pei wq-slide">
                                 <span class="indent kyg">
                                     折扣专区
-                                     <span class="iconfont icon-icon-arrow-down"></span>
+                                     <span class="iconfont icon-icon-arrow-down "></span>
                                 </span>
                                 <ul class="menu">
                                     <li><a href="#" class="underline">限时折扣</a></li>
@@ -116,7 +116,7 @@
             </div>
             <!--注册/登陆-->
             <div class="wq-nav-right">
-                <span>
+                <span id="zu">
                     <a href="" class="btn btn-primary btn-lg deng" data-toggle="modal" data-target="#myModal">
                         <span class="iconfont icon-denglu"></span>
                         注册/登陆
@@ -148,30 +148,29 @@
                                         <input type="checkbox" checked class="zidong"> 自动登陆
                                         <br>
                                         <br>
-                                        <button class="qd">确定</button>
+                                        <button class="qd" id="qd" type="button">确定</button>
                                     </form>
                                 </div>
                                 <div class="shadow"></div>
                                 <div class="ri">
-                                    <h4>第三方登陆</h4>
+                                    <h4>账号登陆</h4>
+                                    <br>
+                                    <input type="text" placeholder="请输入账号" name="user" class="user" id="user">
                                     <br>
                                     <br>
-                                    <button type="button" class="wx">
-                                        <span class="iconfont icon-changyonglogo28 tb"></span>
-                                        <span>微信登陆</span>
-                                    </button>
+                                    <div>
+                                        <p class="ts" id="p11">请输入账号</p>
+                                        <p class="ts" id="p22">账号输入错误</p>
+                                    </div>
                                     <br>
+                                    <input type="password" placeholder="请输入密码" name="password" class="password" id="password">
                                     <br>
-                                    <button type="button" class="wb">
-                                        <span class="iconfont icon-weibo tb"></span>
-                                        <span>微博登陆</span>
-                                    </button>
+                                    <div>
+                                        <p class="ts" id="p33">请输入密码</p>
+                                        <p class="ts" id="p44">账号或密码错误</p>
+                                    </div>
                                     <br>
-                                    <br>
-                                    <button type="button" class="qq">
-                                        <span class="iconfont icon-qq tb"></span>
-                                        <span>QQ登陆</span>
-                                    </button>
+                                    <button type="button" class="land" id="land">登陆</button>
                                 </div>
                             </div>
                             <div class="modal-footer down">
@@ -1440,24 +1439,85 @@
     //发送验证码
     var oYzm=document.getElementById('yzm');
     var oT=document.getElementById('t1');
+    var oT2=document.getElementById('t2');
     oYzm.onclick=function () {
+        console.log(oT.value);
         $.ajax({
-            url:'yzm',
+            url:'/yzm.do',
             data:{
-                name1:oT.value
+                phone:oT.value
 
             },
              type:'post',
             success:function(res){//成功时候执行的函数
                 //res 成功时候接受到的数据
+                alert(res)
             },
             error:function(err){//失败时候执行的函数
                 //err 错误信息
             }
         });
     };
+    //确定
+    var oQ=document.getElementById('qd');
+    //注册
+    //手机号登陆
+    var oZ=document.getElementById('zu');
+    oQ.onclick=function () {
 
+        console.log(oT.value);
+        $.ajax({
+            url:'/zd.do',
+            data:{
+                phone:oT.value,
+                code:oT2.value
+            },
+            type:'post',
+            success:function(res){//成功时候执行的函数
+                //res 成功时候接受到的数据
+                console.log(res);
+                oZ.innerHTML=`<span>${res.name}</span><img src="../imames/index.images/${res.headerimg}" alt="">`;
+            },
+            error:function(err){//失败时候执行的函数
+                //err 错误信息
+            }
+        });
+    };
+    function ifHasUser() {
+        let myUser=document.cookie.split('=')[1];
+        if(user){
+           return  JSON.parse(myUser);
+        }
+        return flase;
+    }
+    //账号登陆
+    var oLand=document.getElementById('land');
+    oLand.onclick=function () {
+        var user=$('#user').val();
+        var pwd=$('#password').val();
+        console.log(user);
+        $.ajax({
+            url:'/login',
+            type:'post',
+            data:{
+                user,
+                pwd
+            },
+            success:function (res) {
+                let nowData=new Date();
+                nowData.setDate(nowData.getDay()+1);
 
+                document.cookie=`bigLegUser=${JSON.stringify({
+                    info:res
+                })};path=/;expires=${nowData}`;
+                console.log(document.cookie.bigLegUser);
+                oZ.innerHTML=`<span>${res.nickname}</span><img src="../imames/index.images/${res.headerimg}" alt="">`;
+            },
+            error:function (err) {
+
+            }
+        })
+    };
 
 
 
@@ -1482,33 +1542,83 @@
 
 
     var reg={
-        tel:/^1[3-9]\d{9}$/
+        tel:/^1[3-9]\d{9}$/,
+        user:/^[a-zA-Z0-9_-]{6}$/,
+        password:/^[a-zA-Z0-9]{6}$/
+
     };
     var oF=document.getElementById('from');
     var oT1=document.getElementById('t1');
+
     var oT2=document.getElementById('t2');
     var p1=document.getElementById('p1');
     var p2=document.getElementById('p2');
     var p3=document.getElementById('p3');
 
-    function test(str) {
-//    非空判断
-        //正则验证
-        if(reg .tel.test(str)){
-            return true
-        }else{
-            p2.style.display='block';
-            p1.style.display='none';
-            return false
+    var oUser=document.getElementById('user');
+    var oPassword=document.getElementById('password');
+
+    var op11=document.getElementById('p11');
+    var op22=document.getElementById('p22');
+    var op33=document.getElementById('p33');
+    var op44=document.getElementById('p44');
+
+
+
+
+
+    function test() {
+        var oT1=document.getElementById('t1').value.trim();
+        if(oT1.length!=0){
+            var reg = /^1[3-9]\d{9}$/;
+            var r = oT1.match(reg);
+            if(r==null){
+                p2.style.display='block';
+                p1.style.display='none';
+            }else {
+                p2.style.display='none';
+                p1.style.display='none';
+            }
+        }
+//
+    }
+    //账号验证
+    function user(){
+        var oUser=document.getElementById('user').value.trim();
+        if(oUser.length!=0){
+            var reg =  /^[a-zA-Z0-9_-]{6}$/;
+            var r = oUser.match(reg);
+            if(r==null){
+                op22.style.display='block';
+                op11.style.display='none';
+            }else {
+                op22.style.display='none';
+                op11.style.display='none';
+            }
         }
     }
+    //密码验证
+    function password(){
+        var  oPassword=document.getElementById('password').value.trim();
+        if(oPassword.length!=0){
+            var reg = /^[a-zA-Z0-9]{6}$/;
+            var r = oPassword.match(reg);
+            if(r==null){
+                op44.style.display='block';
+                op33.style.display='none';
+            }else {
+                op44.style.display='none';
+                op33.style.display='none';
+            }
+        }
+    }
+
     oT1.onblur=function(){
+            test();
             if(!this.value.trim()){
                 p1.style.display='block';
                 p2.style.display='none';
                 return false
-            }else {
-                test(this.value);
             }
     };
     oT2.onblur=function(){
@@ -1518,6 +1628,22 @@
                 p3.style.display='block';
                 return false
             }
+        }
+    };
+    oUser.onblur=function () {
+        user();
+        if(!this.value.trim()){
+            op11.style.display='block';
+            op22.style.display='none';
+            return false
+            }
+    };
+    oPassword.onblur=function () {
+        password();
+        if(!this.value.trim()){
+            op33.style.display='block';
+            op44.style.display='none';
+            return false
         }
     };
 </script>
