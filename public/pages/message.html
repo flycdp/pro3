@@ -114,10 +114,10 @@
         <div class="container">
             <div class="container-fluid">
                 <div class="tabMsg">
-                    <ul>
-                        <li class="on"><a href="./messge.html">消息中心</a></li>
-                        <li>我的关注</li>
-                        <li>我的粉丝</li>
+                    <ul @click="isShower($event)">
+                        <li class="on" id="all"><a href="./messge.html" >消息中心</a></li>
+                        <li class="gz" id="gz">我的关注</li>
+                        <li id="fs">我的粉丝</li>
                     </ul>
                 </div>
                 <div class="box">
@@ -125,6 +125,9 @@
                         <my-comother></my-comother>
                     </div>
                     <div class="rs">
+                        <div v-if="!curUser" class="nullNews" v-text="'没有任何消息'">
+
+                        </div>
                         <div class="allMsg">
                             <div style="display: none">
                                 <!-- 进程模板，下单 -->
@@ -184,9 +187,32 @@
                                 <!-- 用户模板 -->
                             </div>
 
+                            <div v-if="curUser" v-for="(item,index) in curUser.content"
+                                :class="item.type==1?'myMsg':'otherMsg'">
+                                <div style="overflow: hidden">
 
+                                    <div class="hdIMg">
+                                        <span v-text="item.type==1?message.name.myName:curUser.name"></span>
+                                        <img :src="'http://photocdn.sohu.com/20120216/Img334903378.jpg'" alt=""
+                                            class="img-circle"></div>
+                                </div>
+                                <div :class="'getMsg'">
+                                    <span v-text="item.text"></span>
+                                    <time v-cloak :class="'show-time'">{{item.time|timeHands}}</time>
+                                </div>
 
-                            <div class="myMsg">
+                            </div>
+
+                            <!-- <div class="myMsg">
+                                <div style="overflow: hidden">
+                                    <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
+                                            alt="" class="img-circle"></div>
+                                </div>
+                                <div class="getMsg" text="">
+                                    123
+                                </div>
+                            </div>
+                            <div class="otherMsg">
                                 <div style="overflow: hidden">
                                     <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
                                             alt="" class="img-circle"></div>
@@ -194,16 +220,7 @@
                                 <div class="getMsg">
                                     123
                                 </div>
-                            </div>
-                            <div class="otherMsh">
-                                <div style="overflow: hidden">
-                                    <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
-                                            alt="" class="img-circle"></div>
-                                </div>
-                                <div class="getMsg">
-                                    123
-                                </div>
-                            </div>
+                            </div> -->
 
                         </div>
                         <div class="sendMsg">
@@ -216,8 +233,7 @@
                                 </ul>
                             </div>
                             <div class="fillText">
-                                <textarea v-model="message.text" name="" id="" cols="110" rows="6"
-                                    placeholder="对Ta说点什么吧">
+                                <textarea v-model="message.text" placeholder="对Ta说点什么吧">
 
                                 </textarea>
                                 <button id="sendTo" @click="sendMessage">发 送</button>
@@ -227,28 +243,33 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
     <template id="com">
         <ul>
-            <li v-if="user" v-for="(item,index) in user" :class="index==0?'on':''">
+            <li v-if="user" v-for="(item,index) in user" :class="item.cur"  @click="changeCur(item.name,index)" @dblclick="gzLike(index)">
                 <!-- 存放图片 -->
-                <div class="otherImg">
-                    <img :src="item.img" class="img-circle">
+                <div class="otherImg" >
+                    <!-- 是否是我的关注，是否是我的迷妹 -->
+                    <img :src="item.img" :class="'img-circle'">
                 </div>
                 <div class="msg">
                     <div class="sf">
                         <span class="name" v-text="item.name"></span>
-                        <time>{{item.content[0].time | timeHands}}</time>
+                        <time v-cloak>{{item.content[item.content.length-1].time | timeHands}}</time>
                     </div>
-                    <div class="text" v-text="item.content[0].text">
+                    <div class="text" v-text="item.content[item.content.length-1].text">
 
                     </div>
                 </div>
                 <!-- 最近消息显示 -->
-                <div class="mesCount" v-if="count" v-text="count"></div>
+                <div class="mesCount" v-if="item.count" v-text="item.count"></div>
+                <i class="glyphicon glyphicon-remove close" @click="delMsg($event,index)"></i>
+                <div :class="'clearLocalMsg'" @click="clearLocalMsg($event,index)">删除记录</div>
+                <div :class="'altGz'" v-if="!item.gz">已关注</div>
             </li>
         </ul>
     </template>
