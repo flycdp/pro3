@@ -1,32 +1,25 @@
 const mysql=require('mysql');
 const yhb=require('./yhb.js');
-/* const hlx=require('./hlx.js');
-const fy=require('./fy.js');
-const jf=require('./jf.js');
-const ljy=require('./ljy.js');
-const wq=require('./wq.js') */
+
 const dbPool={
     pool:null,
     config:{
-        host:'localhost',
+        host:'172.17.2.251',
         port:'3306',
         user:'root',
         password:'123456',
-        database:'pro3'
+        database:'pro3dist'
     },
     
     create(){
         this.pool=mysql.createPool(this.config);
         console.log('连接池已启动');
     },
-    yhb,
-    hlx,
-    fy,
-    jf,
-    ljy,
-    wq,
     login(){
-        return 'select * from t_user where u_name=? and u_pwd=?'
+        return 'select * from x_user where name=? and password=?'
+    },
+    loginphone(){
+        return 'select * from x_user where telphone=?'
     },
     reg(){
         return ['select * from t_user where u_name=?','insert into t_user values(null,?,?)']
