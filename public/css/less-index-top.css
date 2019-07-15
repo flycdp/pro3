@@ -615,6 +615,7 @@
     width: 400px;
     height: 60px;
 }
+
 .wq-nav-center-right .search{
     width: 190px;
     height: 32px;
@@ -674,9 +675,21 @@
     float: left;
     position: relative;
 }
+/*登陆后的头像*/
+.wq-nav-right #tou{
+    width: 50px;
+    height: 50px;
+    border-radius:50px;
+    position: absolute;
+    top:5px;
+    left: 20px;
+}
 .wq-nav-right>span{
     height:60px;
     line-height: 60px;
+}
+.wq-nav-right>.loginUser{
+    display: none;
 }
 .wq-nav-right>span:hover{
     color: rgb(255, 191, 41);
