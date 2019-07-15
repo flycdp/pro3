@@ -6,3 +6,4 @@ gulpfile.js
 node_modules/
 dist/
 npm-debug.log
+public/index.html
