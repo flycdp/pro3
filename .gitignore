@@ -2,8 +2,9 @@
 gulpfile.js
 
 
+
 .DS_Store
 node_modules/
 dist/
 npm-debug.log
-public/index.html
+

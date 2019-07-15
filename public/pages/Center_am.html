@@ -73,13 +73,28 @@
             <div class="div9">
                 <div class="div10">
                     <ul>
-                        <li class="js_am active1 "><a href="javascript:;" class="active1"><span>账号管理</span></a></li>
-                        <li class="js_rec"><a href="javascript:;"><span>充值</span></a></li>
+                        <li class="active1"><a href="javascript:;" class="active1"><span>账号管理</span></a></li>
+                        <li><a href="javascript:;"><span>充值</span></a></li>
                     </ul>
                 </div>
                 <div class="div11">
                     <div class="am1 active">
-                        <div class="div12"></div>
+                        <div class="div12">
+                            <div class="div13">
+                                <span></span>
+                                <span>我的余额</span>
+                                <span><strong>0</strong><b>Y</b></span>
+                            </div>
+                            <div class="div13">
+                                <span></span>
+                                <span>我的收入</span>
+                                <span><strong>0</strong><b>Y</b></span>
+                            </div>
+                            <div class="div13">
+                                <button class="btn2">转入余额</button>
+                                <button class="btn3">充值</button>
+                            </div>
+                        </div>
                         <div class="div14">
                             <p class="p5">交易明细</p>
                             <table cellspacing="0" cellpadding="0">
@@ -93,7 +108,34 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    <!--<tr>
+                                        <td class="td1">CD90202020201</td>
+                                        <td>支出</td>
+                                        <td class="col-skyblue">-10</td>
+                                        <td>下单消费</td>
+                                        <td>2019-06-14 15:01:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td1">CD90202021111</td>
+                                        <td>进账</td>
+                                        <td class="col-red">+100</td>
+                                        <td>订单退回</td>
+                                        <td>2019-06-14 15:02:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td1">CD902020219999</td>
+                                        <td>进账</td>
+                                        <td class="col-red">+0.7</td>
+                                        <td>现金红包</td>
+                                        <td>2019-06-14 15:02:11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td1">CD9020202192299</td>
+                                        <td>进账</td>
+                                        <td class="col-red">+10</td>
+                                        <td>充值现金</td>
+                                        <td>2019-06-14 15:02:11</td>
+                                    </tr>-->
                                 </tbody>
                             </table>
                         </div>
@@ -172,146 +214,53 @@
         data:{
             user_id:'01',user_bal:'500',user_inc:'0'
         }
-    };
-
+    }
     //插入收入和余额
     function userBal() {
-        $.ajax({
-            url:'/userBal',
-            type:'post',
-            data:{
-                user_id:1
-            },
-            success:function (res) {
-                if (res.error){
-                    console.log('数据库出错')
-                }else {
-                    $('.div12').html(' ');
-                    var oDiv=document.createElement('div')
-                    $(oDiv).html(`
-                            <div class="div13">
-                                <span></span>
-                                <span>我的余额</span>
-                                <span><strong>${res.data[0].userBalm}</strong><b>Y</b></span>
-                            </div>
-                            <div class="div13">
-                                <span></span>
-                                <span>我的收入</span>
-                                <span><strong>${res.data[0].userIncm}</strong><b>Y</b></span>
-                            </div>
-                            <div class="div13">
-                                <button class="btn2">转入余额</button>
-                                <button class="btn3">充值</button>
-                            </div>
-                    `);
-                    $('.div12').html(oDiv)
-                }
-            }
-        });
-
+        $('.div12').html(' ')
+        var oDiv=document.createElement('div')
+        $(oDiv).html(`
+                    <div class="div13">
+                        <span></span>
+                        <span>我的余额</span>
+                        <span><strong>${user.data.user_bal}</strong><b>Y</b></span>
+                    </div>
+                    <div class="div13">
+                        <span></span>
+                        <span>我的收入</span>
+                        <span><strong>${user.data.user_inc}</strong><b>Y</b></span>
+                    </div>
+                    <div class="div13">
+                        <button class="btn2">转入余额</button>
+                        <button class="btn3">充值</button>
+                    </div>
+        `)
+        $('.div12').html(oDiv)
     };
     userBal();
 
     //交易信息
     function tran(){
-        $.ajax({
-            url:'/tranDet',
-            type:'post',
-            data:{
-                user_id:1
-            },
-            success:function (res) {
-                if(res.error){
-                    console.log('数据库出错')
-                }else {
-                    $('tbody').html(' ')
-                    var arr=res.data;
-                    $.each(arr,function (i,v) {
-                        var money;
-                        var oDate;
-                        if (arr[i].rechargeNum){
-                            money=arr[i].rechargeNum
-                            oDate=arr[i].rechargeDate;
-                        };
-                        if(arr[i].yhjPre){
-                            money=(arr[i].price)*arr[i].yhjPre
-                            oDate=arr[i].date
-                        };
-                        if(arr[i].giftId){
-                            money=arr[i].price
-                            oDate=arr[i].sendTime
-                        }
-                        var oTr=document.createElement('tr')
-                        $(oTr).html(`
-                            <td class="td1">${v.code}</td>
-                            <td>${v.moneyClass}</td>
-                            <td class="col-write"></td>
-                            <td>${v.moneyDes}</td>
-                            <td>${oDate}</td>`)
-                        if($(oTr).children().eq(1).html()=="进账"){
-                            $(oTr).children().eq(2).addClass('col-red')
-                            $(oTr).children().eq(2).html(`+${money}`)
-                        }else {
-                            $(oTr).children().eq(2).addClass('col-skyblue')
-                            $(oTr).children().eq(2).html(`-${money}`)
-                        }
-                        $('tbody').append(oTr)
-
-                    });
-                    var iNow=arr.length;
-                    var oH=iNow*62;
-                    if (oH>300) {
-                        var oH2=oH+120;
-                        var oHC=oH+400;
-                        $('.div11 .am1 .div14').css("height",oH2);
-                        $('#content').css("height",oHC)
-                    }
-                }
-            }
-        });
+        $('tbody').html(' ')
+        $.each(am.data,function (i,v) {
+            var oTr=document.createElement('tr')
+            $(oTr).html(`
+                            <td class="td1">${v.user_tran_num}</td>
+                            <td>${v.user_tran_type}</td>
+                            <td class="${v.user_tran_col}">${v.user_tran_money}</td>
+                            <td>${v.user_tran_des}</td>
+                            <td>${v.user_tran_date}</td>`)
+            $('tbody').append(oTr)
+        })
+        var iNow=am.data.length;
+        var oH=iNow*62;
+        if (oH>300) {
+            var oH2=oH+120
+            $('.div11 .am1 .div14').css("height",oH2)
+        }
     };
     tran();
 
-    $('.div10').on('click','.js_am',function () {
-        userBal();
-        tran();
-    });
-    $('.div11').on('click','.btn3',function () {
-        $('.js_am').removeClass('active1');
-        $('.js_am a').removeClass('active1');
-        $('.am1').removeClass('active');
-        $('.js_rec').addClass('active1');
-        $('.js_rec a').addClass('active1');
-        $('.Rec').addClass('active');
-    });
-    //扫描二维码
-    $('.Rec_box').on('click','.Rec_img',function () {
-        var money=($('.Rec_money').html())/1+($('.active3>span').html())/1;
-        var des=$('.Rec_payc').html()
-        $.ajax({
-            url:'/recMoney',
-            type:'post',
-            data:{
-                user_id:1,
-                money:money,
-                moneydes:des
-            },
-            success:function (res) {
-                if(res.error){
-                    alert('充值失败')
-                }else {
-                    alert('充值成功')
-                    $('.Rec_box').css('display','none')
-                }
-
-            }
-        })
-    })
-
-
-    $('.div10').on('click','.js_rec',function () {
-        $('#content').css('height','980')
-    });
     $('.div10 li').click(function () {
         $('.div10 li').removeClass('active1');
         $('.div10 li a').removeClass('active1');
@@ -356,8 +305,7 @@
     });
     $('.Rec_s2').click(function () {
         $('.Rec_box').css('display','none')
-    });
-
+    })
     $('.div18').click(function () {
         $('.div18 .num').removeClass('active2');
         $('.div18 .give-fee').removeClass('active3');
@@ -377,7 +325,7 @@
             return
         }
         $('.Rec_foot span').html(num)
-    });
+    })
     $('.div7 a').click(function () {
         $('.div7 b').removeClass('active-show');
         $('.div7 .s5').removeClass('active-color');
@@ -393,6 +341,6 @@
     $('.div7 a').mouseleave(function () {
         $('.div7 b').removeClass('active-show1');
         $('.div7 .s5').removeClass('active-color1');
-    });
+    })
 </script>
 </html>

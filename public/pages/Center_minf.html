@@ -94,20 +94,6 @@
     };
     //加载我的资料
     function minf(){
-        $.ajax({
-            url:'minf',
-            type:'post',
-            data:{
-                user_id:1
-            },
-            success:function (res) {
-                if(res.error){
-                    console.log('数据库出错')
-                }else{
-                    console.log(res.data)
-                }
-            }
-        });
         //头像
         var oImg=document.createElement('img');
         $(oImg).attr('src',`..${user.data[0].user_hpor}`);
