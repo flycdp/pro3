@@ -1,21 +1,10 @@
     $(function () {
-        function ifHasLoginMan() {
-            let allCookie = document.cookie.split(';');
-            if(!allCookie[0]) return false;
-            for(var i=0;i<allCookie.length;i++){
-                let arr=allCookie[i].split['='];
-                if(arr[0]=='bigLegUser'){
-                    return JSON.parse(arr[1]);
-                }
-            }
-        };
         let UserInfo=ifHasLoginMan();
         if(!UserInfo){
             alert('请先登录');
             location.href="../index.html";
         }
-        return ;
-        let myName = `bigLeg${x}`;
+        let myName = `bigLeg${UserInfo.info[0].name}`;
         var user = JSON.parse(localStorage.getItem(myName)) || [];
 
         function msgG() {
@@ -81,8 +70,10 @@
                 message: {
                     text: '',
                     name: {
-                        myName: x,
-                        otherName: ''
+                        myName: UserInfo.info[0].name,
+                        myNickname:UserInfo.info[0].nickname,
+                        otherName: '',
+                        otherNickname: '',
                     }
                 },
                 socket: io('http://172.17.2.251:80', {
@@ -99,9 +90,12 @@
                     user[0].cur = 'on';
                     user[0].count = 0;
                 }
-                this.socket.emit('connection', this.message.name.myName);
+                this.socket.emit('connection', {
+                    myName:this.message.name.myName,
+                    myNickname:this.message.name.myNickname
+                });
                 this.socket.on('con', (msg) => {
-                    console.log(msg + ':加入了聊天');
+                    console.log(msg.myNickname + ':加入了聊天');
                 });
                 this.socket.on(this.message.name.myName, function (msg) {
                     var {
@@ -134,6 +128,7 @@
                     }
                     let jsonA = {
                         name: msg.name.otherName,
+                        nickname:msg.name.nickname,
                         img: "http://photocdn.sohu.com/20120216/Img334903378.jpg",
                         phone: "a13333333333",
                         cur: user.length ? '' : 'on',
@@ -211,6 +206,7 @@
                     }
                     user.push({
                         name: this.message.name.otherName,
+                        nickname:this.message.name.nickname,
                         img: "http://photocdn.sohu.com/20120216/Img334903378.jpg",
                         phone: "a13333333333",
                         cur: user.length ? '' : 'on',
@@ -245,7 +241,6 @@
                             } else {
                                 user[i].gz = true;
                             }
-                            console.log(user[i].gz);
                         },
                         delMsg(e, i) {
                             var arr = user.splice(i, 1);
@@ -311,5 +306,4 @@
                 f
             }
         }
-        console.log(vm);
     })

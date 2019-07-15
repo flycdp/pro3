@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../pulg/bootstrap/css/bootstrap.css" />
     <script src="../js/jQuery.js"></script>
     <script src="../pulg/bootstrap/js/bootstrap.js"></script>
+    <script src="../js/ifHasUser.js"></script>
     <script src="../js/messge.js"></script>
     <link rel="stylesheet" href="../css/messge.css">
     <link rel="stylesheet" href="../css/less-index-top.css">
@@ -192,7 +193,7 @@
                                 <div style="overflow: hidden">
 
                                     <div class="hdIMg">
-                                        <span v-text="item.type==1?message.name.myName:curUser.name"></span>
+                                        <span v-text="item.type==1?message.name.myNickname:curUser.nickname"></span>
                                         <img :src="'http://photocdn.sohu.com/20120216/Img334903378.jpg'" alt=""
                                             class="img-circle"></div>
                                 </div>
