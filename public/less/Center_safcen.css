@@ -260,9 +260,12 @@ a {
   line-height: 34px;
   background-color: #ff5760;
   color: #ffffff;
+  outline: none;
+  border: 2px solid #ff5760;
 }
 .div11 .safcen_header .saf_rg button:hover {
   background-color: #f22833;
+  border: 2px solid #f22833;
 }
 .div11 .saf_kong {
   width: 950px;
@@ -311,8 +314,11 @@ a {
   line-height: 34px;
   background-color: #ff5760;
   color: #ffffff;
+  outline: none;
+  border: 2px solid #ff5760;
 }
 .div11 .safcen_body .saf_box li .li_rg button:hover {
   background-color: #f22833;
+  border: 2px solid #f22833;
 }
 /*# sourceMappingURL=Center_safcen.css.map */
