@@ -4,43 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        div {
+            height: 200px;
+            overflow: auto;
+            background: red;
+            box-sizing: border-box;
+            width: 100px;
+        }
+            p{
+                box-sizing: border-box
+            }
+    </style>
 </head>
 
 <body>
-    <div id="root">
-        <my-div></my-div>
-        <my-table></my-table>
+    <div>
+        <p>
+            1
+        </p>
+        <p>
+            2
+        </p>
+        <p>
+            3
+        </p>
+        <p>
+            4
+        </p>
+        <p>
+                4
+            </p>
+            <p>
+                    4
+                </p>
+                <p>
+                        4
+                    </p>
+                
     </div>
-   
-    <template id="roo">
-        <div>
-            <p>{{title}}</p>
-            <ul>
-                <li v-for="(item, index) in list" >{{item}}</li>
-            </ul>
-        </div>
-    </template>
-    <script type="text/javascript">
-        new Vue({
-            el: "#root",
-            components: {
-                'my-table': {
-                    template: '#roo',
-                    data:function(){
-                        return {
-                           title:'title',
-                           list:[1,2,3,4]
-                        }
-                    }
-                },
-                'my-div': {
-                    template: '<h1>hello World</h1>',
-                }
-            }
-        })
-    </script>
 </body>
-
+<script>
+    var div=document.querySelector('div');
+    function msgG (){
+            /* 获取高度 */
+            let h=div.clientHeight;
+            let x=div.scrollHeight;
+            div.scrollTop=x-h;
+        }
+        msgG ()
+</script>
 
 </html>
