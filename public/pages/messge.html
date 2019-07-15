@@ -12,208 +12,224 @@
     <link rel="stylesheet" href="../pulg/bootstrap/css/bootstrap.css" />
     <script src="../js/jQuery.js"></script>
     <script src="../pulg/bootstrap/js/bootstrap.js"></script>
-    <script src="../js/ifHasUser.js"></script>
     <script src="../js/messge.js"></script>
     <link rel="stylesheet" href="../css/messge.css">
     <link rel="stylesheet" href="../css/less-index-top.css">
-    <script src="../js/socket.js"></script>
     <title>小杨</title>
 </head>
 
 <body>
-
     <header style="height: 60px;margin-bottom: 40px;background: rgb(246, 246, 246);">
-        <div class="wq-top">
-            <div class="wq-top1 clearfix">
-                <div class="wq-nav-left">
-                    <a href="#" class="wq-nav-left-a1"></a>
-                    <span class="wq-nav-left-s1">大腿陪玩</span>
-                    <a href="#" class="wq-nav-left-a2"></a>
-                </div>
-                <div class="wq-nav-center">
-                    <div class="wq-nav-center-left">
-                        <ul>
-                            <li>
-                                <a href="#" class="HomePage wq-slide">
-                                    <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
-                                    <span class="indent">首页</span>
-                                    <span class="caret"></span>
-                                    <ul class="menu">
-                                        <li><a href="#" class="underline">成为大神</a></li>
-                                        <li><a href="./RapidMatch.html" class="underline overline">急速下单</a></li>
-                                        <li><a href="./gamesNews.html" class="underline overline">游戏资讯</a></li>
-                                    </ul>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./discountZone.html" class="pei wq-slide">
-                                    <span class="indent">全部陪玩</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="pei wq-slide">
-                                    <span class="indent">聊天室</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./discountZone.html" class="pei wq-slide">
-                                    <span class="indent">折扣专区</span>
-                                    <span class="caret"></span>
-                                    <ul class="menu">
-                                        <li><a href="./discountZone.html" class="underline">限时折扣</a></li>
-                                        <li><a href="./discountZone.html" class="underline  overline">免单专区</a></li>
-                                        <li><a href="./discountZone.html" class="underline  overline">深夜专区</a></li>
-                                    </ul>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="pei wq-slide">
-                                    <span class="indent">代练</span>
-                                </a>
-                            </li>
-                        </ul>
+            <div class="wq-top">
+                    <div class="wq-top1 clearfix">
+                        <div class="wq-nav-left">
+                            <a href="#" class="wq-nav-left-a1"></a>
+                            <span class="wq-nav-left-s1">大腿陪玩</span>
+                            <a href="#" class="wq-nav-left-a2"></a>
+                        </div>
+                        <div class="wq-nav-center">
+                            <div class="wq-nav-center-left">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="HomePage wq-slide">
+                                            <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                                            <span class="indent">首页</span>
+                                            <span class="caret"></span>
+                                            <ul class="menu">
+                                                <li><a href="#" class="underline">成为大神</a></li>
+                                                <li><a href="./RapidMatch.html" class="underline overline">急速下单</a></li>
+                                                <li><a href="./gamesNews.html" class="underline overline">游戏资讯</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html" class="pei wq-slide">
+                                            <span class="indent">全部陪玩</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"  class="pei wq-slide">
+                                            <span class="indent">聊天室</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html"  class="pei wq-slide">
+                                            <span class="indent">折扣专区</span>
+                                            <span class="caret"></span>
+                                            <ul class="menu">
+                                                <li><a href="./discountZone.html" class="underline">限时折扣</a></li>
+                                                <li><a href="./discountZone.html" class="underline  overline">免单专区</a></li>
+                                                <li><a href="./discountZone.html" class="underline  overline">深夜专区</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"  class="pei wq-slide">
+                                            <span class="indent">代练</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wq-nav-center-right">
+                                <ul>
+                                    <li class="search">
+                                        <input type="text" class="input">
+                                        <button class="button">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </button>
+                                    </li>
+                                    <li class="search1">
+                                        <span>
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            <a href="#">充值</a>
+                                        </span>
+                                    </li>
+                                    <li class="search1">
+                                        <span>
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            <a href="">订单</a>
+                                        </span>
+                                    </li>
+                                    <li class="search1">
+                                        <span>
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                            <a href="">消息</a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wq-nav-right">
+                            <span>
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                <a href="">注册/登陆</a>
+                            </span>
+                        </div>
                     </div>
-                    <div class="wq-nav-center-right">
-                        <ul>
-                            <li class="search">
-                                <input type="text" class="input">
-                                <button class="button">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </li>
-                            <li class="search1">
-                                <span>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    <a href="#">充值</a>
-                                </span>
-                            </li>
-                            <li class="search1">
-                                <span>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    <a href="">订单</a>
-                                </span>
-                            </li>
-                            <li class="search1">
-                                <span>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    <a href="">消息</a>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-                <div class="wq-nav-right">
-                    <span>
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                        <a href="">注册/登陆</a>
-                    </span>
-                </div>
-            </div>
-        </div>
     </header>
     <div id="root">
         <div class="container">
             <div class="container-fluid">
                 <div class="tabMsg">
-                    <ul @click="isShower($event)">
-                        <li class="on" id="all"><a href="./messge.html" >消息中心</a></li>
-                        <li class="gz" id="gz">我的关注</li>
-                        <li id="fs">我的粉丝</li>
+                    <ul>
+                        <li class="on"><a href="./messge.html">消息中心</a></li>
+                        <li>我的关注</li>
+                        <li>我的粉丝</li>
                     </ul>
                 </div>
                 <div class="box">
                     <div class="ls">
-                        <my-comother></my-comother>
+                        <ul>
+                            <li class="on">
+                                <!-- 存放图片 -->
+                                <div class="otherImg">
+                                    <img src="http://photocdn.sohu.com/20120216/Img334903378.jpg" class="img-circle">
+
+                                </div>
+                                <div class="msg">
+                                    <div class="sf">
+                                        <span class="name">你是晨的皮皮虾子</span>
+                                        <time>昨天12:02</time>
+                                    </div>
+                                    <div class="text">
+                                        萨瓦迪卡，欢迎大家，欢迎大家来到美丽的泰国
+                                    </div>
+                                </div>
+                                <!-- 最近消息显示 -->
+                                <div class="mesCount">1</div>
+                            </li>
+                            <li>
+                                <div class="otherImg">
+                                    <img src="http://photocdn.sohu.com/20120216/Img334903378.jpg" class="img-circle">
+
+                                </div>
+                                <div class="msg">
+                                    <div class="sf">
+                                        <span class="name">你是晨的皮皮虾子</span>
+                                        <time>昨天12:02</time>
+                                    </div>
+                                    <div class="text">
+                                        萨瓦迪卡，欢迎大家，欢迎大家来到美丽的泰国
+                                    </div>
+                                </div>
+                                <!-- 最近消息显示 -->
+                                <div class="mesCount">5</div>
+                            </li>
+                            <li>
+                                <div class="otherImg">
+                                    <img src="http://photocdn.sohu.com/20120216/Img334903378.jpg" class="img-circle">
+
+                                </div>
+                                <div class="msg">
+                                    <div class="sf">
+                                        <span class="name">你是晨的皮皮虾子</span>
+                                        <time>昨天12:02</time>
+                                    </div>
+                                    <div class="text">
+                                        萨瓦迪卡，欢迎大家，欢迎大家来到美丽的泰国
+                                    </div>
+                                </div>
+                                <!-- 最近消息显示 -->
+                                <div class="mesCount">3</div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="rs">
-                        <div v-if="!curUser" class="nullNews" v-text="'没有任何消息'">
-
-                        </div>
                         <div class="allMsg">
-                            <div style="display: none">
-                                <!-- 进程模板，下单 -->
-                                <div class="course" style="height: 60px; background: #fff5cd; padding-left: 20px">
-                                    <div style="float: left">
-                                        <div>
-                                            <img v-bind:src="course.src"
-                                                style="margin-right: 10px;transform: translateY(8px)" width="50"
-                                                height="50">
-
-                                        </div>
+                            <!-- 进程模板，下单 -->
+                            <div class="course" style="height: 60px; background: #fff5cd; padding-left: 20px">
+                                <div style="float: left">
+                                    <div>
+                                        <img v-bind:src="course.src"
+                                            style="margin-right: 10px;transform: translateY(8px)" width="50" height="50">
 
                                     </div>
-                                    <div style="float: left">
-                                        <h5 style="margin-bottom: 0; font-size:22px "><b v-text="course.name"></b></h5>
-                                        <span v-text="course.price"></span>
-                                    </div>
-                                    <div style="float: right;padding-right: 20px ">
-                                        <button
-                                            style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)">下单</button>
-                                    </div>
+
                                 </div>
-                                <!-- 进程模板, 已下单,接单者申请开始， -->
-                                <div class="course" style="height: 60px; background: #fff5cd; padding-left: 20px">
-                                    <div style="float: left">
-                                        <div>
-                                            <img :src="course.src" style="margin-right: 10px;transform: translateY(8px)"
-                                                width="50" height="50">
-                                        </div>
+                                <div style="float: left">
+                                    <h5 style="margin-bottom: 0; font-size:22px "><b>{{course.name}}</b></h5>
+                                    <span>{{course.price}}</span>
+                                </div>
+                                <div style="float: right;padding-right: 20px ">
+                                    <button
+                                        style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)">下单</button>
+                                </div>
+                            </div>
+                            <!-- 进程模板, 已下单,接单者申请开始， -->
+                            <div class="course" style="height: 60px; background: #fff5cd; padding-left: 20px">
+                                <div style="float: left">
+                                    <div>
+                                        <img :src="course.src"style="margin-right: 10px;transform: translateY(8px)" width="50" height="50">
+                                    </div>
 
-                                    </div>
-                                    <div style="float: left">
-                                        <h5 style="margin-bottom: 0; font-size:22px "><b v-text="course2.name"></b></h5>
-                                        <span v-text="course2.price"></span>
-                                    </div>
-                                    <div style="float: right;padding-right: 20px ">
-                                        <button
-                                            style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)"
-                                            v-text="course2.no"></button>
-                                        <button v-show="course2.yes"
-                                            style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)"
-                                            v-text="course2.yes"></button>
-                                    </div>
-                                    <!-- 陪玩模板 -->
-                                    <div style="float: left">
-                                        <!-- 已经隐藏 -->
-                                        <h5
-                                            style="display: none; color: #FF5760;margin-bottom: 0; font-size:14px ;margin-left:20px; line-height: 40px">
-                                            <b>已接单，申请开始?</b></h5>
+                                </div>
+                                <div style="float: left">
+                                    <h5 style="margin-bottom: 0; font-size:22px "><b>{{course2.name}}</b></h5>
+                                    <span>{{course2.price}}</span>
+                                </div>
+                                <div style="float: right;padding-right: 20px ">
+                                    <button
+                                        style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)">{{course2.no}}</button>
+                                    <button v-show="course2.yes"
+                                        style="background:rgb(255, 200, 46); outline: none;border: none ;width: 100px;height: 40px;border-radius: 40px;transform: translateY(10px)">{{course2.yes}}</button>
+                                </div>
+                                <!-- 陪玩模板 -->
+                                <div style="float: left">
+                                    <!-- 已经隐藏 -->
+                                    <h5
+                                        style="display: none; color: #FF5760;margin-bottom: 0; font-size:14px ;margin-left:20px; line-height: 40px">
+                                        <b>已接单，申请开始?</b></h5>
                                         <!-- 用户模板 -->
                                         <h5
-                                            style="color: #FF5760;margin-bottom: 0; font-size:14px ;margin-left:20px; line-height: 40px">
-                                            <b v-text="course2.info"></b></h5>
-                                    </div>
-
-                                </div>
-                                <!-- 用户模板 -->
-                            </div>
-
-                            <div v-if="curUser" v-for="(item,index) in curUser.content"
-                                :class="item.type==1?'myMsg':'otherMsg'">
-                                <div style="overflow: hidden">
-
-                                    <div class="hdIMg">
-                                        <span v-text="item.type==1?message.name.myNickname:curUser.nickname"></span>
-                                        <img :src="'http://photocdn.sohu.com/20120216/Img334903378.jpg'" alt=""
-                                            class="img-circle"></div>
-                                </div>
-                                <div :class="'getMsg'">
-                                    <span v-text="item.text"></span>
-                                    <time v-cloak :class="'show-time'">{{item.time|timeHands}}</time>
+                                        style="color: #FF5760;margin-bottom: 0; font-size:14px ;margin-left:20px; line-height: 40px">
+                                        <b>{{course2.info}}</b></h5>
                                 </div>
 
                             </div>
+                            <!-- 用户模板 -->
 
-                            <!-- <div class="myMsg">
-                                <div style="overflow: hidden">
-                                    <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
-                                            alt="" class="img-circle"></div>
-                                </div>
-                                <div class="getMsg" text="">
-                                    123
-                                </div>
-                            </div>
-                            <div class="otherMsg">
+                            <div class="myMsg">
                                 <div style="overflow: hidden">
                                     <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
                                             alt="" class="img-circle"></div>
@@ -221,7 +237,16 @@
                                 <div class="getMsg">
                                     123
                                 </div>
-                            </div> -->
+                            </div>
+                            <div class="otherMsh">
+                                <div style="overflow: hidden">
+                                    <div class="hdIMg"><img src="http://photocdn.sohu.com/20120216/Img334903378.jpg"
+                                            alt="" class="img-circle"></div>
+                                </div>
+                                <div class="getMsg">
+                                    123
+                                </div>
+                            </div>
 
                         </div>
                         <div class="sendMsg">
@@ -234,46 +259,18 @@
                                 </ul>
                             </div>
                             <div class="fillText">
-                                <textarea v-model="message.text" placeholder="对Ta说点什么吧">
+                                <textarea name="" id="" cols="110" rows="6" placeholder="对Ta说点什么吧">
 
                                 </textarea>
-                                <button id="sendTo" @click="sendMessage">发 送</button>
-                                <span id="hint" v-show="msgIsNull" v-text="'请输入消息'"></span>
-                                <input v-model="message.name.myName" type="text"> ohtername <input
-                                    v-model="message.name.otherName" type="text">
+                                <button id="sendTo">发 送</button>
+                                <span id="hint">请输入消息</span>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-    <template id="com">
-        <ul>
-            <li v-if="user" v-for="(item,index) in user" :class="item.cur"  @click="changeCur(item.name,index)" @dblclick="gzLike(index)">
-                <!-- 存放图片 -->
-                <div class="otherImg" >
-                    <!-- 是否是我的关注，是否是我的迷妹 -->
-                    <img :src="item.img" :class="'img-circle'">
-                </div>
-                <div class="msg">
-                    <div class="sf">
-                        <span class="name" v-text="item.name"></span>
-                        <time v-cloak>{{item.content[item.content.length-1].time | timeHands}}</time>
-                    </div>
-                    <div class="text" v-text="item.content[item.content.length-1].text">
-
-                    </div>
-                </div>
-                <!-- 最近消息显示 -->
-                <div class="mesCount" v-if="item.count" v-text="item.count"></div>
-                <i class="glyphicon glyphicon-remove close" @click="delMsg($event,index)"></i>
-                <div :class="'clearLocalMsg'" @click="clearLocalMsg($event,index)">删除记录</div>
-                <div :class="'altGz'" v-if="!item.gz">已关注</div>
-            </li>
-        </ul>
-    </template>
 </body>
 
 </html>
