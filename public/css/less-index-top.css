@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*头部 导航栏*/
 *{
     margin:0;
@@ -191,6 +191,12 @@
 }
 .wq-nav-center-left .kyg{
     width: 87px;
+    position: relative;
+}
+.wq-nav-center-left .kyg span{
+    position: absolute;
+    top:0;
+    right:-17px;
 }
 .wq-nav-center-left .caret{
     position: absolute;
@@ -242,11 +248,18 @@
 .wq-nav-center-right .search1{
     width:51px;
     height: 60px;
-    margin-left: 14px;
+    margin-left: 23px;
+    position: relative;
 }
 .wq-nav-center-right .search1>span{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:51px;
+    height: 60px;
     font-size: 14px;
     line-height: 60px;
+    text-align: center;
 }
 .wq-nav-center-right .search1>span:hover{
     color: rgb(255, 191, 41);
@@ -309,7 +322,7 @@
     content:url("../images/index.images/nav3.png");
     position: absolute;
     left: 98px;
-    top: 17px;
+    top: 18px;
 }
 .wq-nav-right .content{
     width: 760px;
@@ -384,6 +397,10 @@
     height: 245px;
     padding-left: 78px;
 }
+.wq-nav-right .login .ri div{
+    width: 180px;
+    height: 20px;
+}
 .wq-nav-right .login .shadow{
     width: 40px;
     height: 245px;
@@ -405,41 +422,26 @@
 .wq-nav-right .down a{
     color: #FEB425;
 }
-.wq-nav-right .ri button{
+.wq-nav-right .ri .user,.password{
     width: 180px;
     height: 40px;
     border-radius:20px;
+    background: #e6e6e6;
     border:none;
 }
-.wq-nav-right .ri span{
-    font-size: 16px;
-    color: white;
-}
-.wq-nav-right .ri .tb{
-    font-size: 24px;
-    margin-right: 15px;
-}
-.wq-nav-right .ri .wx{
-    background: #5FCD54;
+.wq-nav-right .ri .land{
+    width: 180px;
+    height: 40px;
+    border-radius:20px;
+    background: #57B846;
+    border:none;
+    color:#fff;
+    font-size:15px;
     transition: all 0.3s linear;
 }
-.wq-nav-right .ri .wx:hover{
-    background: #00ff00;
+.wq-nav-right .ri .land:hover {
+    background: #374035;
 }
-.wq-nav-right .ri .wb{
-    background: #F3614B;
-    transition: all 0.3s linear;
-}
-.wq-nav-right .ri .wb:hover{
-    background: #ff0000;
-}
-.wq-nav-right .ri .qq{
-    background: #3AA1E8;
-    transition: all 0.3s linear;
-}
-.wq-nav-right .ri .qq:hover{
-    background: #0000ff;
-=======
 /*头部 导航栏*/
 *{
     margin:0;
@@ -644,11 +646,7 @@
     width:46px;
     height: 60px;
 }
-.wq-nav-center-right .search1>span{
-    font-size: 14px;
-    margin: 25px;
-    line-height: 60px;
-}
+
 .wq-nav-center-right .search1>span:hover{
     color: rgb(255, 191, 41);
 }
@@ -686,10 +684,9 @@
 .wq-nav-right>span:hover a{
     color: rgb(255, 191, 41);
 }
-.wq-nav-right::after{
-    content:url("../images/index.images/nav3.png");
-    position: absolute;
-    left: 85px;
-    top: 15px;
->>>>>>> 6d67eb273cf363bcfaf46709ee635139a183507e
+/*账号登陆验证提示*/
+.ts{
+    font-size:14px;
+    color:#FF5760;
+    display: none;
 }
