@@ -61,8 +61,8 @@
         <div class="div9">
             <div class="div10">
                 <ul>
-                    <li class="active1"><a href="javascript:;" class="active1"><span>可用</span></a></li>
-                    <li><a href="javascript:;"><span>不可用</span></a></li>
+                    <li class="js_Coupon active1"><a href="javascript:;" class="active1"><span>可用</span></a></li>
+                    <li class="js_unCoupon"><a href="javascript:;"><span>不可用</span></a></li>
                 </ul>
             </div>
             <div class="div11">
@@ -203,42 +203,82 @@
         ]
     };
     //可用优惠券
-    $.each(gj.data,function (i,v) {
-        var oDiv=document.createElement('div')
-        $(oDiv).addClass('goodJoin');
-        $(oDiv).html(`
-                <div class="joinBox">
-                    <div class="ls">
-                        <p><span>￥</span><span>${v.gj_much}</span></p>
-                        <p class="p2"><b>满<span>${v.gj_mess}</span>可用</b></p>
-                    </div>
-                    <div class="rs">
-                        <span>${v.gj_class}</span>
-                        <p class="p3">到期时间：<span>${v.date}</span></p>
-                    </div>
-                </div>
-                <img src="../images/yhq.png" alt="">
-        `)
-        $('.ava>.div15').append(oDiv)
+    function Coupon(){
+        $.ajax({
+            url:'/Coupon',
+            type:'post',
+            data:{
+                user_id:1
+            },
+            success:function (res) {
+                if(res.error){
+                    console.log('数据库出错')
+                }else {
+                    $.each(res.data,function (i,v) {
+                        var num=Math.ceil((v.minReq)*(1-v.yhjPre));
+                        var oDiv=document.createElement('div')
+                        $(oDiv).addClass('goodJoin');
+                        $(oDiv).html(`
+                                <div class="joinBox">
+                                    <div class="ls">
+                                        <p><span>￥</span><span>${num}</span></p>
+                                        <p class="p2"><b>满<span>${v.minReq}</span>可用</b></p>
+                                    </div>
+                                    <div class="rs">
+                                        <span>${v.information}</span>
+                                        <p class="p3">到期时间：<span>${v.time}</span></p>
+                                    </div>
+                                </div>
+                                <img src="../images/yhq.png" alt="">
+                        `)
+                        $('.ava>.div15').append(oDiv)
+                    });
+                }
+            }
+        })
+    };
+    Coupon();
+    $('.div10').on('click','.js_Coupon',function () {
+        Coupon();
     });
     //不可用优惠券
-    $.each(gj.data,function (i,v) {
-        var oDiv=document.createElement('div')
-        $(oDiv).addClass('goodJoin');
-        $(oDiv).html(`
-                <div class="joinBox">
-                    <div class="ls">
-                        <p><span>￥</span><span>${v.gj_much}</span></p>
-                        <p class="p2"><b>满<span>${v.gj_mess}</span>可用</b></p>
-                    </div>
-                    <div class="rs">
-                        <span>${v.gj_class}</span>
-                        <p class="p3">到期时间：<span>${v.date}</span></p>
-                    </div>
-                </div>
-                <img src="../images/yhq1.png" alt="">
-        `)
-        $('.unava>.div15').append(oDiv)
+    function unCoupon(){
+        $.ajax({
+            url: '/unCoupon',
+            type: 'post',
+            data: {
+                user_id: 1
+            },
+            success: function (res) {
+                if (res.error) {
+                    console.log('数据库出错')
+                } else {
+                    $.each(res.data,function (i,v) {
+                        var num=Math.ceil((v.minReq)*(1-v.yhjPre));
+                        var oDiv=document.createElement('div')
+                        $(oDiv).addClass('goodJoin');
+                        $(oDiv).html(`
+                                <div class="joinBox">
+                                    <div class="ls">
+                                        <p><span>￥</span><span>${num}</span></p>
+                                        <p class="p2"><b>满<span>${v.minReq}</span>可用</b></p>
+                                    </div>
+                                    <div class="rs">
+                                        <span>${v.information}</span>
+                                        <p class="p3">到期时间：<span>${v.time}</span></p>
+                                    </div>
+                                </div>
+                                <img src="../images/yhq1.png" alt="">
+                        `)
+                        $('.unava>.div15').append(oDiv)
+                    });
+                }
+            }
+        })
+    };
+    unCoupon();
+    $('.div10').on('click','.js_unCoupon',function () {
+        unCoupon();
     });
 
     $('.div10 li').click(function () {
@@ -249,19 +289,22 @@
         $(this).addClass('active1');
         $('.div11>div').eq($(this).index()).addClass('active');
         $('.div10 li a').eq($(this).index()).addClass('active1');
-    })
+    });
+
     $('.div7 a').click(function () {
         $('.div7 b').removeClass('active-show');
         $('.div7 .s5').removeClass('active-color');
         $(this).children(0).children(0).addClass('active-show');
         $(this).children(1).addClass('active-color');
     });
+
     $('.div7 a').mouseover(function () {
         $('.div7 b').removeClass('active-show1');
         $('.div7 .s5').removeClass('active-color1');
         $(this).children(0).children(0).addClass('active-show1');
         $(this).children(1).addClass('active-color1');
     });
+
     $('.div7 a').mouseleave(function () {
         $('.div7 b').removeClass('active-show1');
         $('.div7 .s5').removeClass('active-color1');

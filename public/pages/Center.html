@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../less/Center.css">
+    <!--<script src="../pulg/bootstrap/js/jquery-3.4.0.js"></script>-->
     <script src="../pulg/bootstrap/js/jquery-3.4.0.js"></script>
    <style></style>
 </head>
@@ -47,8 +48,8 @@
                 <div class="div7">
                     <ul>
                         <li><a href="javascript:;" class="myorder"><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">我的订单</span></a></li>
-                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
-                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
+                        <li><a href="http://localhost:7878/Center_am.html"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
+                        <li><a href="http://localhost:7878/Center_gj.html"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
                         <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
                         <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
                         <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
@@ -59,63 +60,16 @@
             <div class="div9">
                 <div class="div10">
                     <ul>
-                        <li class="active1" ><a href="javascript:;" class="active1"><span>全部订单</span></a></li>
-                        <li><a href="javascript:;"><span>待付款</span></a></li>
-                        <li><a href="javascript:;"><span>进行中</span></a></li>
-                        <li><a href="javascript:;"><span>已完成</span></a></li>
+                        <li class="active1 li_all" ><a href="javascript:;" class="active1"><span>全部订单</span></a></li>
+                        <li class="li_dai"><a href="javascript:;"><span>待付款</span></a></li>
+                        <li class="li_jing"><a href="javascript:;"><span>进行中</span></a></li>
+                        <li class="li_yi"><a href="javascript:;"><span>已完成</span></a></li>
                     </ul>
                 </div>
                 <div class="div11">
                     <div class="all_dingdan active">
                         <ul>
-                            <li>
-                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单已取消</span></div>
-                                <div class="div13">
-                                    <div class="div14">
-                                        <a href="">
-                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
-                                        </a>
-                                    </div>
-                                    <div class="div-left">
-                                        <dl>
-                                            <dt>嗷呜酱🍥下单秒接</dt>
-                                            <dd>品类：<span class="s8">绝地求生</span></dd>
-                                            <dd>备注：<span class="s8">跳唱rap</span></dd>
-                                        </dl>
-                                    </div>
-                                    <div class="div-right">
-                                        <dl>
-                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
-                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
-                                            <dd><span class="s9">已优惠5Y币</span></dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="div12"><span class="s6">订单编号:DD190613163346729</span><span class="s7">订单已取消</span></div>
-                                <div class="div13">
-                                    <div class="div14">
-                                        <a href="">
-                                            <img src="../images/user.jpg" alt="" class="img3"><p class="p3">聊一聊</p>
-                                        </a>
-                                    </div>
-                                    <div class="div-left">
-                                        <dl>
-                                            <dt>嗷呜酱🍥下单秒接</dt>
-                                            <dd>品类：<span class="s8">绝地求生</span></dd>
-                                            <dd>备注：<span class="s8">跳唱rap</span></dd>
-                                        </dl>
-                                    </div>
-                                    <div class="div-right">
-                                        <dl>
-                                            <dt>预约时间： <span> 2019-06-13 10:48</span></dt>
-                                            <dd>实际支付：<span class="s9">45Y币</span></dd>
-                                            <dd><span class="s9">已优惠5Y币</span></dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </li>
+
                         </ul>
                         <div class="div9-foot">
                             <div class="div15">
@@ -318,51 +272,6 @@
     </div>
 </body>
 <script>
-    var order={
-        data:[
-            {order_num:'DC019999000',playid:'22',game_name:'lol',play_name:'嗷呜酱🍥下单秒接',play_remarks:'我会嘤嘤嘤',order_sta:'进行中',order_time:'2019-06-13 10:48',money:'45',gj:'5',user_hpor:'/images/user.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'lol',play_name:'芝麻酱🍥下单秒接',play_remarks:'我是大神',order_sta:'已完成',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user1.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'王者荣耀',play_name:'嗷呜酱🍥下单秒接',play_remarks:'我是老司机',order_sta:'已取消',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user1.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'绝地求生',play_name:'嗷呜酱🍥下单秒接',play_remarks:'我会喊666',order_sta:'进行中',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'穿越火线',play_name:'芝麻酱🍥下单秒接',play_remarks:'我会叫爸爸',order_sta:'已完成',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user1.jpg'}
-            ]
-    };
-    function myorder(){
-        $('.div11 .active>ul').html(' ');
-        $.each(order.data,function (i,v) {
-            var oLi=document.createElement('li');
-            oLi.innerHTML=`
-            <div class="div12"><span class="s6">订单编号：${v.order_num}</span><span class="s7">订单${v.order_sta}</span></div>
-                            <div class="div13">
-                                <div class="div14">
-                                    <a href="">
-                                        <img src="..${v.user_hpor}" alt="" class="img3"><p class="p3">聊一聊</p>
-                                    </a>
-                                </div>
-                                <div class="div-left">
-                                    <dl>
-                                        <dt>${v.play_name}</dt>
-                                        <dd>品类：<span class="s8">${v.game_name}</span></dd>
-                                        <dd>备注：<span class="s8">${v.play_remarks}</span></dd>
-                                    </dl>
-                                </div>
-                                <div class="div-right">
-                                    <dl>
-                                        <dt>预约时间： <span> ${v.order_time}</span></dt>
-                                        <dd>实际支付：<span class="s9">${v.money}Y币</span></dd>
-                                        <dd><span class="s9">已优惠${v.gj}Y币</span></dd>
-                                    </dl>
-                                </div>
-                            </div>
-        `;
-            $('.div11 .active>ul').append(oLi);
-        })
-
-    };
-    myorder();
-    if($('.div11 .active>ul li').length>3){
-         $('#content').css('height','1500px')
-    }
     $('.div10 li').click(function () {
         $('.div10 li').removeClass('active1');
         $('.div10 li a').removeClass('active1');
@@ -372,10 +281,234 @@
         $('.div10 li a').eq($(this).index()).addClass('active1');
 
     });
+
+    function myorder(){
+        $.ajax({
+            url:'/myorder',
+            type:'POST',
+            data:{
+                user_id:1
+            },
+            success:function (res) {
+                if(res.error){
+                    console.log('数据库出错')
+                }else {
+                    var arr=res.data;
+                    $('.div11 .active>ul').html(' ');
+                    $.each(arr,function (i,v) {
+                        var oLi=document.createElement('li');
+                        var money=(v.price)*(v.yhjPre);
+                        var money1=(v.price)-money;
+                        oLi.innerHTML=`
+                        <div class="div12"><span class="s6">订单编号：${v.code}</span><span class="s7">订单${v.order_sta}</span></div>
+                            <div class="div13">
+                                <div class="div14">
+                                    <a href="">
+                                        <img src="..${v.headerimg}" alt="" class="img3"><p class="p3">聊一聊</p>
+                                    </a>
+                                </div>
+                                <div class="div-left">
+                                    <dl>
+                                        <dt>${v.name}🍥下单秒接</dt>
+                                        <dd>品类：<span class="s8">${v.service_name}</span></dd>
+                                        <dd>备注：<span class="s8">${v.textintroduction}</span></dd>
+                                    </dl>
+                                </div>
+                                <div class="div-right">
+                                    <dl>
+                                        <dt>预约时间： <span> ${v.date}</span></dt>
+                                        <dd>实际支付：<span class="s9">${money}Y币</span></dd>
+                                        <dd><span class="s9">已优惠${money1}Y币</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+        `;
+                        $('.div11 .active>ul').append(oLi);
+                    });
+                    if($('.div11 .active>ul li').length>3){
+                        var iNow=$('.div11 .all_dingdan>ul li').length+2;
+                        var oH=iNow*200-20;
+                        $('#content').css('height',`${oH}`);
+                    }
+                }
+            }
+        });
+    };
     //myorder
     //post
     //content:用户id
     //date{error：0；data}
+    myorder();
+    //所有订单
+    $('.div10').on('click','.li_all',function () {
+        myorder();
+    });
+    //待付款
+    $('.div10').on('click','.li_dai',function () {
+        $.ajax({
+            url:'/daiorder',
+            type:'POST',
+            data:{
+                user_id:1
+            },
+            success:function (res) {
+                if(res.error){
+                    console.log('数据库出错')
+                }else {
+                    var arr=res.data;
+                    $('.div11 .active>ul').html(' ');
+                    $.each(arr,function (i,v) {
+                        var oLi=document.createElement('li');
+                        var money=(v.price)*(v.yhjPre);
+                        var money1=(v.price)-money;
+                        oLi.innerHTML=`
+                        <div class="div12"><span class="s6">订单编号：${v.code}</span><span class="s7">订单${v.order_sta}</span></div>
+                            <div class="div13">
+                                <div class="div14">
+                                    <a href="">
+                                        <img src="..${v.headerimg}" alt="" class="img3"><p class="p3">聊一聊</p>
+                                    </a>
+                                </div>
+                                <div class="div-left">
+                                    <dl>
+                                        <dt>${v.name}🍥下单秒接</dt>
+                                        <dd>品类：<span class="s8">${v.service_name}</span></dd>
+                                        <dd>备注：<span class="s8">${v.textintroduction}</span></dd>
+                                    </dl>
+                                </div>
+                                <div class="div-right">
+                                    <dl>
+                                        <dt>预约时间： <span> ${v.date}</span></dt>
+                                        <dd>实际支付：<span class="s9">${money}Y币</span></dd>
+                                        <dd><span class="s9">已优惠${money1}Y币</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+        `;
+                        $('.div11 .active>ul').append(oLi);
+                    });
+                    if($('.div11 .active>ul li').length>=3){
+                        var iNow=$('.div11 .dai_dingdan>ul li').length+2;
+                        var oH=iNow*200-20;
+                        $('#content').css('height',`${oH}`);
+                    }else {
+                        $('#content').css('height','680px');
+                    }
+                }
+            }
+        });
+    });
+    //进行中
+    $('.div10').on('click','.li_jing',function () {
+        $.ajax({
+            url:'/jingorder',
+            type:'POST',
+            data:{
+                user_id:1
+            },
+            success:function (res) {
+                if(res.error){
+                    console.log('数据库出错')
+                }else {
+                    var arr=res.data;
+                    $('.div11 .active>ul').html(' ');
+                    $.each(arr,function (i,v) {
+                        var oLi=document.createElement('li');
+                        var money=(v.price)*(v.yhjPre);
+                        var money1=(v.price)-money;
+                        oLi.innerHTML=`
+                        <div class="div12"><span class="s6">订单编号：${v.code}</span><span class="s7">订单${v.order_sta}</span></div>
+                            <div class="div13">
+                                <div class="div14">
+                                    <a href="">
+                                        <img src="..${v.headerimg}" alt="" class="img3"><p class="p3">聊一聊</p>
+                                    </a>
+                                </div>
+                                <div class="div-left">
+                                    <dl>
+                                        <dt>${v.name}🍥下单秒接</dt>
+                                        <dd>品类：<span class="s8">${v.service_name}</span></dd>
+                                        <dd>备注：<span class="s8">${v.textintroduction}</span></dd>
+                                    </dl>
+                                </div>
+                                <div class="div-right">
+                                    <dl>
+                                        <dt>预约时间： <span> ${v.date}</span></dt>
+                                        <dd>实际支付：<span class="s9">${money}Y币</span></dd>
+                                        <dd><span class="s9">已优惠${money1}Y币</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+        `;
+                        $('.div11 .active>ul').append(oLi);
+                    });
+                    if($('.div11 .active>ul li').length>3){
+                        var iNow=$('.div11 .jing_fukuan>ul li').length+2;
+                        var oH=iNow*200-20;
+                        $('#content').css('height',`${oH}`);
+                    }else {
+                        $('#content').css('height','680px');
+                    }
+                }
+            }
+        });
+    });
+    //已完成
+    $('.div10').on('click','.li_yi',function () {
+        $.ajax({
+            url:'/yiorder',
+            type:'POST',
+            data:{
+                user_id:1
+            },
+            success:function (res) {
+                if(res.error){
+                    console.log('数据库出错')
+                }else {
+                    var arr=res.data;
+                    $('.div11 .active>ul').html(' ');
+                    $.each(arr,function (i,v) {
+                        var oLi=document.createElement('li');
+                        var money=(v.price)*(v.yhjPre);
+                        var money1=(v.price)-money;
+                        oLi.innerHTML=`
+                        <div class="div12"><span class="s6">订单编号：${v.code}</span><span class="s7">订单${v.order_sta}</span></div>
+                            <div class="div13">
+                                <div class="div14">
+                                    <a href="">
+                                        <img src="..${v.headerimg}" alt="" class="img3"><p class="p3">聊一聊</p>
+                                    </a>
+                                </div>
+                                <div class="div-left">
+                                    <dl>
+                                        <dt>${v.name}🍥下单秒接</dt>
+                                        <dd>品类：<span class="s8">${v.service_name}</span></dd>
+                                        <dd>备注：<span class="s8">${v.textintroduction}</span></dd>
+                                    </dl>
+                                </div>
+                                <div class="div-right">
+                                    <dl>
+                                        <dt>预约时间： <span> ${v.date}</span></dt>
+                                        <dd>实际支付：<span class="s9">${money}Y币</span></dd>
+                                        <dd><span class="s9">已优惠${money1}Y币</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+        `;
+                        $('.div11 .active>ul').append(oLi);
+                    });
+                    if($('.div11 .active>ul li').length>3){
+                        var iNow=$('.div11 .wancheng_fukuan>ul li').length+2;
+                        var oH=iNow*200-20;
+                        $('#content').css('height',`${oH}`);
+                    }else {
+                        $('#content').css('height','680px');
+                    }
+                }
+            }
+        });
+    });
+
     $('.div7 a').click(function () {
         $('.div7 b').removeClass('active-show');
         $('.div7 .s5').removeClass('active-color');
