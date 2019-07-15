@@ -204,6 +204,15 @@
     left: 98px;
     z-index: 1;
 }
+#exit{
+    position: relative;
+    top:10px;
+    text-decoration: none;
+    text-decoration:underline black !important;
+}
+#exit:hover {
+    text-decoration:underline black !important;
+}
 .wq-nav-center-right{
     width: 400px;
     height: 60px;
@@ -324,6 +333,9 @@
     left: 98px;
     top: 18px;
 }
+.wq-nav-right1::after{
+    content:''
+}
 .wq-nav-right .content{
     width: 760px;
     height: 423px;
@@ -359,6 +371,7 @@
     height: 40px;
     border-radius: 4px;
     border: 1px solid #D9D9D9;
+    text-indent: 2rem;
 }
 .wq-nav-right .le p{
     color:#FF5760;
@@ -395,7 +408,7 @@
 .wq-nav-right .login .ri{
     width: 342px;
     height: 245px;
-    padding-left: 78px;
+    padding-left: 50px;
 }
 .wq-nav-right .login .ri div{
     width: 180px;
@@ -423,11 +436,13 @@
     color: #FEB425;
 }
 .wq-nav-right .ri .user,.password{
-    width: 180px;
-    height: 40px;
+    width: 260px;
+    height: 48px;
     border-radius:20px;
     background: #e6e6e6;
     border:none;
+    text-indent: 2rem;
+    outline: none;
 }
 .wq-nav-right .ri .land{
     width: 180px;
@@ -675,13 +690,15 @@
     position: relative;
 }
 /*登陆后的头像*/
+.loginUser {
+    line-height: 62px;
+    height: 46px;
+}
 .wq-nav-right #tou{
     width: 50px;
     height: 50px;
     border-radius:50px;
-    position: absolute;
-    top:5px;
-    left: 20px;
+    margin-left: 20px;
 }
 .wq-nav-right>span{
     height:60px;

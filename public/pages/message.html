@@ -23,7 +23,7 @@
 <body>
 
     <header style="height: 60px;margin-bottom: 40px;background: rgb(246, 246, 246);">
-        <div class="wq-top">
+        <div class="wq-top" id="wq-top">
             <div class="wq-top1 clearfix">
                 <div class="wq-nav-left">
                     <a href="#" class="wq-nav-left-a1"></a>
@@ -33,41 +33,49 @@
                 <div class="wq-nav-center">
                     <div class="wq-nav-center-left">
                         <ul>
-                            <li>
+                            <li class="shou">
                                 <a href="#" class="HomePage wq-slide">
                                     <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
-                                    <span class="indent">首页</span>
-                                    <span class="caret"></span>
+                                    <span class="indent">
+                                        首页
+                                         <span class="iconfont icon-icon-arrow-down"></span>
+                                    </span>
+    
                                     <ul class="menu">
                                         <li><a href="#" class="underline">成为大神</a></li>
-                                        <li><a href="./RapidMatch.html" class="underline overline">急速下单</a></li>
-                                        <li><a href="./gamesNews.html" class="underline overline">游戏资讯</a></li>
+                                        <li><a href="#" class="underline overline">急速下单</a></li>
+                                        <li><a href="#" class="underline overline">游戏咨询</a></li>
                                     </ul>
                                 </a>
                             </li>
                             <li>
-                                <a href="./discountZone.html" class="pei wq-slide">
+                                <a href="#" class="pei wq-slide">
                                     <span class="indent">全部陪玩</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="pei wq-slide">
-                                    <span class="indent">聊天室</span>
+                                <a href="#"  class="pei wq-slide">
+                                    <span class="lobby"></span>
+                                    <span class="indent">聊天室
+                                    <mark class="hot"></mark>
+                                    </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="./discountZone.html" class="pei wq-slide">
-                                    <span class="indent">折扣专区</span>
-                                    <span class="caret"></span>
+                                <a href="#"  class="pei wq-slide">
+                                    <span class="indent kyg">
+                                        折扣专区
+                                         <span class="iconfont icon-icon-arrow-down "></span>
+                                    </span>
                                     <ul class="menu">
-                                        <li><a href="./discountZone.html" class="underline">限时折扣</a></li>
-                                        <li><a href="./discountZone.html" class="underline  overline">免单专区</a></li>
-                                        <li><a href="./discountZone.html" class="underline  overline">深夜专区</a></li>
+                                        <li><a href="#" class="underline">限时折扣</a></li>
+                                        <li><a href="#" class="underline  overline">免单专区</a></li>
+                                        <li><a href="#" class="underline  overline">深夜专区</a></li>
                                     </ul>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="pei wq-slide">
+                                <a href="#"  class="pei wq-slide">
                                     <span class="indent">代练</span>
                                 </a>
                             </li>
@@ -75,38 +83,51 @@
                     </div>
                     <div class="wq-nav-center-right">
                         <ul>
+                            <!--搜索框-->
                             <li class="search">
-                                <input type="text" class="input">
+                                <input type="text" class="input" placeholder="请输入大神昵称">
                                 <button class="button">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                    <span class="iconfont icon-sousuo"></span>
                                 </button>
                             </li>
+                            <!--充值-->
                             <li class="search1">
                                 <span>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    <a href="#">充值</a>
+                                    <a href="#">
+                                        <span class="iconfont icon-chongzhi"></span>
+                                        充值
+                                    </a>
                                 </span>
                             </li>
+                            <!--订单-->
                             <li class="search1">
                                 <span>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    <a href="">订单</a>
+    
+                                    <a href="">
+                                        <span class="iconfont icon-dingdan"></span>
+                                        订单
+                                    </a>
                                 </span>
                             </li>
+                            <!--消息-->
                             <li class="search1">
                                 <span>
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                    <a href="">消息</a>
+    
+                                    <a href="">
+                                         <span class="iconfont icon-xiaoxi"></span>
+                                        消息
+                                    </a>
                                 </span>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="wq-nav-right">
-                    <span>
-                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                        <a href="">注册/登陆</a>
-                    </span>
+                <!--注册/登陆-->
+                <div class="wq-nav-right wq-nav-right1">
+                    <div class="loginUser" style="display: block">
+                        <a href="./pages/Center.html"> <img id="tou" src="" alt=""></a>
+                        <a href="javascript:;" id="exit">退出登录</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -114,14 +135,17 @@
     <div id="root">
         <div class="container">
             <div class="container-fluid">
-                <div class="tabMsg">
+                <div class="loadImg" v-if="loading">
+                    <img src="../images/loadingMSG.jpg" alt="">
+                </div>
+                <div class="tabMsg" v-if="!loading">
                     <ul @click="isShower($event)">
                         <li class="on" id="all"><a href="./messge.html" >消息中心</a></li>
                         <li class="gz" id="gz">我的关注</li>
                         <li id="fs">我的粉丝</li>
                     </ul>
                 </div>
-                <div class="box">
+                <div class="box" v-if="!loading">
                     <div class="ls">
                         <my-comother></my-comother>
                     </div>
@@ -194,7 +218,7 @@
 
                                     <div class="hdIMg">
                                         <span v-text="item.type==1?message.name.myNickname:curUser.nickname"></span>
-                                        <img :src="'http://photocdn.sohu.com/20120216/Img334903378.jpg'" alt=""
+                                        <img :src="item.type==1?message.img:'http://photocdn.sohu.com/20120216/Img334903378.jpg'" alt=""
                                             class="img-circle"></div>
                                 </div>
                                 <div :class="'getMsg'">
@@ -251,15 +275,14 @@
     </div>
     <template id="com">
         <ul>
-            <li v-if="user" v-for="(item,index) in user" :class="item.cur"  @click="changeCur(item.name,index)" @dblclick="gzLike(index)">
+            <li v-if="user" v-for="(item,index) in user" :class="item.cur" @contextmenu.prevent.stop="altDel(index)" @click="changeCur(item.name,index)" @dblclick="gzLike(index)">
                 <!-- 存放图片 -->
                 <div class="otherImg" >
-                    <!-- 是否是我的关注，是否是我的迷妹 -->
                     <img :src="item.img" :class="'img-circle'">
                 </div>
                 <div class="msg">
                     <div class="sf">
-                        <span class="name" v-text="item.name"></span>
+                        <span class="name" v-text="item.nickname"></span>
                         <time v-cloak>{{item.content[item.content.length-1].time | timeHands}}</time>
                     </div>
                     <div class="text" v-text="item.content[item.content.length-1].text">
@@ -268,9 +291,8 @@
                 </div>
                 <!-- 最近消息显示 -->
                 <div class="mesCount" v-if="item.count" v-text="item.count"></div>
-                <i class="glyphicon glyphicon-remove close" @click="delMsg($event,index)"></i>
-                <div :class="'clearLocalMsg'" @click="clearLocalMsg($event,index)">删除记录</div>
-                <div :class="'altGz'" v-if="!item.gz">已关注</div>
+                <i class="glyphicon glyphicon-remove close" @click.stop="delMsg(index)"></i>
+                <div v-if="db==index" :class="'clearLocalMsg'" @click.stop="clearLocalMsg(index)">删除记录</div>
             </li>
         </ul>
     </template>

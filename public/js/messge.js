@@ -1,9 +1,14 @@
     $(function () {
-        let UserInfo=ifHasLoginMan();
-        if(!UserInfo){
+        let UserInfo = ifHasLoginMan();
+        console.log(UserInfo);
+        if (!UserInfo) {
             alert('请先登录');
-            location.href="../index.html";
+            location.href = "../index.html";
         }
+        /* 添加到 */
+        $('#tou').attr('src', '../' + UserInfo.info[0].headerimg)
+
+
         let myName = `bigLeg${UserInfo.info[0].name}`;
         var user = JSON.parse(localStorage.getItem(myName)) || [];
 
@@ -52,6 +57,7 @@
         var vm = new Vue({
             el: '#root',
             data: {
+                loading: true,
                 course: {
                     src: 'https://static.yay.com.cn/product/5c0e292eb837d.png',
                     name: '王者荣耀',
@@ -67,14 +73,17 @@
                     info: '陪玩未申请开始,三分钟未开始默认取消,今天还可免费主动取消三次',
                     no: '取消'
                 },
-                message: {
+                message: { //发送的消息
                     text: '',
                     name: {
                         myName: UserInfo.info[0].name,
-                        myNickname:UserInfo.info[0].nickname,
+                        myNickname: UserInfo.info[0].nickname,
                         otherName: '',
-                        otherNickname: '',
-                    }
+                        otherNickname: ''
+                    },
+                    img: UserInfo.info[0].headerimg,
+                    telphone: UserInfo.info[0].telphone,
+                    time: ''
                 },
                 socket: io('http://172.17.2.251:80', {
                     'reconnect': true
@@ -83,21 +92,61 @@
                 curUser: user[0] ? user[0] : false
             },
             created() {
+                let getfriend = setTimeout(() => {
+                    user.forEach(v => {
+                        $.ajax({
+                            url: 'lookOther.do',
+                            type: 'post',
+                            data: {
+                                user: v.name,
+                                type: 0
+                            },
+                            success(res) {
+                                try {
+                                    v.nickname = res[0].nickname;
+                                    v.img = '../' + res[0].headerimg;
+                                    localStorage.setItem(myName, JSON.stringify(user));
+                                } catch (err) {
+                                    console.log('网络延迟');
+                                }
+                            }
+                        })
+
+                    })
+                    this.loading = !this.loading;
+                    clearTimeout(getfriend);
+                }, 2000);
                 user.forEach(item => {
                     item.cur = ''
                 });
                 if (this.curUser) {
                     user[0].cur = 'on';
                     user[0].count = 0;
+                    this.message.otherName = user[0].name;
+                    this.message.otherNickname = user[0].otherNickname;
                 }
                 this.socket.emit('connection', {
-                    myName:this.message.name.myName,
-                    myNickname:this.message.name.myNickname
+                    myName: this.message.name.myName,
+                    myNickname: this.message.name.myNickname
                 });
                 this.socket.on('con', (msg) => {
                     console.log(msg.myNickname + ':加入了聊天');
                 });
                 this.socket.on(this.message.name.myName, function (msg) {
+                    console.log(msg);
+                    if (msg instanceof Array) {
+                        user.splice(user.length - 1, 0, msg);
+                        msg.forEach(v => {
+                            var num = user.indexOf(v.name);
+                            if (num != -1) {
+                                v.content.forEach(v => {
+                                    user.content.push(v);
+                                })
+                            } else {
+                                user.unshift(v);
+                            }
+                        })
+                    }
                     var {
                         a,
                         b,
@@ -126,10 +175,11 @@
                             return;
                         }
                     }
+
                     let jsonA = {
                         name: msg.name.otherName,
-                        nickname:msg.name.nickname,
-                        img: "http://photocdn.sohu.com/20120216/Img334903378.jpg",
+                        nickname: msg.name.otherNickname,
+                        img: this.message.img,
                         phone: "a13333333333",
                         cur: user.length ? '' : 'on',
                         count: 1,
@@ -190,39 +240,58 @@
                         e,
                         f
                     } = handsTime(new Date());
-                    var time = `${a}-${b}-${c} ${d}:${e}:${f}`
-                    for (var i = 0; i < user.length; i++) {
-                        if (user[i].name == this.message.name.otherName) {
-                            user[i].content.push({
-                                time: time,
-                                text: this.message.text,
-                                type: "1"
+                    $.ajax({
+                        url: 'lookOther.do',
+                        type: 'post',
+                        data: {
+                            user: this.message.name.otherName,
+                            type: 0
+                        },
+                        success:res=> {
+                            var time = `${a}-${b}-${c} ${d}:${e}:${f}`
+                            for (var i = 0; i < user.length; i++) {
+                                if (user[i].name == this.message.name.otherName) {
+                                    user[i].content.push({
+                                        time: time,
+                                        text: this.message.text,
+                                        type: "1"
+                                    });
+                                    localStorage.setItem(myName, JSON.stringify(user));
+                                    this.socket.emit('chat message', this.message);
+                                    this.message.text = "";
+                                    user[i].nickname = res[0].nickname;
+                                    user[i].img = '../' + res[0].headerimg;
+                                    localStorage.setItem(myName, JSON.stringify(user));
+                                    return;
+                                }
+                            }
+                            user.push({
+                                name: this.message.name.otherName,
+                                nickname: this.message.name.otherNickname,
+                                img: "http://photocdn.sohu.com/20120216/Img334903378.jpg",
+                                phone: "a13333333333",
+                                cur: user.length ? '' : 'on',
+                                count: 0,
+                                content: [{
+                                    time: time,
+                                    text: this.message.text,
+                                    type: "1"
+                                }]
                             });
-                            localStorage.setItem(myName, JSON.stringify(user));
+                            this.message.time = time;
                             this.socket.emit('chat message', this.message);
+                            user[user.length - 1].nickname = res[0].nickname;
+                            user[user.length - 1].img = '../' + res[0].headerimg;
+                            localStorage.setItem(myName, JSON.stringify(user));
                             this.message.text = "";
-                            return;
+                            if (user.length == 1) {
+                                this.curUser = user[0];
+                            }
+
+
                         }
-                    }
-                    user.push({
-                        name: this.message.name.otherName,
-                        nickname:this.message.name.nickname,
-                        img: "http://photocdn.sohu.com/20120216/Img334903378.jpg",
-                        phone: "a13333333333",
-                        cur: user.length ? '' : 'on',
-                        count: 0,
-                        content: [{
-                            time: time,
-                            text: this.message.text,
-                            type: "1"
-                        }]
-                    });
-                    this.socket.emit('chat message', this.message);
-                    localStorage.setItem(myName, JSON.stringify(user));
-                    this.message.text = "";
-                    if (user.length == 1) {
-                        this.curUser = user[0];
-                    }
+                    })
+
                 },
 
             },
@@ -231,18 +300,12 @@
                     template: "#com",
                     data() {
                         return {
-                            user
+                            user,
+                            db:-1
                         }
                     },
                     methods: {
-                        gzLike(i) {
-                            if (user[i].gz) {
-                                user[i].gz = false;
-                            } else {
-                                user[i].gz = true;
-                            }
-                        },
-                        delMsg(e, i) {
+                        delMsg(i) {
                             var arr = user.splice(i, 1);
                             if (user[0]) {
                                 if (arr[0].cur == 'on') {
@@ -252,8 +315,13 @@
                             } else {
                                 vm.$data.curUser = false;
                             }
-
-                            e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+                        },
+                        altDel(i){
+                            if(this.db==i){
+                                this.db=-1;
+                            }else{
+                                this.db=i;
+                            }
                         },
                         changeCur(name, index) {
                             vm.$data.message.name.otherName = name;
@@ -263,8 +331,21 @@
                             user[index].cur = 'on';
                             user[index].count = 0;
                             vm.$data.curUser = user[index];
+                            $.ajax({
+                                url: 'lookOther.do',
+                                type: 'post',
+                                data: {
+                                    user: user[index].name,
+                                    type: 0
+                                },
+                                success(res) {
+                                    user[index].nickname = res[0].nickname;
+                                    user[index].img = '../' + res[0].headerimg;
+                                    localStorage.setItem(myName, JSON.stringify(user));
+                                }
+                            })
                         },
-                        clearLocalMsg(e, i) {
+                        clearLocalMsg(i) {
                             var flag = confirm('确定删除本地记录?')
                             if (!flag) return;
                             var arr = user.splice(i, 1);
@@ -277,7 +358,6 @@
                                 vm.$data.curUser = false;
                             }
                             localStorage.setItem(myName, JSON.stringify(user));
-                            e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
                         }
                     }
                 }
@@ -291,12 +371,6 @@
             var d = obj.getHours() < 10 ? "0" + obj.getHours() : obj.getHours(); /* 获取小时 */
             var e = obj.getMinutes() < 10 ? "0" + obj.getMinutes() : obj.getMinutes(); /* 获取分 */
             var f = obj.getSeconds() < 10 ? "0" + obj.getSeconds() : obj.getSeconds(); /* 获取秒 */
-            a = parseInt(a);
-            b = parseInt(b);
-            c = parseInt(c);
-            d = parseInt(d);
-            e = parseInt(e);
-            f = parseInt(f);
             return {
                 a,
                 b,

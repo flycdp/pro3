@@ -22,7 +22,7 @@ const dbPool={
         return 'select * from x_user where telphone=?'
     },
     reg(){
-        return ['select * from t_user where u_name=?','insert into t_user values(null,?,?)']
+        return ['select * from x_user where name=?','insert into x_user values(null,?,?)']
     },
     
     connect(sql,arr,fn){

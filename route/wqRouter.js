@@ -48,5 +48,5 @@ const route=express.Router();
 route.post('/yzm.do',smsController.sendCode);
 route.post('/zd.do',smsController.verSms);
 route.post('/login',con.login);
-
+route.post('/pages/lookOther.do',con.lookOther);
 module.exports = route;
