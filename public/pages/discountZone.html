@@ -4,8 +4,119 @@
     <meta charset="UTF-8">
     <title>折扣专区</title>
     <link rel="stylesheet" href="../less/discountZone.css">
+    <link rel="stylesheet" href="../css/less-index-top.css"></link>
+    <link rel="stylesheet" href="../font/wq/iconfont/iconfont.css">
 </head>
 <body>
+        <header style=" border-bottom:1px solid yellow;height: 60px;margin-bottom: 40px;background: rgb(246, 246, 246);">
+                <div class="wq-top" id="wq-top">
+                    <div class="wq-top1 clearfix">
+                        <div class="wq-nav-left">
+                            <a href="../" class="wq-nav-left-a1"></a>
+                            <span class="wq-nav-left-s1">大腿陪玩</span>
+                            <a href="#" class="wq-nav-left-a2"></a>
+                        </div>
+                        <div class="wq-nav-center">
+                            <div class="wq-nav-center-left">
+                                <ul>
+                                    <li class="shou">
+                                        <a href="../" class="HomePage wq-slide">
+                                            <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                                            <span class="indent">
+                                                首页
+                                                 <span class="iconfont icon-icon-arrow-down"></span>
+                                            </span>
+            
+                                            <ul class="menu">
+                                                <li><a href="#" class="underline">成为大神</a></li>
+                                                <li><a href="./RapidMatch.html" class="underline overline">急速下单</a></li>
+                                                <li><a href="./gamesNews.html" class="underline overline">游戏资讯</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html" class="pei wq-slide">
+                                            <span class="indent">全部陪玩</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./"  class="pei wq-slide">
+                                            <span class="lobby"></span>
+                                            <span class="indent">聊天室
+                                            <mark class="hot"></mark>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html"  class="pei wq-slide">
+                                            <span class="indent kyg">
+                                                折扣专区
+                                                 <span class="iconfont icon-icon-arrow-down "></span>
+                                            </span>
+                                            <ul class="menu">
+                                                <li><a href="./discountZone.html" class="underline">限时折扣</a></li>
+                                                <li><a href="./discountZone.html" class="underline  overline">免单专区</a></li>
+                                                <li><a href="./discountZone.html" class="underline  overline">深夜专区</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html"  class="pei wq-slide">
+                                            <span class="indent">代练</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wq-nav-center-right">
+                                <ul>
+                                    <!--搜索框-->
+                                    <li class="search">
+                                        <input type="text" class="input" placeholder="请输入大神昵称">
+                                        <button class="button">
+                                            <span class="iconfont icon-sousuo"></span>
+                                        </button>
+                                    </li>
+                                    <!--充值-->
+                                    <li class="search1">
+                                        <span>
+                                            <a href="./Center_am.html">
+                                                <span class="iconfont icon-chongzhi"></span>
+                                                充值
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <!--订单-->
+                                    <li class="search1">
+                                        <span>
+            
+                                            <a href="./Center.html">
+                                                <span class="iconfont icon-dingdan"></span>
+                                                订单
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <!--消息-->
+                                    <li class="search1">
+                                        <span>
+                                            <a href="./message.html">
+                                                 <span class="iconfont icon-xiaoxi"></span>
+                                                消息
+                                            </a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--注册/登陆-->
+                        <div class="wq-nav-right wq-nav-right1">
+                            <div class="loginUser" style="display: block">
+                                <a href="./Center_minf.html"> <img id="tou" src="" alt=""></a>
+                                <a href="javascript:;" id="exit" style="top: -5px">退出登录</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
     <div id="box">
         <div id="mainBox">
             <div class="selectBox">
@@ -366,4 +477,26 @@
 </body>
 <script src="../js/jQuery.min.js"></script>
 <script src="../js/discountZone.js"></script>
+<script src="../js/ifHasUser.js"></script>
+<script>
+    let UserInfo = ifHasLoginMan();
+    if (!UserInfo) {
+        alert('请先登录');
+        location.href = "../index.html";
+    }
+    /* 添加到 */
+    $('#tou').attr('src', '../' + UserInfo.info[0].headerimg)
+    function exit() {
+            document.cookie = '';
+        if ($('.wq-banner').length) {
+            oZ.style.display = "block";
+            $('.loginUser').hide();
+            $('.wq-nav-right').removeClass('wq-nav-right1');
+            $('#tou')[0].src = '';
+        } else {
+            window.location.href = "../";
+        }
+    }
+    $('#exit').click(exit);
+</script>
 </html>

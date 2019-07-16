@@ -129,9 +129,6 @@
                     myName: this.message.name.myName,
                     myNickname: this.message.name.myNickname
                 });
-                this.socket.on('con', (msg) => {
-                    console.log(msg.myNickname + ':加入了聊天');
-                });
                 this.socket.on(this.message.name.myName, function (msg) {
                     console.log(msg);
                     if (msg instanceof Array) {
@@ -198,6 +195,10 @@
                         vm.$data.curUser = user[0];
                     }
                 });
+                this.socket.on('con', (msg) => {
+                    console.log(msg);
+                    console.log(msg.myNickname + ':加入了聊天');
+                });
             },
             mounted() {
                 msgG();
@@ -248,6 +249,7 @@
                             type: 0
                         },
                         success:res=> {
+                            let flx=true;
                             var time = `${a}-${b}-${c} ${d}:${e}:${f}`
                             for (var i = 0; i < user.length; i++) {
                                 if (user[i].name == this.message.name.otherName) {
@@ -256,39 +258,35 @@
                                         text: this.message.text,
                                         type: "1"
                                     });
-                                    localStorage.setItem(myName, JSON.stringify(user));
-                                    this.socket.emit('chat message', this.message);
-                                    this.message.text = "";
                                     user[i].nickname = res[0].nickname;
                                     user[i].img = '../' + res[0].headerimg;
-                                    localStorage.setItem(myName, JSON.stringify(user));
-                                    return;
+                                    flx=false;
                                 }
                             }
-                            user.push({
-                                name: this.message.name.otherName,
-                                nickname: this.message.name.otherNickname,
-                                img: "http://photocdn.sohu.com/20120216/Img334903378.jpg",
-                                phone: "a13333333333",
-                                cur: user.length ? '' : 'on',
-                                count: 0,
-                                content: [{
-                                    time: time,
-                                    text: this.message.text,
-                                    type: "1"
-                                }]
-                            });
+                            if(flx){
+                                user.push({
+                                    name: this.message.name.otherName,
+                                    nickname: this.message.name.otherNickname,
+                                    img: "http://photocdn.sohu.com/20120216/Img334903378.jpg",
+                                    phone: "a13333333333",
+                                    cur: user.length ? '' : 'on',
+                                    count: 0,
+                                    content: [{
+                                        time: time,
+                                        text: this.message.text,
+                                        type: "1"
+                                    }]
+                                });
+                                user[user.length - 1].nickname = res[0].nickname;
+                                user[user.length - 1].img = '../' + res[0].headerimg;
+                            }
                             this.message.time = time;
                             this.socket.emit('chat message', this.message);
-                            user[user.length - 1].nickname = res[0].nickname;
-                            user[user.length - 1].img = '../' + res[0].headerimg;
                             localStorage.setItem(myName, JSON.stringify(user));
                             this.message.text = "";
                             if (user.length == 1) {
                                 this.curUser = user[0];
                             }
-
-
                         }
                     })
 
@@ -344,6 +342,7 @@
                                     localStorage.setItem(myName, JSON.stringify(user));
                                 }
                             })
+                            
                         },
                         clearLocalMsg(i) {
                             var flag = confirm('确定删除本地记录?')
@@ -357,6 +356,7 @@
                             } else {
                                 vm.$data.curUser = false;
                             }
+                            this.db=-1;
                             localStorage.setItem(myName, JSON.stringify(user));
                         }
                     }

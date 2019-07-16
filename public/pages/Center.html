@@ -3,56 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../font/wq/iconfont/iconfont.css">
     <link rel="stylesheet" href="../less/Center.css">
     <script src="../pulg/bootstrap/js/jquery-3.4.0.js"></script>
-   <style></style>
+    <link rel="stylesheet" href="../css/less-index-top.css"></link>
 </head>
 <body>
-    <div id="header">
-        <div class="div1">
-            <a href=""><img src="../images/logo.png" alt="" class="img1"></a>
-            <span class="s1"><b>YAY</b></span>
-            <a href="" class="a2"><img src="../images/download_app.png" alt="" class="img2"></a>
-        </div>
-        <div class="div2">
-            <ul>
-                <li><a href=""><span>首页</span><span class="glyphicon glyphicon-chevron-down s3"></span></a></li>
-                <li><a href=""><span>全部陪玩</span></a></li>
-                <li><a href=""><span>聊天室</span></a></li>
-                <li><a href=""><span>折扣专区</span></a></li>
-                <li><a href=""><span>代练</span></a></li>
-            </ul>
-            <div class="div3">
-                <input type="text" placeholder="请输入大神昵称" class="inp1">
-                <div class="div4"><button class="btn1"><span class="glyphicon glyphicon-search s4"></span></button></div>
-            </div>
-            <div class="div5">
-                <ul>
-                    <li><a href=""><span>充值</span></a></li>
-                    <li><a href=""><span>订单</span></a></li>
-                    <li><a href=""><span>消息</span></a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="div6">
-            <a href="">
-                <img src="../images/user.jpg" alt="">
-                <span>XXXXXX</span>
-            </a>
-        </div>
-    </div>
+        <header style="height: 60px;margin-bottom: 40px;background: rgb(246, 246, 246);">
+                <div class="wq-top" id="wq-top">
+                    <div class="wq-top1 clearfix">
+                        <div class="wq-nav-left">
+                            <a href="../" class="wq-nav-left-a1"></a>
+                            <span class="wq-nav-left-s1">大腿陪玩</span>
+                            <a href="#" class="wq-nav-left-a2"></a>
+                        </div>
+                        <div class="wq-nav-center">
+                            <div class="wq-nav-center-left">
+                                <ul>
+                                    <li class="shou">
+                                        <a href="../" class="HomePage wq-slide">
+                                            <!--<span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>-->
+                                            <span class="indent">
+                                                首页
+                                                 <span class="iconfont icon-icon-arrow-down"></span>
+                                            </span>
+            
+                                            <ul class="menu">
+                                                <li><a href="#" class="underline">成为大神</a></li>
+                                                <li><a href="./RapidMatch.html" class="underline overline">急速下单</a></li>
+                                                <li><a href="./gamesNews.html" class="underline overline">游戏资讯</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html" class="pei wq-slide">
+                                            <span class="indent">全部陪玩</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./"  class="pei wq-slide">
+                                            <span class="lobby"></span>
+                                            <span class="indent">聊天室
+                                            <mark class="hot"></mark>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html"  class="pei wq-slide">
+                                            <span class="indent kyg">
+                                                折扣专区
+                                                 <span class="iconfont icon-icon-arrow-down "></span>
+                                            </span>
+                                            <ul class="menu">
+                                                <li><a href="./discountZone.html" class="underline">限时折扣</a></li>
+                                                <li><a href="./discountZone.html" class="underline  overline">免单专区</a></li>
+                                                <li><a href="./discountZone.html" class="underline  overline">深夜专区</a></li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./discountZone.html"  class="pei wq-slide">
+                                            <span class="indent">代练</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wq-nav-center-right">
+                                <ul>
+                                    <!--搜索框-->
+                                    <li class="search">
+                                        <input type="text" class="input" placeholder="请输入大神昵称">
+                                        <button class="button">
+                                            <span class="iconfont icon-sousuo"></span>
+                                        </button>
+                                    </li>
+                                    <!--充值-->
+                                    <li class="search1">
+                                        <span>
+                                            <a href="./Center_am.html">
+                                                <span class="iconfont icon-chongzhi"></span>
+                                                充值
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <!--订单-->
+                                    <li class="search1">
+                                        <span>
+            
+                                            <a href="./Center.html">
+                                                <span class="iconfont icon-dingdan"></span>
+                                                订单
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <!--消息-->
+                                    <li class="search1">
+                                        <span>
+                                            <a href="./message.html">
+                                                 <span class="iconfont icon-xiaoxi"></span>
+                                                消息
+                                            </a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--注册/登陆-->
+                        <div class="wq-nav-right wq-nav-right1">
+                            <div class="loginUser" style="display: block">
+                                <a href="./Center_minf.html"> <img id="tou" src="" alt=""></a>
+                                <a href="javascript:;" id="exit" style="top:-3px">退出登录</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
     <div id="contentbox">
         <div id="content">
             <div class="div8">
                 <div class="div7">
                     <ul>
-                        <li><a href="javascript:;" class="myorder"><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">我的订单</span></a></li>
-                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
-                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
+                        <li><a href="./Center.html" class="myorder"><i><b class="b1 active-show"></b><b class="b2 active-show"></b></i><span class="s5 active-color">我的订单</span></a></li>
+                        <li><a href="./Center_am.html"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">账号管理</span></a></li>
+                        <li><a href="./Center_gj.html"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">优惠券</span></a></li>
                         <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">礼物记录</span></a></li>
-                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
-                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
-                        <li><a href="javascript:;"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">会员中心</span></a></li>
+                        <li><a href="./Center_minf.html"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">我的资料</span></a></li>
+                        <li><a href="./Center_safcen.html"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">安全设置</span></a></li>
+                        <li><a href="./Center_memcen.html"><i><b class="b1"></b><b class="b2"></b></i><span class="s5">会员中心</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -317,81 +394,30 @@
         </div>
     </div>
 </body>
+<script src="../js/ifHasUser.js"></script>
 <script>
-    var order={
-        data:[
-            {order_num:'DC019999000',playid:'22',game_name:'lol',play_name:'嗷呜酱🍥下单秒接',play_remarks:'我会嘤嘤嘤',order_sta:'进行中',order_time:'2019-06-13 10:48',money:'45',gj:'5',user_hpor:'/images/user.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'lol',play_name:'芝麻酱🍥下单秒接',play_remarks:'我是大神',order_sta:'已完成',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user1.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'王者荣耀',play_name:'嗷呜酱🍥下单秒接',play_remarks:'我是老司机',order_sta:'已取消',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user1.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'绝地求生',play_name:'嗷呜酱🍥下单秒接',play_remarks:'我会喊666',order_sta:'进行中',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user.jpg'},
-            {order_num:'DC019999001',playid:'01',game_name:'穿越火线',play_name:'芝麻酱🍥下单秒接',play_remarks:'我会叫爸爸',order_sta:'已完成',order_time:'2019-06-15 02:48',money:'40',gj:'5',user_hpor:'/images/user1.jpg'}
-            ]
-    };
-    function myorder(){
-        $('.div11 .active>ul').html(' ');
-        $.each(order.data,function (i,v) {
-            var oLi=document.createElement('li');
-            oLi.innerHTML=`
-            <div class="div12"><span class="s6">订单编号：${v.order_num}</span><span class="s7">订单${v.order_sta}</span></div>
-                            <div class="div13">
-                                <div class="div14">
-                                    <a href="">
-                                        <img src="..${v.user_hpor}" alt="" class="img3"><p class="p3">聊一聊</p>
-                                    </a>
-                                </div>
-                                <div class="div-left">
-                                    <dl>
-                                        <dt>${v.play_name}</dt>
-                                        <dd>品类：<span class="s8">${v.game_name}</span></dd>
-                                        <dd>备注：<span class="s8">${v.play_remarks}</span></dd>
-                                    </dl>
-                                </div>
-                                <div class="div-right">
-                                    <dl>
-                                        <dt>预约时间： <span> ${v.order_time}</span></dt>
-                                        <dd>实际支付：<span class="s9">${v.money}Y币</span></dd>
-                                        <dd><span class="s9">已优惠${v.gj}Y币</span></dd>
-                                    </dl>
-                                </div>
-                            </div>
-        `;
-            $('.div11 .active>ul').append(oLi);
-        })
-
-    };
-    myorder();
-    if($('.div11 .active>ul li').length>3){
-         $('#content').css('height','1500px')
+    $('#exit').css('top',-3)
+    var UserInfo = ifHasLoginMan();
+    console.log(UserInfo);
+    if (!UserInfo) {
+        alert('请先登录');
+        location.href = "../index.html";
     }
-    $('.div10 li').click(function () {
-        $('.div10 li').removeClass('active1');
-        $('.div10 li a').removeClass('active1');
-        $('.div11>div').removeClass('active');
-        $(this).addClass('active1');
-        $('.div11>div').eq($(this).index()).addClass('active');
-        $('.div10 li a').eq($(this).index()).addClass('active1');
-
-    });
-    //myorder
-    //post
-    //content:用户id
-    //date{error：0；data}
-    $('.div7 a').click(function () {
-        $('.div7 b').removeClass('active-show');
-        $('.div7 .s5').removeClass('active-color');
-        $(this).children(0).children(0).addClass('active-show');
-        $(this).children(1).addClass('active-color');
-    });
-    $('.div7 a').mouseover(function () {
-        $('.div7 b').removeClass('active-show1');
-        $('.div7 .s5').removeClass('active-color1');
-        $(this).children(0).children(0).addClass('active-show1');
-        $(this).children(1).addClass('active-color1');
-    });
-    $('.div7 a').mouseleave(function () {
-        $('.div7 b').removeClass('active-show1');
-        $('.div7 .s5').removeClass('active-color1');
-    })
-
+    /* 添加到 */
+    $('#tou').attr('src', '../' + UserInfo.info[0].headerimg)
+    function exit() {
+            document.cookie = '';
+        if ($('.wq-banner').length) {
+            oZ.style.display = "block";
+            $('.loginUser').hide();
+            $('.wq-nav-right').removeClass('wq-nav-right1');
+            $('#tou')[0].src = '';
+        } else {
+            window.location.href = "../";
+        }
+    }
+    $('#exit').click(exit);
 </script>
+<script src="../js/Center.js"></script>
+
 </html>

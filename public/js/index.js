@@ -1,18 +1,28 @@
 
 window.onload = function () {
     //确定
+    
+    if(window.location.hash=="#sec"){
+        let nowData = new Date();
+        nowData.setDate(nowData.getDate() -1);
+        document.cookie = `bigLegUser='';path=/;expires=${nowData}`;
+    }
     var oQ = document.getElementById('qd');
     //注册
     //手机号登陆
     var oZ = document.getElementById('zu');
     function exit() {
+    
         if ($('.wq-banner').length) {
+            let nowData = new Date();
+            nowData.setDate(nowData.getDate() -1);
+            document.cookie = `bigLegUser='';path=/;expires=${nowData}`;
             oZ.style.display = "block";
             $('.loginUser').hide();
             $('.wq-nav-right').removeClass('wq-nav-right1');
             $('#tou')[0].src = '';
         }else{
-            window.location.href="localhost";
+            window.location.href="./#sec";
         }
     }
     $('#exit').click(exit);
@@ -119,7 +129,15 @@ window.onload = function () {
                 pwd
             },
             success: function (res) {
-                loginning(res);
+                if(res){
+                    loginning(res);
+                    $('.close').click();
+                    $('#p44').hide();
+                    $('#p33').hide();
+                }else{
+                    $('#p44').show();
+                    $('#p33').hide();
+                }
             },
             error: function (err) {}
         })

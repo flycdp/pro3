@@ -23,12 +23,11 @@ let offLineUser={
 io.on('connection', function (socket) {
     socket.on('connection',function(msg){
         console.log(msg.myName,offLineUser[msg.myName]);
-        if(offLineUser[msg.myName]){/* 若已经是离线用户，并且有消息 */
+        if(offLineUser[msg.myName] instanceof Array){/* 若已经是离线用户，并且有消息 */
             if(offLineUser[msg.myName].length){
                 console.log(msg.myName);
-
                 io.emit(msg.myName,offLineUser[msg.myName]);
-                delete offLineUser[msg.myName];
+                offLineUser[msg.myName]=false;
             }
         }
         io.emit('con',msg)
@@ -39,18 +38,16 @@ io.on('connection', function (socket) {
         msg.name.myName=item;
         /* 判断发送的消息的接收用户是否下线 */
         let user=offLineUser[msg.name.myName];
-
         if(user){/* 若有说明下线 */
-            let count=0;
+            let count=true;
             user.forEach(v => {
                 if(v.name==item){/* 判断这个离线用户的消息是否有本人 */
-                    count=1;
                     v.content.push({ time: msg.time, text: msg.text, type: "0"})
-                    v.count++;
+                    count=false;
                 }
             });
             if(count){
-                v.push({
+                user.push({
                     name: msg.name.otherName,
                     nickname:msg.name.otherNickname,
                     img: msg.img,
@@ -63,7 +60,6 @@ io.on('connection', function (socket) {
                         type: "0"
                     }]
                 })
-            console.log(user)
             }
         }else{
             io.emit(item,msg)

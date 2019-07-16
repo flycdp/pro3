@@ -15,6 +15,10 @@ html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
     list-style: none;
     text-decoration: none;
 }
+html,body{
+    overflow: hidden;
+    height: 100%;
+}
 .clearfix::after{
     content:'';
     display: block;
@@ -75,12 +79,16 @@ html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
     position: absolute;
     top:60px;
     left: 0;
-    height: 90px;
-    display: none;
+    height: 0;
     background-color: #FFD20F;
+    opacity: 0;
+    transition: all .3s;
+    overflow: hidden;
 }
+
 .wq-header .han:hover .ul{
-    display: block;
+    opacity: 1;
+    height: 90px;
 }
 .wq-header .ul li{
     width: 100%;
@@ -130,7 +138,7 @@ html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
 /*******MP4********/
 .wq-banner{
     min-width: 1200px;
-    height: 854px;
+    height: 100%;
     overflow: hidden;
     margin: auto;
     position: relative;
@@ -138,11 +146,11 @@ html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
 }
 .wq-banner .video{
     width: 1519px;
-    height: 854px;
+    height: 100%;
     position: relative;
     top:0;
     left:50%;
-    transform: translateX(-61%);
+    transform: translateX(-63%);
 }
 .wq-banner .video video{
     display: block;
@@ -157,7 +165,6 @@ html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
 /******MP4中的内容********/
 .wq-mark{
     width: 1519px;
-    height: 854px;
     position: relative;
     top:-700px;
     left: 0;

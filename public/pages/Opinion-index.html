@@ -1,22 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="../css/Opinion-index.css">
+    <style>
+        .reg {
+            position: absolute;
+            left: 1200px;
+            top: 54%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 500px;
+            height: 700px;
+            font-style: italic;
+            border-radius: 10px;
+
+        }
+
+        .reg h1 {
+            text-align: center;
+            color: #FEDD01;
+            margin-bottom: 30px;
+            line-height: 1.5em;
+        }
+
+        .reg>div {
+            height: 80px;
+        }
+
+        .reg input[type="text"],
+        .reg input[type="password"] {
+            width: 300px;
+            height: 35px;
+            border-radius: 5px;
+            border: none;
+            outline-color: darkorange;
+            text-indent: 1rem;
+        }
+
+        label {
+            width: 120px;
+            display: inline-block;
+            text-align: center;
+            color: #FEDD01;
+        }
+
+        .reg div span {
+            font-size: 12px;
+        }
+
+        [type="file"] {
+            width: 200px;
+            outline: none;
+        }
+        #regYz{
+            width: 160px;
+        }
+        .sex{
+            color: #666;
+        }
+        button {
+            margin-left: 50px;
+            width: 90px;
+            height: 40px;
+            border-radius :10px;
+            border: none;
+            background: skyblue;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            transition: all .3s;
+        }
+        .getYzm:hover{
+            box-shadow: skyblue 0 0  10px;
+        }
+        .regDo{
+            margin: 0 auto;
+            display: block;
+            background: #FEDD01;
+            
+        }
+        .regDo:hover{
+            box-shadow: #FEDD01 0 0  10px;
+        }
+    </style>
 </head>
+
 <body>
     <div class="wq-header">
         <div class="middle">
-            <a href="#" class="logo">
+            <a href="../" class="logo">
                 <img src="../images/index.images/logo1.png" alt="">
                 <span>大腿陪玩</span>
             </a>
             <ul class="clearfix u2">
-                <li><a href="#"  class="nv n1">首页</a></li>
-                <li><a href="#"  class="nv n2">成为大神</a></li>
+                <li><a href="../" class="nv n1">首页</a></li>
+                <li><a href="#" class="nv n2">成为大神</a></li>
                 <li class="han">
-                    <a href="#"  class="nv n3">关于大腿 ▼</a>
+                    <a href="#" class="nv n3">关于大腿 ▼</a>
                     <ul class="ul">
                         <li><a href="#">关于大腿</a></li>
                         <li><a href="#">用户协议</a></li>
@@ -30,7 +113,7 @@
     <div class="wq-banner">
         <div class="video">
             <video preload="metadata" muted="muted" autoplay="autoplay" loop="loop" width="1920">
-                <source src="https://static.yay.com.cn/video/YAY1.mp4"/>
+                <source src="https://static.yay.com.cn/video/YAY1.mp4" />
             </video>
         </div>
     </div>
@@ -39,23 +122,51 @@
             <img src="../images/index.images/video.png" alt="">
             <p>大腿陪玩,丰富的游戏交友约玩美女聚集地</p>
         </div>
-        <a href="" class="ke"></a>
+        <a href="./RapidMatch.html" class="ke"></a>
         <div class="han">
             <a class="ping" target="_blank" href="https://apps.apple.com/cn/app/id1450891677">iPhone</a>
-            <a  class="er" href="#">
+            <a class="er" href="#">
                 <div class="erwei">
                     <img src="../images/index.images/erwei1.png" alt="">
                     <div class="san"></div>
                 </div>
             </a>
-            <a class="an" href="#" target="_blank" >Android</a>
+            <a class="an" href="#" target="_blank">Android</a>
         </div>
     </div>
-    <div class="wq-content">
-        <div class="life">
-            <img src="https://www.yay.com.cn/static/img/item_tit1.png" alt="">
-            <p>视频聊天，游戏陪玩，多种类型，各式风格，你来选择。</p>
+    <div class="reg">
+        <h1>欢迎来到大腿陪玩</h1>
+        <div>
+            <label for="username">账号: </label> <input type="text" id="username">
         </div>
-    </div>
+        <div>
+            <label for="pwd">密码: </label> <input type="password" id="pwd">
+        </div>
+        <div>
+            <label for="pwd2">确认密码: </label> <input type="password" id="pwd2">
+        </div>
+        <div>
+            <label>性别: </label>
+            <label class="sex" for="nan">男</label> <input checked type="radio" id="nan" name="sex">
+            <label class="sex" for="nv">女</label> <input type="radio" id="nv" name="sex">
+        </div>
+        <div>
+            <label for="file">上传头像: </label><input type="file" id="file"></input>
+            <span>需.jpg .png .gif类型的文件</span>
+        </div>
+        <div>
+            <label for="phone">手机号码:</label><input type="text" id="phone"></input>
+        </div>
+        <div>
+            <label for="regYz">验证码:</label><input type="text" id="regYz"></input>
+            <button class="getYzm">获取验证码</button>
+        </div>
+        <div>
+             <button class="regDo">立即注册</button>
+        </div>
+        <script>
+            let reg=[/[a-zA-Z]{+}([a-zA-Z0-9]){5,11}/];
+        </script>
 </body>
+
 </html>

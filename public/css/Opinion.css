@@ -72,12 +72,15 @@ html::-webkit-scrollbar-track{ -webkit-border-radius: 0px;border-radius: 0px;}
     position: absolute;
     top:60px;
     left: 0;
-    height: 90px;
-    display: none;
+    height: 0;
     background-color: #FFD20F;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .3s;
 }
 .wq-header .han:hover .ul{
-    display: block;
+    height: 90px;
+    opacity: 1;
 }
 .wq-header .ul li{
     width: 100%;
