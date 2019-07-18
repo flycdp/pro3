@@ -6,7 +6,7 @@ let banner = {
             target: '＃',
         },
         {
-            src: 'https://static.yay.com.cn/banner/5c753b73ed50a.png',
+            src: 'https://static.yay.com.cn/banner/5d24276056535.jpg',
             target: '＃',
         }
     ]

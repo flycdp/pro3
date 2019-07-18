@@ -69,7 +69,13 @@ function getUserInfo() {
     })}
 getUserInfo();
 $('.msgBtn').click(function () {
-    let msg=$('.msgCon').val();
+    var msg=$('.msgCon').val();
+
+    if(!msg.trim()){
+        alert('评论不能为空！');
+        return
+    }
+
     $.ajax({
         url:'/sendDiscuss',
         type:'post',

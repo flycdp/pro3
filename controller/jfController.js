@@ -26,14 +26,6 @@ function handsTime(obj) {
 let json={
     getNews:function(req,res){
         const query = req.query.category
-        console.log(
-            query? 
-            (query == "全部新闻"
-                ? "%"
-                :query)
-            :
-             "%"
-        )
         let sql=    
         `select a.id,a.type,a.title,a.prevCon,a.time,a.url,a.click,a.tag,count(b.zx_id) num from zx a left join ept b  
         on  a.id=b.zx_id  where  
