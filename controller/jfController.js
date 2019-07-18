@@ -7,6 +7,22 @@ let db=mysql.createConnection({
     database:'pro3dist',
     timezone:'08:00'
 });
+function handsTime(obj) {
+    var a = obj.getFullYear(); /* 获取年 */
+    var b = obj.getMonth() + 1 < 10 ? "0" + (obj.getMonth() + 1) : obj.getMonth() + 1; /* 获取月 */
+    var c = obj.getDate() < 10 ? "0" + obj.getDate() : obj.getDate(); /* 获取日 */
+    var d = obj.getHours() < 10 ? "0" + obj.getHours() : obj.getHours(); /* 获取小时 */
+    var e = obj.getMinutes() < 10 ? "0" + obj.getMinutes() : obj.getMinutes(); /* 获取分 */
+    var f = obj.getSeconds() < 10 ? "0" + obj.getSeconds() : obj.getSeconds(); /* 获取秒 */
+    return {
+        a,
+        b,
+        c,
+        d,
+        e,
+        f
+    }
+}
 let json={
     getNews:function(req,res){
         const query = req.query.category
@@ -62,7 +78,7 @@ let json={
         })
     },
     getDiscussInfo:function (req,res) {
-        const sql=`select b.headerimg,b.name,a.text,a.time from ept a left join x_user b on a.zx_id=b.id where a.zx_id=${req.query.id}`;
+        const sql=`SELECT a.*,b.nickname FROM ept a LEFT JOIN x_user b ON a.u_id=b.id WHERE a.zx_id=${req.query.id}`;
         db.query(sql,function (err,data) {
             if(err){
                 res.send('获取评论失败！'+err)
@@ -70,6 +86,22 @@ let json={
                 res.send({error:0,data:data})
             }
         })
-    }
+    },
+    sendDiscuss:function (req,res) {
+        var myDate = new Date();
+        var {a,b,c,d,e,f}=handsTime(myDate);
+        var data=req.body;
+        var str=`${a}-${b}-${c} ${d}:${e}:${f}`;
+        console.log(str);
+        const sql=`insert into ept values("",${data.userId},${data.newsId},'${str}',"${data.msg}","${data.userImg}",null,null,null)`;
+        db.query(sql,function (error,data) {
+            if(error){
+                console.log(error);
+                res.send({error:1,data:'评论失败！'})
+            }else{
+                res.send({error:0,data:'评论成功！'})
+            }
+          })
+      }
 }
 module.exports = json;

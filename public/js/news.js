@@ -20,7 +20,20 @@ $.ajax({
         }
     }
 });
-$('window').ready(function () {
+var getCookie = function (name) {
+        var arr;
+        var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+        if (arr = document.cookie.match(reg)){
+        return unescape(arr[2]);
+        } else{
+        return null;
+        }
+       };
+var user=JSON.parse(getCookie('bigLegUser'));
+
+function getUserInfo() {
+    $('.headImg').attr('src',user.info[0].headerimg)
     $.ajax({
         url: '/getDiscussInfo' + location.search,
         type: 'get',
@@ -28,6 +41,7 @@ $('window').ready(function () {
             if (res.error) {
                 alert(res.error)
             } else {
+                $('.msgList').html(' ');
                 if (!res.data.length) {
                     $('.msgList').html(
                         '<li class="msg" style="text-align:center;font-size:20px;color:#ababab;display:inline-block;width:760px">暂时没有网友评论!</li>'
@@ -38,10 +52,10 @@ $('window').ready(function () {
                         $(oLi).html(`
                                     <div class="msg">
                                     <span>
-                                        <img src="${v.headerimg}" alt="${v.name}">
+                                        <img src="${v.hd_src}" alt="${v.nickname}">
                                     </span>
                                     <div>
-                                        <div style="width: 680px;"><span>${v.name}</span> &nbsp;&nbsp;<span style="font-size: 14px;color: #a2a2a2">${v.time}</span><div style="float: right"><span>👍 0</span></div></div>
+                                        <div style="width: 680px;"><span>${v.nickname}</span> &nbsp;&nbsp;<span style="font-size: 14px;color: #a2a2a2">${v.time}</span></div>
                                         <div style="margin-top: 8px"><span>${v.text}</span></div>
                                     </div>
                                     </div>
@@ -52,6 +66,28 @@ $('window').ready(function () {
                 }
             }
         }
-    }
-    )
-});
+    })}
+getUserInfo();
+$('.msgBtn').click(function () {
+    let msg=$('.msgCon').val();
+    $.ajax({
+        url:'/sendDiscuss',
+        type:'post',
+        data:{
+            newsId:location.search.split('=')[1],
+            msg:msg,
+            userId:user.info[0].id,
+            userImg:user.info[0].headerimg
+        },
+        success:function (res) {
+            if(res.error){
+                alert(res.data);
+            }else{ 
+                alert(res.data);
+                $('.msgCon').val(' ');
+                getUserInfo();
+            }
+          }
+    });
+    
+  });
