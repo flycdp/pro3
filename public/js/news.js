@@ -75,7 +75,10 @@ $('.msgBtn').click(function () {
         alert('评论不能为空！');
         return
     }
-
+    if(msg.length>=30){
+        alert('评论字数不能超过30')
+        return
+    }
     $.ajax({
         url:'/sendDiscuss',
         type:'post',
